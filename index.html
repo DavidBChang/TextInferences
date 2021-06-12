@@ -5,7 +5,7 @@
       <body>
       <table border="1" class="dataframe table table-striped">
       <thead>
-        <tr style="text-align: right;">
+        <tr style="text-align: center;">
           <th></th>
           <th>Event + Inference</th>
           <th>ground truth</th>
@@ -14,11 +14,29 @@
       </thead>
       <tbody>
     
+<tr style="background-color: white"> 
+ <th>0</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Because <|det1|> and <|det2|> wanted to identify their luggage</td>
+<td>1</td>
+<td>1</td>
+</tr>
 <tr style="background-color: lightgreen"> 
  <th>1</th>
 <td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Because <|det1|> and <|det2|> wanted to have someone purchase the picture</td>
 <td>0</td>
 <td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>2</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Because <|det1|> and <|det2|> wanted to prevent theft</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>3</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Because <|det1|> and <|det2|> wanted to be put in luggage</td>
+<td>0</td>
+<td>0</td>
 </tr>
 <tr style="background-color: pink"> 
  <th>4</th>
@@ -26,11 +44,35 @@
 <td>1</td>
 <td>0</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>5</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Before <|det1|> and <|det2|> needed to identify their luggage</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>6</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Before <|det1|> and <|det2|> needed to be put in luggage</td>
+<td>1</td>
+<td>1</td>
+</tr>
 <tr style="background-color: lightgreen"> 
  <th>7</th>
 <td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Before <|det1|> and <|det2|> needed to be shipped somewhere</td>
 <td>0</td>
 <td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>8</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Before <|det1|> and <|det2|> needed to go to the airport</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>9</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Before <|det1|> and <|det2|> needed to prevent theft</td>
+<td>0</td>
+<td>0</td>
 </tr>
 <tr style="background-color: pink"> 
  <th>10</th>
@@ -50,11 +92,29 @@
 <td>1</td>
 <td>0</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>13</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. After <|det1|> and <|det2|> will most likely identify their luggage</td>
+<td>0</td>
+<td>0</td>
+</tr>
 <tr style="background-color: pink"> 
  <th>14</th>
 <td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. After <|det1|> and <|det2|> will most likely get placed with a decoration in a house</td>
 <td>1</td>
 <td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>15</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. After <|det1|> and <|det2|> will most likely prevent theft</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>16</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. After <|det1|> and <|det2|> will most likely load the bag on the plane</td>
+<td>1</td>
+<td>1</td>
 </tr>
 <tr style="background-color: lightgreen"> 
  <th>17</th>
@@ -62,11 +122,59 @@
 <td>0</td>
 <td>1</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>18</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. After <|det1|> and <|det2|> will most likely put on a seatbelt</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>19</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. After <|det1|> and <|det2|> will most likely be put in luggage</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>20</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Because <|det1|> wanted to hide from someone</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>21</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Because <|det1|> wanted to go through customs</td>
+<td>0</td>
+<td>0</td>
+</tr>
 <tr style="background-color: pink"> 
  <th>22</th>
 <td><|det1|> is half a woman  's face protruding from the top of a suitcase. Because <|det1|> wanted to be aware of people following her</td>
 <td>1</td>
 <td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>23</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Because <|det1|> wanted to go through a metal detector</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>24</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Before <|det1|> needed to go through a metal detector</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>25</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Before <|det1|> needed to hide from someone</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>26</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Before <|det1|> needed to be taken out of a car</td>
+<td>1</td>
+<td>1</td>
 </tr>
 <tr style="background-color: lightgreen"> 
  <th>27</th>
@@ -86,16 +194,52 @@
 <td>0</td>
 <td>1</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>30</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Before <|det1|> needed to get mounted on cardboard</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>31</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Before <|det1|> needed to be put in an overhead compartment</td>
+<td>0</td>
+<td>0</td>
+</tr>
 <tr style="background-color: pink"> 
  <th>32</th>
 <td><|det1|> is half a woman  's face protruding from the top of a suitcase. After <|det1|> will most likely go through customs</td>
 <td>1</td>
 <td>0</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>33</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. After <|det1|> will most likely go through a metal detector</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>34</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. After <|det1|> will most likely be put in an overhead compartment</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>35</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. After <|det1|> will most likely hide from someone</td>
+<td>0</td>
+<td>0</td>
+</tr>
 <tr style="background-color: pink"> 
  <th>36</th>
 <td><|det1|> is half a woman  's face protruding from the top of a suitcase. After <|det1|> will most likely get damaged by water</td>
 <td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>37</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. After <|det1|> will most likely be taken out of a car</td>
+<td>0</td>
 <td>0</td>
 </tr>
 <tr style="background-color: pink"> 
@@ -110,10 +254,28 @@
 <td>0</td>
 <td>1</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>40</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Because <|det2|> wanted to spy on a female</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>41</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Because <|det2|> wanted to fall off</td>
+<td>0</td>
+<td>0</td>
+</tr>
 <tr style="background-color: pink"> 
  <th>42</th>
 <td><|det2|> is a man creepily peeking over the top of a piece of luggage. Because <|det2|> wanted to take a picture</td>
 <td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>43</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Because <|det2|> wanted to pasted on</td>
+<td>0</td>
 <td>0</td>
 </tr>
 <tr style="background-color: pink"> 
@@ -122,10 +284,76 @@
 <td>1</td>
 <td>0</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>45</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Before <|det2|> needed to fall off</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>46</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Before <|det2|> needed to bought</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>47</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Before <|det2|> needed to spy on a female</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>48</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Before <|det2|> needed to walk up to the luggage</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>49</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Before <|det2|> needed to take a picture</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>50</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Before <|det2|> needed to grab the luggage</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>51</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Before <|det2|> needed to scare away people</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>52</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. After <|det2|> will most likely fall off</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>53</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. After <|det2|> will most likely spy on a female</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>54</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. After <|det2|> will most likely scare away people</td>
+<td>1</td>
+<td>1</td>
+</tr>
 <tr style="background-color: lightgreen"> 
  <th>55</th>
 <td><|det2|> is a man creepily peeking over the top of a piece of luggage. After <|det2|> will most likely take a picture</td>
 <td>0</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>56</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. After <|det2|> will most likely walk away from the luggage</td>
+<td>1</td>
 <td>1</td>
 </tr>
 <tr style="background-color: lightgreen"> 
@@ -134,10 +362,34 @@
 <td>0</td>
 <td>1</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>58</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. After <|det2|> will most likely tell <|det1|> to walk away</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>59</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. After <|det2|> will most likely bought</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>60</th>
+<td><|det1|> sternly looks down at <|det2|>. Because <|det1|> wanted to scold <|det2|></td>
+<td>1</td>
+<td>1</td>
+</tr>
 <tr style="background-color: lightgreen"> 
  <th>61</th>
 <td><|det1|> sternly looks down at <|det2|>. Because <|det1|> wanted to pick her up</td>
 <td>0</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>62</th>
+<td><|det1|> sternly looks down at <|det2|>. Because <|det1|> wanted to convince <|det2|> to admit her mistake</td>
+<td>1</td>
 <td>1</td>
 </tr>
 <tr style="background-color: lightgreen"> 
@@ -146,10 +398,124 @@
 <td>0</td>
 <td>1</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>64</th>
+<td><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to see a mess in the kitchen</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>65</th>
+<td><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to scold <|det1|></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>66</th>
+<td><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to get close to the kitchen</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>67</th>
+<td><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to convince <|det1|> to admit her mistake</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>68</th>
+<td><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to catch <|det2|> throwing away food</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>69</th>
+<td><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to pick her up</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>70</th>
+<td><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to feel upset</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>71</th>
+<td><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to yell at her</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>72</th>
+<td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely pick her up</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>73</th>
+<td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely see a mess in the kitchen</td>
+<td>0</td>
+<td>0</td>
+</tr>
 <tr style="background-color: pink"> 
  <th>74</th>
 <td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely yell at her</td>
 <td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>75</th>
+<td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely scold <|det1|></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>76</th>
+<td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely ask <|det2|> to clean up the mess</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>77</th>
+<td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely get close to the kitchen</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>78</th>
+<td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely punish <|det2|></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>79</th>
+<td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely convince <|det1|> to admit her mistake</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>80</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Because <|det2|> wanted to refuse to confess</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>81</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Because <|det2|> wanted to get punished</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>82</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Because <|det2|> wanted to show her remorse</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>83</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Because <|det2|> wanted to get in trouble</td>
+<td>0</td>
 <td>0</td>
 </tr>
 <tr style="background-color: pink"> 
@@ -158,16 +524,64 @@
 <td>1</td>
 <td>0</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>85</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Before <|det2|> needed to get punished</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>86</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Before <|det2|> needed to look down from <|det1|></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>87</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Before <|det2|> needed to refuse to confess</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>88</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Before <|det2|> needed to push vegetables around her plate</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>89</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Before <|det2|> needed to show her remorse</td>
+<td>0</td>
+<td>0</td>
+</tr>
 <tr style="background-color: pink"> 
  <th>90</th>
 <td><|det2|> stares ahead avoiding <|det1|>  's eyes. Before <|det2|> needed to feed vegetables to the dog</td>
 <td>1</td>
 <td>0</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>91</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Before <|det2|> needed to apologize for her actions</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>92</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. After <|det2|> will most likely get punished</td>
+<td>1</td>
+<td>1</td>
+</tr>
 <tr style="background-color: lightgreen"> 
  <th>93</th>
 <td><|det2|> stares ahead avoiding <|det1|>  's eyes. After <|det2|> will most likely get in trouble</td>
 <td>0</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>94</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. After <|det2|> will most likely apologize for her actions</td>
+<td>1</td>
 <td>1</td>
 </tr>
 <tr style="background-color: lightgreen"> 
@@ -176,11 +590,41 @@
 <td>0</td>
 <td>1</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>96</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. After <|det2|> will most likely said sorry to <|det2|></td>
+<td>1</td>
+<td>1</td>
+</tr>
 <tr style="background-color: lightgreen"> 
  <th>97</th>
 <td><|det2|> stares ahead avoiding <|det1|>  's eyes. After <|det2|> will most likely refuse to confess</td>
 <td>0</td>
 <td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>98</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. After <|det2|> will most likely help clean up her toys</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>99</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. After <|det2|> will most likely show her remorse</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>100</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Because <|det1|> wanted to reassure <|det4|> that everything is alright</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>101</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Because <|det1|> wanted to walk into the kitchen</td>
+<td>0</td>
+<td>0</td>
 </tr>
 <tr style="background-color: pink"> 
  <th>102</th>
@@ -188,11 +632,59 @@
 <td>1</td>
 <td>0</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>103</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Because <|det1|> wanted to investigate that noise</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>104</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to approach the door</td>
+<td>1</td>
+<td>1</td>
+</tr>
 <tr style="background-color: lightgreen"> 
  <th>105</th>
 <td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to walk into the kitchen</td>
 <td>0</td>
 <td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>106</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to look through the hallway</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>107</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to investigate that noise</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>108</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to stand behind <|det4|></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>109</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to protect <|det1|></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>110</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to grab <|det4|> by the shoulder</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>111</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to reassure <|det1|> that everything is alright</td>
+<td>0</td>
+<td>0</td>
 </tr>
 <tr style="background-color: pink"> 
  <th>112</th>
@@ -200,16 +692,94 @@
 <td>1</td>
 <td>0</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>113</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. After <|det1|> will most likely approach the door</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>114</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. After <|det1|> will most likely investigate that noise</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>115</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. After <|det1|> will most likely reassure <|det1|> that everything is alright</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>116</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. After <|det1|> will most likely protect <|det4|></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>117</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. After <|det1|> will most likely look in the doorway and see what was there</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>118</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. After <|det1|> will most likely move in front of <|det4|></td>
+<td>1</td>
+<td>1</td>
+</tr>
 <tr style="background-color: lightgreen"> 
  <th>119</th>
 <td><|det1|> is a father holding the shoulder of his daughter <|det4|>. After <|det1|> will most likely look through the hallway</td>
 <td>0</td>
 <td>1</td>
 </tr>
+<tr style="background-color: white"> 
+ <th>120</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Because <|det3|> wanted to see what what was inside the doorway</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>121</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Because <|det3|> wanted to feel scared</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>122</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Because <|det3|> wanted to help protect the children</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>123</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Because <|det3|> wanted to find an abandoned home</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>124</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Before <|det3|> needed to find an abandoned home</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>125</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Before <|det3|> needed to feel scared</td>
+<td>0</td>
+<td>0</td>
+</tr>
 <tr style="background-color: pink"> 
  <th>126</th>
 <td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Before <|det3|> needed to see an alien</td>
 <td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white"> 
+ <th>127</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Before <|det3|> needed to run out</td>
+<td>0</td>
 <td>0</td>
 </tr>
  </tbody>
