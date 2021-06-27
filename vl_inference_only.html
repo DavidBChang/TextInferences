@@ -7,16 +7,16 @@
   </p>
   <p>
    For every inference sentence of a given image, we add a negative inference sentence that is taken from the same image.
-   The first 5000 or so examples of these "event sentence + positive/negative inference statement" from the test dataset
-   are shown in the table below.
+   The first 5000 or so examples of these "positive/negative inference statement" from the test dataset
+   are shown in the table below. We used UNITER pretrained model, Roberta text embedder, and Roberta tokenizer.
   </p>
   <p>
-   Our model scored an 83.57% accuracy on the test data. Other evaluation metrics are as follows:
+   Our model scored an 76.44% accuracy on the test data. Other evaluation metrics are as follows:
     <ul>
-      <li>precision (PPV): 85.53%</li>
-      <li>recall (TPR): 82.13%</li>
-      <li>NPV: 82.81%</li>
-      <li>specificity (TNR): 86.11%</li>
+      <li>precision (PPV): 78.94%</li>
+      <li>recall (TPR): 72.97%</li>
+      <li>NPV: 74.87%</li>
+      <li>specificity (TNR): 80.53%</li>
     </ul>
     The examples that are classified as false positives are highlighted in green, and the examples that are
     classified as false negatives are highlighted in pink
@@ -25,7 +25,7 @@
       <thead>
         <tr style="text-align: center;">
           <th></th>
-          <th>Event + Inference</th>
+          <th>Inference</th>
           <th>ground truth</th>
           <th>predicted</th>
         </tr>
