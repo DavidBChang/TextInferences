@@ -1,8 +1,26 @@
-
-    <html>
-      <head><title>HTML Pandas Dataframe with CSS</title></head>
-      <link rel="stylesheet" type="text/css" href="df_style.css"/>
-      <body>
+ <!DOCTYPE html>
+<html lang="en-us">
+  <head><title>Text inferences on same image</title></head>
+  <body>
+  <p>
+   <a href="index.html">Home</a>
+  </p>
+  <p>
+   For every inference sentence of a given image, we add a negative inference sentence that is taken from the same image.
+   The first 5000 or so examples of these "event sentence + positive/negative inference statement" from the test dataset
+   are shown in the table below.
+  </p>
+  <p>
+   Our model scored an 83.57% accuracy on the test data. Other evaluation metrics are as follows:
+    <ul>
+      <li>precision (PPV): 85.53%</li>
+      <li>recall (TPR): 82.13%</li>
+      <li>NPV: 82.81%</li>
+      <li>specificity (TNR): 86.11%</li>
+    </ul>
+    The examples that are classified as false positives are highlighted in green, and the examples that are
+    classified as false negatives are highlighted in pink
+  </p>
       <table border="1" class="dataframe table table-striped">
       <thead>
         <tr style="text-align: center;">
