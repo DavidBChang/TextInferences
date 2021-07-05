@@ -1,0 +1,5140 @@
+
+    <html>
+      <head><title>HTML Pandas Dataframe with CSS</title></head>
+      <link rel="stylesheet" type="text/css" href="df_style.css"/>
+      <body>
+      <table border="1" class="dataframe table table-striped">
+      <thead>
+        <tr style="text-align: center;">
+          <th></th>
+          <th>Event + Inference</th>
+          <th>ground truth</th>
+          <th>predicted</th>
+        </tr>
+      </thead>
+      <tbody>
+
+<tr style="background-color: white">
+ <th>0</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Because <|det1|> and <|det2|> wanted to </td>
+<td>identify their luggage</td>
+<td>show him around his new place</td>
+<td>anticipate their movements</td>
+<td>clean up the mess</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>1</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Because <|det1|> and <|det2|> wanted to </td>
+<td>prevent theft</td>
+<td>check messages</td>
+<td>relax between sessions</td>
+<td>shoot someone</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>2</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Before <|det1|> and <|det2|> needed to </td>
+<td>have someone purchase the picture</td>
+<td>go to an office meeting</td>
+<td>show they are good at posing</td>
+<td>judge the performance</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>3</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Before <|det1|> and <|det2|> needed to </td>
+<td>be put in luggage</td>
+<td>attend a baseball game for kids</td>
+<td>find her lawyer  's office building</td>
+<td>see a kid he doesn  't like</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>4</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Before <|det1|> and <|det2|> needed to </td>
+<td>go to the airport</td>
+<td>want to engage kids in fun</td>
+<td>see if they need help</td>
+<td>mount his horse</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>5</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. Before <|det1|> and <|det2|> needed to </td>
+<td>label <|det1|> and <|det2|>  's bag with a picture</td>
+<td>realize an emergency is happening</td>
+<td>have posed for a picture</td>
+<td>be prepared for attack</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>6</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. After <|det1|> and <|det2|> will most likely </td>
+<td>be shipped somewhere</td>
+<td>compile evidence</td>
+<td>board the airplane</td>
+<td>finish his drink and leave</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>7</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. After <|det1|> and <|det2|> will most likely </td>
+<td>get placed with a decoration in a house</td>
+<td style="background-color: lightgreen">assist in the competition</td>
+<td>go to the side of the stage</td>
+<td>clap for the speaker</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>8</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. After <|det1|> and <|det2|> will most likely </td>
+<td>load the bag on the plane</td>
+<td>wait for a winner to be announced</td>
+<td>watch the door</td>
+<td>get up and run</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>9</th>
+<td><|det1|> and <|det2|> are pictures of a man and woman sticking out of a bag. After <|det1|> and <|det2|> will most likely </td>
+<td>put on a seatbelt</td>
+<td>try to bike home before sundown</td>
+<td>cheer for his favorite</td>
+<td>applaud what he hears</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>10</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Because <|det1|> wanted to </td>
+<td>have easy access to his gun</td>
+<td>hide from someone</td>
+<td>judge her appearance</td>
+<td>catch his breath for a minute</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>11</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Because <|det1|> wanted to </td>
+<td>entertain the crowd</td>
+<td>be aware of people following her</td>
+<td>recover from a gun shot wound</td>
+<td>buy a beer</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>12</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Before <|det1|> needed to </td>
+<td>be seriously injured in an accident</td>
+<td>go through a metal detector</td>
+<td>drive them out to the field</td>
+<td>be listening to something that is good</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>13</th>
+<td style="background-color: lightgreen"><|det1|> is half a woman  's face protruding from the top of a suitcase. Before <|det1|> needed to </td>
+<td>buy tickets to a big game</td>
+<td>be taken out of a car</td>
+<td>raise his camera</td>
+<td>stand at the reception desk in the restaurant</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>14</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Before <|det1|> needed to </td>
+<td style="background-color: lightgreen">join the small gathering</td>
+<td>get printed out</td>
+<td>learn how to be a dealer</td>
+<td>come back from a funeral</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>15</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. Before <|det1|> needed to </td>
+<td>meet up with the group</td>
+<td>get mounted on cardboard</td>
+<td>be a prisoner in the facility he  's at</td>
+<td>have film ready</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>16</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. After <|det1|> will most likely </td>
+<td>get off the vehicle</td>
+<td>go through customs</td>
+<td>be asked question</td>
+<td>tell them how fun it will be</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>17</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. After <|det1|> will most likely </td>
+<td>go home leaving here</td>
+<td>be put in an overhead compartment</td>
+<td style="background-color: lightgreen">take pictures of the naked models</td>
+<td>load them on himself</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>18</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. After <|det1|> will most likely </td>
+<td>get up and inspect the noise</td>
+<td>get damaged by water</td>
+<td>carry on a conversation</td>
+<td>hand his head in shame</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>19</th>
+<td><|det1|> is half a woman  's face protruding from the top of a suitcase. After <|det1|> will most likely </td>
+<td>cheer after hearing the leaders  ' remarks</td>
+<td>fall out of the laptop case</td>
+<td>tell them they are doing great</td>
+<td>file the proper paperwork</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>20</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Because <|det2|> wanted to </td>
+<td>perform a ritual</td>
+<td>act silly with everyone</td>
+<td>spy on a female</td>
+<td>get their work done quick</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>21</th>
+<td style="background-color: lightgreen"><|det2|> is a man creepily peeking over the top of a piece of luggage. Because <|det2|> wanted to </td>
+<td>read it</td>
+<td>drive responsibly</td>
+<td>take a picture</td>
+<td>kick them out</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>22</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Before <|det2|> needed to </td>
+<td>go outside the store for a break</td>
+<td>feel the fires raging behind</td>
+<td style="background-color: lightgreen">pasted on</td>
+<td>order her food</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>23</th>
+<td style="background-color: lightgreen"><|det2|> is a man creepily peeking over the top of a piece of luggage. Before <|det2|> needed to </td>
+<td>attend a comedy show</td>
+<td>put on a hockey jersey</td>
+<td>bought</td>
+<td>peel the banana</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>24</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Before <|det2|> needed to </td>
+<td>sit down with his family</td>
+<td>see people dancing</td>
+<td>walk up to the luggage</td>
+<td>feel guilty</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>25</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. Before <|det2|> needed to </td>
+<td>attend tai chi class</td>
+<td>reassure her the wedding will be great</td>
+<td>grab the luggage</td>
+<td>make plan to meet up with someone at hotel</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>26</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. After <|det2|> will most likely </td>
+<td>look around the building</td>
+<td>finish her drink</td>
+<td>fall off</td>
+<td>congratulate their opponent</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>27</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. After <|det2|> will most likely </td>
+<td style="background-color: lightgreen">keep warm outside in the cold</td>
+<td>ask to stay there all evening</td>
+<td>scare away people</td>
+<td>walk over to his school</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>28</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. After <|det2|> will most likely </td>
+<td>give high fives</td>
+<td>chat with some of the crowd</td>
+<td>walk away from the luggage</td>
+<td>finish his set</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>29</th>
+<td><|det2|> is a man creepily peeking over the top of a piece of luggage. After <|det2|> will most likely </td>
+<td>remain diligent in physical therapy</td>
+<td>yell cut</td>
+<td>tell <|det1|> to walk away</td>
+<td>check her pages</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>30</th>
+<td><|det1|> sternly looks down at <|det2|>. Because <|det1|> wanted to </td>
+<td>show her condolences</td>
+<td>go for a ride</td>
+<td>introduce himself properly</td>
+<td>scold <|det2|></td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>31</th>
+<td><|det1|> sternly looks down at <|det2|>. Because <|det1|> wanted to </td>
+<td>tell <|det2|> he will be alright</td>
+<td>be ready if something happens that needs to be photographed</td>
+<td>be prepared to shoot</td>
+<td>convince <|det2|> to admit her mistake</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>32</th>
+<td><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to </td>
+<td>hear the bell of the streetcar</td>
+<td>put on the costume</td>
+<td>have written notes onteh cards</td>
+<td>see a mess in the kitchen</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>33</th>
+<td style="background-color: lightgreen"><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to </td>
+<td>walk up to the microphone</td>
+<td>want to drive somewhere</td>
+<td>decide to attend the meeting</td>
+<td>get close to the kitchen</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>34</th>
+<td><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to </td>
+<td>show <|det2|> the truth</td>
+<td>make an important call</td>
+<td>be at the mall</td>
+<td>catch <|det2|> throwing away food</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>35</th>
+<td><|det1|> sternly looks down at <|det2|>. Before <|det1|> needed to </td>
+<td>pour the drink in his hand</td>
+<td>put on his suit</td>
+<td>fix his glasses</td>
+<td>feel upset</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>36</th>
+<td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely </td>
+<td>row towards him</td>
+<td>chat with band members</td>
+<td>check to see if he is bleeding</td>
+<td>pick her up</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>37</th>
+<td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely </td>
+<td>ask for an exclusive interview</td>
+<td>hurt each other</td>
+<td>decide to sit down</td>
+<td>yell at her</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>38</th>
+<td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely </td>
+<td>bet all of his chips</td>
+<td>have a conversation with his patient</td>
+<td>sit down once the game resumes</td>
+<td>ask <|det2|> to clean up the mess</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>39</th>
+<td><|det1|> sternly looks down at <|det2|>. After <|det1|> will most likely </td>
+<td>turn off the watch</td>
+<td>get the information she needs</td>
+<td>go to a restaurant</td>
+<td>punish <|det2|></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>40</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Because <|det2|> wanted to </td>
+<td>refuse to confess</td>
+<td>share a personal moment</td>
+<td>assist the person in the limousine</td>
+<td>help others at the tournament know where to go</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>41</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Because <|det2|> wanted to </td>
+<td>show her remorse</td>
+<td>be read a bedtime story</td>
+<td style="background-color: lightgreen">cross the street safely</td>
+<td>observe something</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>42</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Before <|det2|> needed to </td>
+<td style="background-color: lightgreen">get in trouble</td>
+<td>put on a costume</td>
+<td>hear an explosion</td>
+<td>introduce himself</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>43</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Before <|det2|> needed to </td>
+<td>look down from <|det1|></td>
+<td>call the children down to talk to them</td>
+<td>have family dinner</td>
+<td>agree to meet at the quiet restaurant</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>44</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Before <|det2|> needed to </td>
+<td>push vegetables around her plate</td>
+<td>open the door</td>
+<td>schedule a meeting</td>
+<td>gather around the table</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>45</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. Before <|det2|> needed to </td>
+<td>feed vegetables to the dog</td>
+<td>get a cart from the front</td>
+<td>decide to hangout with friends</td>
+<td>pay for the ticket</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>46</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. After <|det2|> will most likely </td>
+<td>get punished</td>
+<td>feel very happy about their scheme</td>
+<td>wait his turn to fight</td>
+<td>get up out of the chair</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>47</th>
+<td style="background-color: lightgreen"><|det2|> stares ahead avoiding <|det1|>  's eyes. After <|det2|> will most likely </td>
+<td>apologize for her actions</td>
+<td>be woke in the chair</td>
+<td>put the gun away</td>
+<td>stroke her leg</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>48</th>
+<td style="background-color: lightgreen"><|det2|> stares ahead avoiding <|det1|>  's eyes. After <|det2|> will most likely </td>
+<td>said sorry to <|det2|></td>
+<td>run out of the alley</td>
+<td>put down the broom</td>
+<td>point out the area <|det2|> is trying to find</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>49</th>
+<td><|det2|> stares ahead avoiding <|det1|>  's eyes. After <|det2|> will most likely </td>
+<td>help clean up her toys</td>
+<td>walk away from the bag</td>
+<td>assume the situation is under control</td>
+<td>get money from the register</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>50</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Because <|det1|> wanted to </td>
+<td>address the crowd</td>
+<td>reassure <|det4|> that everything is alright</td>
+<td>see if they have any leads</td>
+<td>make <|det4|> stop asking questions</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>51</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Because <|det1|> wanted to </td>
+<td>make a comment</td>
+<td>look in the doorway and see what was there</td>
+<td>enjoy the show</td>
+<td>experience something new</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>52</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to </td>
+<td>have seen the people in the confrontation</td>
+<td>approach the door</td>
+<td style="background-color: lightgreen">hear the video phone ring</td>
+<td>make a costume hat out of foil</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>53</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to </td>
+<td>get the baby out of his carseat</td>
+<td>look through the hallway</td>
+<td>call a meeting for the council</td>
+<td>put on the gray shirt</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>54</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to </td>
+<td>want to get onto the boat</td>
+<td>stand behind <|det4|></td>
+<td>see a shooter</td>
+<td>brew herself coffee</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>55</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. Before <|det1|> needed to </td>
+<td>greet <|det4|></td>
+<td>grab <|det4|> by the shoulder</td>
+<td>gather her bags</td>
+<td>put the tube in his mouth</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>56</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. After <|det1|> will most likely </td>
+<td>let go of the metal pole</td>
+<td>walk into the kitchen</td>
+<td>lay on the ground moaning</td>
+<td>compete himself</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>57</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. After <|det1|> will most likely </td>
+<td>fill out the form</td>
+<td>investigate that noise</td>
+<td>have a drink together</td>
+<td>reach some dangerous waters</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>58</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. After <|det1|> will most likely </td>
+<td>tell <|det4|> his thoughts on what they said</td>
+<td>protect <|det4|></td>
+<td style="background-color: lightgreen">win the fight against the boy in red</td>
+<td>try to get the baby  's attention</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>59</th>
+<td><|det1|> is a father holding the shoulder of his daughter <|det4|>. After <|det1|> will most likely </td>
+<td>keep her baby from harm</td>
+<td>move in front of <|det4|></td>
+<td>wait in line for his turn</td>
+<td>faint on the ground</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>60</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Because <|det3|> wanted to </td>
+<td>give them bountiful appreciation for a job well done</td>
+<td>see if they could jump all the way across</td>
+<td style="background-color: lightgreen">see what what was inside the doorway</td>
+<td>spot a rare bird</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>61</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Because <|det3|> wanted to </td>
+<td>get to a destination across the water</td>
+<td style="background-color: lightgreen">get his hearing back</td>
+<td>help protect the children</td>
+<td>think about his life</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>62</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Before <|det3|> needed to </td>
+<td>get an order ticket handed to him</td>
+<td>have been under a sort of threat</td>
+<td>find an abandoned home</td>
+<td>walk into the room</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>63</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Before <|det3|> needed to </td>
+<td>mess up the bed</td>
+<td>be relaxing</td>
+<td>see an alien</td>
+<td>be at dinner alone</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>64</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Before <|det3|> needed to </td>
+<td>light the cigarette</td>
+<td>get a phone call</td>
+<td>enter the home</td>
+<td>hear sounds</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>65</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Before <|det3|> needed to </td>
+<td>grab the napkin</td>
+<td>walk though the lobby</td>
+<td>hear a loud noise from the kitchen</td>
+<td>visit the army recruiter  's office</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>66</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. Before <|det3|> needed to </td>
+<td>realize that he could harness the power of the earth</td>
+<td style="background-color: lightgreen">bring some paper work to go over</td>
+<td>become alert</td>
+<td>get in the car seat</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>67</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. After <|det3|> will most likely </td>
+<td>order lunch</td>
+<td>go lay down on the couch</td>
+<td>feel scared</td>
+<td>type an article</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>68</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. After <|det3|> will most likely </td>
+<td>get a prize</td>
+<td>entertain the guests there for the number</td>
+<td>run out</td>
+<td>convince her she  's wrong</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>69</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. After <|det3|> will most likely </td>
+<td>exchange numbers</td>
+<td>drink her champagne</td>
+<td>tiptoe toward the kitchen</td>
+<td>return to delivering the rest of his packages</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>70</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. After <|det3|> will most likely </td>
+<td>duck for cover</td>
+<td>get the recording</td>
+<td>tell his family to stay back</td>
+<td>do a team cheer</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>71</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. After <|det3|> will most likely </td>
+<td>run away from the situation</td>
+<td>go to the bottom of the stairs</td>
+<td>peek into the kitchen</td>
+<td>drink more of her drink</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>72</th>
+<td><|det3|> is standing with <|det1|> <|det2|> and <|det4|> looking in a doorway. After <|det3|> will most likely </td>
+<td>inquire how he got the stain</td>
+<td>wash her dress in the sink</td>
+<td>investigate the noise</td>
+<td>organize it</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>73</th>
+<td><|det2|> and <|det4|> are kids looking worriedly standinng with <|det1|> and <|det3|>. Because <|det2|> and <|det4|> wanted to </td>
+<td style="background-color: lightgreen">escape the reality going on around him</td>
+<td>look formal</td>
+<td>check out what was wrong</td>
+<td>know that they were protected</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>74</th>
+<td><|det2|> and <|det4|> are kids looking worriedly standinng with <|det1|> and <|det3|>. Because <|det2|> and <|det4|> wanted to </td>
+<td>dance with the man</td>
+<td>get some nicotine</td>
+<td>see the crime scene</td>
+<td>let the adults go through the door first</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>75</th>
+<td><|det2|> and <|det4|> are kids looking worriedly standinng with <|det1|> and <|det3|>. Before <|det2|> and <|det4|> needed to </td>
+<td>be in the army</td>
+<td>take off his clothes</td>
+<td>turn on the game console</td>
+<td>step in front of <|det1|> and <|det3|></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>76</th>
+<td><|det2|> and <|det4|> are kids looking worriedly standinng with <|det1|> and <|det3|>. Before <|det2|> and <|det4|> needed to </td>
+<td>gain authority</td>
+<td>cheer for <|det3|>  's team</td>
+<td>see that a meal is already ordered</td>
+<td>enter the house with <|det1|> and <|det3|></td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>77</th>
+<td><|det2|> and <|det4|> are kids looking worriedly standinng with <|det1|> and <|det3|>. Before <|det2|> and <|det4|> needed to </td>
+<td>see the men with weapons</td>
+<td>pour a glass of wine</td>
+<td>get out his paints</td>
+<td>open the door</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>78</th>
+<td><|det2|> and <|det4|> are kids looking worriedly standinng with <|det1|> and <|det3|>. Before <|det2|> and <|det4|> needed to </td>
+<td>convey they need a break</td>
+<td>stand up</td>
+<td>get in their faces</td>
+<td>see the house empty</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>79</th>
+<td><|det2|> and <|det4|> are kids looking worriedly standinng with <|det1|> and <|det3|>. After <|det2|> and <|det4|> will most likely </td>
+<td>cuddle up in a blanket</td>
+<td>make a purchase from the street vendor</td>
+<td>eat popcorn and snacks</td>
+<td>walk in front of <|det1|> and <|det3|></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>80</th>
+<td><|det2|> and <|det4|> are kids looking worriedly standinng with <|det1|> and <|det3|>. After <|det2|> and <|det4|> will most likely </td>
+<td>yell at each other</td>
+<td>steer the boat away from the dock</td>
+<td>start to cough violently</td>
+<td>go to their rooms</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>81</th>
+<td><|det2|> and <|det4|> are kids looking worriedly standinng with <|det1|> and <|det3|>. After <|det2|> and <|det4|> will most likely </td>
+<td>land on cab</td>
+<td>be denied a high five</td>
+<td>place a bid</td>
+<td>look through the house</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>82</th>
+<td><|det2|> and <|det4|> are kids looking worriedly standinng with <|det1|> and <|det3|>. After <|det2|> and <|det4|> will most likely </td>
+<td>ask the group what would they want for dinner</td>
+<td>wave down a car</td>
+<td>get down on the ground</td>
+<td>make a phone call</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>83</th>
+<td><|det1|> is sitting on a table with his shirt off in a lab. Because <|det1|> wanted to </td>
+<td>get experimented on</td>
+<td>cross the road</td>
+<td>get together to fight someone</td>
+<td>eat his food</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>84</th>
+<td><|det1|> is sitting on a table with his shirt off in a lab. Because <|det1|> wanted to </td>
+<td>get worked on</td>
+<td>enjoy watching some dancing</td>
+<td>show his support</td>
+<td>buy a new dress</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>85</th>
+<td><|det1|> is sitting on a table with his shirt off in a lab. Before <|det1|> needed to </td>
+<td>sign up for a military experiment</td>
+<td>lift his leg up</td>
+<td>get some chips</td>
+<td>get the bets from everyone</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>86</th>
+<td><|det1|> is sitting on a table with his shirt off in a lab. Before <|det1|> needed to </td>
+<td>wait in the lab</td>
+<td style="background-color: lightgreen">walk along the street</td>
+<td>explain they can help</td>
+<td>hear the music playing</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>87</th>
+<td><|det1|> is sitting on a table with his shirt off in a lab. Before <|det1|> needed to </td>
+<td>volunteer for research</td>
+<td>consider being a soldier</td>
+<td>wait at an airport</td>
+<td>get herself a drink</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>88</th>
+<td><|det1|> is sitting on a table with his shirt off in a lab. Before <|det1|> needed to </td>
+<td>climb on the table</td>
+<td>want to watch tv</td>
+<td>hear birds chirping</td>
+<td>shop at a grocery store</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>89</th>
+<td><|det1|> is sitting on a table with his shirt off in a lab. Before <|det1|> needed to </td>
+<td>be in full military attire</td>
+<td>turn on the tv</td>
+<td>receive a briefing about a serious incident</td>
+<td>gather with gang to watch some tv</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>90</th>
+<td><|det1|> is sitting on a table with his shirt off in a lab. After <|det1|> will most likely </td>
+<td>be installed with robot limb s</td>
+<td>steer the boat away from the dock</td>
+<td>wrap up her phone call</td>
+<td>feel the sensation of the plane taking off</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>91</th>
+<td><|det1|> is sitting on a table with his shirt off in a lab. After <|det1|> will most likely </td>
+<td>feel powerful</td>
+<td>realize someone bad just walked in</td>
+<td>head to a store in the city</td>
+<td>fight with an opposing enemy</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>92</th>
+<td><|det1|> is sitting on a table with his shirt off in a lab. After <|det1|> will most likely </td>
+<td>lay down to be examined by <|det6|> and <|det2|></td>
+<td style="background-color: lightgreen">introduce himself to the group</td>
+<td>tell her name</td>
+<td>listen to what <|det2|> says</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>93</th>
+<td><|det1|> is sitting on a table with his shirt off in a lab. After <|det1|> will most likely </td>
+<td>look at <|det6|> and <|det2|> nervously</td>
+<td>raise his glass for a toast</td>
+<td>do nothing to help</td>
+<td>express disapproval with the cause</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>94</th>
+<td><|det3|> is wearing a nurse  's uniform and is bent over near a desk. Because <|det3|> wanted to </td>
+<td>get back to the office before he  's late</td>
+<td>pick something up</td>
+<td>share her ice cream</td>
+<td>avoid dirtying his coat</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>95</th>
+<td><|det3|> is wearing a nurse  's uniform and is bent over near a desk. Because <|det3|> wanted to </td>
+<td>guard her car from intruders</td>
+<td>show she  's a nurse</td>
+<td>surf with his friend</td>
+<td>make sure nobody cheated</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>96</th>
+<td><|det3|> is wearing a nurse  's uniform and is bent over near a desk. Before <|det3|> needed to </td>
+<td>go to the beach to relax</td>
+<td>look for the robes</td>
+<td>pat the baby on the back</td>
+<td>hear a phone ring</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>97</th>
+<td><|det3|> is wearing a nurse  's uniform and is bent over near a desk. Before <|det3|> needed to </td>
+<td>put on his medieval costume</td>
+<td>bend over to find it</td>
+<td>not be impressed</td>
+<td>want to win a prize</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>98</th>
+<td><|det3|> is wearing a nurse  's uniform and is bent over near a desk. Before <|det3|> needed to </td>
+<td>see something surprising</td>
+<td>bend over</td>
+<td>be in the same room</td>
+<td>get a good spot to watch the match</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>99</th>
+<td><|det3|> is wearing a nurse  's uniform and is bent over near a desk. Before <|det3|> needed to </td>
+<td>experience an earthquake</td>
+<td>put on her uniform</td>
+<td>lecture them on staying safe</td>
+<td>take the boy on the bus</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>100</th>
+<td><|det3|> is wearing a nurse  's uniform and is bent over near a desk. After <|det3|> will most likely </td>
+<td>ask how school is</td>
+<td style="background-color: lightgreen">pick up the robe</td>
+<td>have the audience cheering</td>
+<td>talk about what they are looking at</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>101</th>
+<td><|det3|> is wearing a nurse  's uniform and is bent over near a desk. After <|det3|> will most likely </td>
+<td>take a drink</td>
+<td>hand it to the patient</td>
+<td>eat the meals in front of them</td>
+<td>go back to their car</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>102</th>
+<td><|det3|> is wearing a nurse  's uniform and is bent over near a desk. After <|det3|> will most likely </td>
+<td>return to her conversation</td>
+<td>stand up</td>
+<td>begin eating his meal</td>
+<td>ask questions</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>103</th>
+<td><|det3|> is wearing a nurse  's uniform and is bent over near a desk. After <|det3|> will most likely </td>
+<td>wait for a companion to arrive</td>
+<td>examine <|det1|></td>
+<td>talk a little more at the table</td>
+<td>make notes on the script</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>104</th>
+<td><|det4|> is typing something at a computer. Because <|det4|> wanted to </td>
+<td>keep the baby close to her</td>
+<td style="background-color: lightgreen">explain what happened in the room</td>
+<td>research something</td>
+<td>do some banking</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>105</th>
+<td><|det4|> is typing something at a computer. Because <|det4|> wanted to </td>
+<td>spend time with a friend</td>
+<td>listen to the teacher</td>
+<td>look at data</td>
+<td>help others in need</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>106</th>
+<td><|det4|> is typing something at a computer. Before <|det4|> needed to </td>
+<td>show off his new suit</td>
+<td>put on a santa outfit</td>
+<td>be given instructions</td>
+<td>pick up a cup of coffee on the way</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>107</th>
+<td><|det4|> is typing something at a computer. Before <|det4|> needed to </td>
+<td>get the weapon before he attacks</td>
+<td>jump thru a window</td>
+<td>start working with the computer program</td>
+<td>go to a sports event</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>108</th>
+<td><|det4|> is typing something at a computer. Before <|det4|> needed to </td>
+<td>grab his drink</td>
+<td>have done something bad</td>
+<td>be asked to input data</td>
+<td>arrive at the hotel</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>109</th>
+<td style="background-color: lightgreen"><|det4|> is typing something at a computer. Before <|det4|> needed to </td>
+<td>be at home</td>
+<td>think of a counter offer to the school counselor</td>
+<td>log in to the computer</td>
+<td>find the right room</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>110</th>
+<td><|det4|> is typing something at a computer. After <|det4|> will most likely </td>
+<td>get into a confrontation</td>
+<td>lose the game</td>
+<td>find the answer he was told to</td>
+<td>bounce the ball</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>111</th>
+<td><|det4|> is typing something at a computer. After <|det4|> will most likely </td>
+<td>get closer to get a better look</td>
+<td>decide what further action to take</td>
+<td>exclaim that he figured it out</td>
+<td>walk out of the crowd</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>112</th>
+<td><|det4|> is typing something at a computer. After <|det4|> will most likely </td>
+<td style="background-color: lightgreen">observe the crowd for suspicious behavior</td>
+<td>takes some pictures</td>
+<td>call everyone to the computer</td>
+<td>stand pu</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>113</th>
+<td><|det4|> is typing something at a computer. After <|det4|> will most likely </td>
+<td>place a bet</td>
+<td>snatch for it before anyone takes it</td>
+<td>log off</td>
+<td>grab mail from one of the cubbies</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>114</th>
+<td><|det4|> is typing something at a computer. After <|det4|> will most likely </td>
+<td>take a bow</td>
+<td>play the game</td>
+<td>confirm the data was put in correctly</td>
+<td>scan around the entire area</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>115</th>
+<td><|det13|> walks up on stage sorrounded by spectators. Because <|det13|> wanted to </td>
+<td>try and make conversation</td>
+<td>protect the building</td>
+<td>see what has stopped the knife</td>
+<td>introduce himself to the crowd</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>116</th>
+<td><|det13|> walks up on stage sorrounded by spectators. Because <|det13|> wanted to </td>
+<td>adjust the windows</td>
+<td>make sure intruders were kept out</td>
+<td>board the plane</td>
+<td>face his opponent</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>117</th>
+<td><|det13|> walks up on stage sorrounded by spectators. Before <|det13|> needed to </td>
+<td>break open a chest on the desk</td>
+<td>take his girlfriend out on the town</td>
+<td>approach the store</td>
+<td>get dressed for the match</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>118</th>
+<td><|det13|> walks up on stage sorrounded by spectators. Before <|det13|> needed to </td>
+<td>feel like racing</td>
+<td>grab a drink</td>
+<td style="background-color: lightgreen">talk about something personal</td>
+<td>get ready to get on stage</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>119</th>
+<td><|det13|> walks up on stage sorrounded by spectators. Before <|det13|> needed to </td>
+<td>enter the hotel</td>
+<td>pick up his surfboard</td>
+<td>climb onto his horse</td>
+<td>practice the techniques to fight well</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>120</th>
+<td><|det13|> walks up on stage sorrounded by spectators. Before <|det13|> needed to </td>
+<td style="background-color: lightgreen">put on his name tag for work</td>
+<td>get into an argument with the group</td>
+<td>knock out his opponent</td>
+<td>be ready to win</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>121</th>
+<td><|det13|> walks up on stage sorrounded by spectators. After <|det13|> will most likely </td>
+<td>look for his stop</td>
+<td>learn that the regular driver was discharged</td>
+<td>talk to someone in front of him</td>
+<td>take a position opposite the other fighter</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>122</th>
+<td><|det13|> walks up on stage sorrounded by spectators. After <|det13|> will most likely </td>
+<td>take film of the event</td>
+<td>get back up</td>
+<td>order dinner off the menu</td>
+<td>begin competing against the other fighter</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>123</th>
+<td><|det13|> walks up on stage sorrounded by spectators. After <|det13|> will most likely </td>
+<td>give him a ticket</td>
+<td style="background-color: lightgreen">agree to a shoot out</td>
+<td>give a full performance to the audience</td>
+<td>hit the opponent</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>124</th>
+<td><|det13|> walks up on stage sorrounded by spectators. After <|det13|> will most likely </td>
+<td>make drinks from the bar</td>
+<td>look over at the ref</td>
+<td>get rejected</td>
+<td>win the battle</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>125</th>
+<td><|det13|> walks up on stage sorrounded by spectators. After <|det13|> will most likely </td>
+<td>walk out of the room</td>
+<td>walk to her destination</td>
+<td>walk out of the bar</td>
+<td>shake the others hand</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>126</th>
+<td><|det3|> paces himself on stage while keeping tabs on <|det13|>. Because <|det3|> wanted to </td>
+<td>psych himself up for the fight</td>
+<td>pay attention to the sounds coming from the monitor</td>
+<td>keep the station safe</td>
+<td>escort the kid somewhere</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>127</th>
+<td><|det3|> paces himself on stage while keeping tabs on <|det13|>. Because <|det3|> wanted to </td>
+<td>get ready to face his opponent on stage</td>
+<td>have a drink</td>
+<td style="background-color: lightgreen">shop for his groceries</td>
+<td>carry out an operation</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>128</th>
+<td><|det3|> paces himself on stage while keeping tabs on <|det13|>. Before <|det3|> needed to </td>
+<td style="background-color: lightgreen">wait for his opponent</td>
+<td>charge their camera battery</td>
+<td>actually know how to rap well</td>
+<td>be a server at this event</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>129</th>
+<td><|det3|> paces himself on stage while keeping tabs on <|det13|>. Before <|det3|> needed to </td>
+<td>taunt his opponent</td>
+<td>ride his bike to the canal</td>
+<td>get to work on time</td>
+<td>go out to the newspaper stand</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>130</th>
+<td><|det3|> paces himself on stage while keeping tabs on <|det13|>. Before <|det3|> needed to </td>
+<td>get up on stage</td>
+<td>be a retired boxer</td>
+<td>put his hands in his pockets</td>
+<td>put her friend through dorm initiation</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>131</th>
+<td><|det3|> paces himself on stage while keeping tabs on <|det13|>. Before <|det3|> needed to </td>
+<td>mentally prepare to face <|det13|></td>
+<td>collect papers for a meeting</td>
+<td>be on probation</td>
+<td>find out why there are bodies every where</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>132</th>
+<td><|det3|> paces himself on stage while keeping tabs on <|det13|>. After <|det3|> will most likely </td>
+<td>begin fighting</td>
+<td>cross the street</td>
+<td>wait for traffic</td>
+<td>greet the guest with a smile</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>133</th>
+<td><|det3|> paces himself on stage while keeping tabs on <|det13|>. After <|det3|> will most likely </td>
+<td>knock down <|det13|></td>
+<td>put together a presentation</td>
+<td>discuss the contract</td>
+<td>point out the culprits</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>134</th>
+<td><|det3|> paces himself on stage while keeping tabs on <|det13|>. After <|det3|> will most likely </td>
+<td>line up opposite <|det13|></td>
+<td>kide his tears</td>
+<td style="background-color: lightgreen">fall on the floor</td>
+<td>give out penalties</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>135</th>
+<td><|det3|> paces himself on stage while keeping tabs on <|det13|>. After <|det3|> will most likely </td>
+<td>compete in a fight against <|det13|></td>
+<td style="background-color: lightgreen">straighten up in the seat</td>
+<td>show the celebrity his shirt</td>
+<td>hand it to <|det13|></td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>136</th>
+<td><|det2|> departs the stage while looking over at his student. Because <|det2|> wanted to </td>
+<td>quickly pass the stall</td>
+<td>join in with the spectators</td>
+<td>show that he is obedient</td>
+<td>refresh memory of some old events</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>137</th>
+<td><|det2|> departs the stage while looking over at his student. Because <|det2|> wanted to </td>
+<td>humor his children</td>
+<td>move away from the spotlight</td>
+<td>make it clear he didn  't like to be jostled</td>
+<td>wants to win the bout</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>138</th>
+<td><|det2|> departs the stage while looking over at his student. Before <|det2|> needed to </td>
+<td>see something gross in a bathroom</td>
+<td>become a martial arts instructor</td>
+<td>hear the accident happening</td>
+<td>be one of the new owners launching their beer brand</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>139</th>
+<td><|det2|> departs the stage while looking over at his student. Before <|det2|> needed to </td>
+<td>just get done sky diving wearing harness</td>
+<td>accept a student</td>
+<td>work on a project for awhile</td>
+<td>pass out some food</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>140</th>
+<td style="background-color: lightgreen"><|det2|> departs the stage while looking over at his student. Before <|det2|> needed to </td>
+<td>get alerted this is the important phone call</td>
+<td>be aware that it  's time for th ematch</td>
+<td>find himself in a brawl</td>
+<td>find a couch to sit on</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>141</th>
+<td><|det2|> departs the stage while looking over at his student. Before <|det2|> needed to </td>
+<td>get off the bus</td>
+<td>bring <|det13|> up to the stage</td>
+<td>find his seat</td>
+<td>show his id to the agent</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>142</th>
+<td><|det2|> departs the stage while looking over at his student. After <|det2|> will most likely </td>
+<td>ask the men if they  're expecting anyone</td>
+<td>go to the side of the stage</td>
+<td>head to the center of town</td>
+<td>raise the trophy</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>143</th>
+<td><|det2|> departs the stage while looking over at his student. After <|det2|> will most likely </td>
+<td>hang up the phone</td>
+<td>give his student instructions</td>
+<td>take a bite of food</td>
+<td>fire at the enemy but miss</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>144</th>
+<td><|det2|> departs the stage while looking over at his student. After <|det2|> will most likely </td>
+<td>cover his face</td>
+<td>stand back and watch the match</td>
+<td>put the object into the briefcase</td>
+<td>guide them in that direction</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>145</th>
+<td><|det2|> departs the stage while looking over at his student. After <|det2|> will most likely </td>
+<td>arrive to a destination</td>
+<td>cheer for <|det13|></td>
+<td>put the magazine down</td>
+<td>examine the damage on the building</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>146</th>
+<td><|det2|> departs the stage while looking over at his student. After <|det2|> will most likely </td>
+<td>continue talking with <|det13|></td>
+<td>be worried for <|det13|></td>
+<td>read the note</td>
+<td>start moving faster down the street</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>147</th>
+<td><|det1|> the cook is armed. Because <|det1|> wanted to </td>
+<td>rest on the couch</td>
+<td>get a part for <|det2|> and <|det4|></td>
+<td>stop <|det2|> and <|det4|> from killing him</td>
+<td>admire his decorating skills</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>148</th>
+<td><|det1|> the cook is armed. Because <|det1|> wanted to </td>
+<td>show his somber attitude at the outcome</td>
+<td>try to find a way out of the situation</td>
+<td>put the jump on <|det2|></td>
+<td>see who was going to show up for the funeral</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>149</th>
+<td><|det1|> the cook is armed. Before <|det1|> needed to </td>
+<td style="background-color: lightgreen">see that person approach</td>
+<td>get something to eat</td>
+<td>see thieves come in</td>
+<td>be seated by a waitress in the diner</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>150</th>
+<td><|det1|> the cook is armed. Before <|det1|> needed to </td>
+<td>sit down for the broadcast</td>
+<td>start a practice session</td>
+<td>protect themselves</td>
+<td>lie in bed</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>151</th>
+<td><|det1|> the cook is armed. Before <|det1|> needed to </td>
+<td style="background-color: lightgreen">train as a communication officer</td>
+<td>scream happily</td>
+<td>enter the restaurant</td>
+<td>get excited by a good play</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>152</th>
+<td><|det1|> the cook is armed. Before <|det1|> needed to </td>
+<td>attend a party</td>
+<td>pack his pack</td>
+<td>go behind the counter</td>
+<td>see the neighbor kids</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>153</th>
+<td><|det1|> the cook is armed. Before <|det1|> needed to </td>
+<td>book a major client before heading to work</td>
+<td>start shouting out pose orders</td>
+<td>see <|det2|> and <|det4|> kill <|det1|></td>
+<td>notice <|det2|> walking in</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>154</th>
+<td><|det1|> the cook is armed. After <|det1|> will most likely </td>
+<td>look outside</td>
+<td>smoke his pipe</td>
+<td style="background-color: lightgreen">duck behind the counter</td>
+<td>leave the pen on the table for the counselor</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>155</th>
+<td><|det1|> the cook is armed. After <|det1|> will most likely </td>
+<td>run around outside</td>
+<td>explain he is ready to proceed</td>
+<td>shoot the thieves</td>
+<td>walk into the office</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>156</th>
+<td><|det1|> the cook is armed. After <|det1|> will most likely </td>
+<td>say how sorry he is</td>
+<td>receive applause</td>
+<td style="background-color: lightgreen">talk with <|det2|> and <|det4|></td>
+<td>wrap his story up</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>157</th>
+<td><|det1|> the cook is armed. After <|det1|> will most likely </td>
+<td>get up off the floor</td>
+<td>eat dinner at the table</td>
+<td>investigate the bodies</td>
+<td>perform a song</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>158</th>
+<td><|det2|> shot <|det3|> down to the floor. Because <|det2|> wanted to </td>
+<td>read the paper before work</td>
+<td>yell at them</td>
+<td>get the shirt to dry faster</td>
+<td>rob the place</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>159</th>
+<td style="background-color: lightgreen"><|det2|> shot <|det3|> down to the floor. Because <|det2|> wanted to </td>
+<td>buy another drink for himself</td>
+<td>try to fix something</td>
+<td>be friendly</td>
+<td>exact some revenge on those here</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>160</th>
+<td style="background-color: lightgreen"><|det2|> shot <|det3|> down to the floor. Before <|det2|> needed to </td>
+<td>repeat something</td>
+<td>be told that it was his turn to fight</td>
+<td>hear the doorbell ring</td>
+<td>have been seated at the bar</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>161</th>
+<td><|det2|> shot <|det3|> down to the floor. Before <|det2|> needed to </td>
+<td>break into a house</td>
+<td>go to the control room</td>
+<td>watch a friend fight</td>
+<td>take his pistol out of its holster</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>162</th>
+<td><|det2|> shot <|det3|> down to the floor. Before <|det2|> needed to </td>
+<td>want to learn to use chopsticks</td>
+<td>focus the binoculars</td>
+<td>tell the person something conspiratory</td>
+<td>enter the restaurant</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>163</th>
+<td><|det2|> shot <|det3|> down to the floor. Before <|det2|> needed to </td>
+<td>attend the meeting</td>
+<td>get down on the blanket</td>
+<td>walk up to the table</td>
+<td>pull out his gun</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>164</th>
+<td style="background-color: lightgreen"><|det2|> shot <|det3|> down to the floor. After <|det2|> will most likely </td>
+<td>put food on his plate</td>
+<td>put <|det4|> in a jail cell</td>
+<td>listen to the performance by <|det4|></td>
+<td>yell at <|det4|> to get down</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>165</th>
+<td><|det2|> shot <|det3|> down to the floor. After <|det2|> will most likely </td>
+<td>thank <|det3|> for the info</td>
+<td>chase after <|det3|> after he steals from them</td>
+<td>cross the street</td>
+<td>go and check on <|det3|></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>166</th>
+<td><|det2|> shot <|det3|> down to the floor. After <|det2|> will most likely </td>
+<td>get in the huddle</td>
+<td>say hello with hesitation</td>
+<td style="background-color: lightgreen">hide in the rafters</td>
+<td>put down his gun</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>167</th>
+<td><|det2|> shot <|det3|> down to the floor. After <|det2|> will most likely </td>
+<td>open up <|det4|>  's body</td>
+<td>leave the doctor  's office</td>
+<td>pay for coffee</td>
+<td>talk with <|det4|></td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>168</th>
+<td><|det2|> shot <|det3|> down to the floor. After <|det2|> will most likely </td>
+<td>introduce them by name</td>
+<td>have drinks and cheer</td>
+<td>put them on the bunk</td>
+<td>check on the bodies</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>169</th>
+<td><|det4|> kills with <|det2|>. Because <|det4|> wanted to </td>
+<td>help him rob this cafe</td>
+<td>negotiate a deal with them</td>
+<td>not hold back his emotions</td>
+<td>get out of the storm</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>170</th>
+<td><|det4|> kills with <|det2|>. Because <|det4|> wanted to </td>
+<td>kill someone here</td>
+<td>imagine it was going to be ok</td>
+<td>ensure he is hydrated</td>
+<td>check the card details</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>171</th>
+<td><|det4|> kills with <|det2|>. Before <|det4|> needed to </td>
+<td>pull out their weapon</td>
+<td>say something bad about someone</td>
+<td>get a book</td>
+<td>be in the room</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>172</th>
+<td><|det4|> kills with <|det2|>. Before <|det4|> needed to </td>
+<td>shoot people</td>
+<td>feel romatic</td>
+<td>walk down the aisle</td>
+<td>walk out onto the stage</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>173</th>
+<td><|det4|> kills with <|det2|>. Before <|det4|> needed to </td>
+<td>enter the restaurant</td>
+<td>hold up his gifts</td>
+<td>get asked to help raise the pole</td>
+<td>get through screenings</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>174</th>
+<td><|det4|> kills with <|det2|>. Before <|det4|> needed to </td>
+<td>pull out guns</td>
+<td>attend the audience</td>
+<td>show off their karate moves</td>
+<td>go to the beach</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>175</th>
+<td><|det4|> kills with <|det2|>. Before <|det4|> needed to </td>
+<td>shoot people</td>
+<td>become irate</td>
+<td>wait in a long line</td>
+<td>go to a rally</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>176</th>
+<td><|det4|> kills with <|det2|>. After <|det4|> will most likely </td>
+<td>put their weapon down</td>
+<td>read the entire book</td>
+<td>get free of the car</td>
+<td>follow the sidewalk</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>177</th>
+<td style="background-color: lightgreen"><|det4|> kills with <|det2|>. After <|det4|> will most likely </td>
+<td>see if anybody else needs to die</td>
+<td>pull on the windshield wiper</td>
+<td>pay for his goods</td>
+<td>call a cab</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>178</th>
+<td><|det4|> kills with <|det2|>. After <|det4|> will most likely </td>
+<td>make sure that the people are dead</td>
+<td>lean his head back against the wall</td>
+<td style="background-color: lightgreen">clap</td>
+<td>park the car</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>179</th>
+<td><|det4|> kills with <|det2|>. After <|det4|> will most likely </td>
+<td>clean up the bodies</td>
+<td>duck for cover and scream</td>
+<td>eavesdrop</td>
+<td>down the shot himself</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>180</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. Because <|det1|> wanted to </td>
+<td>introduce himself to the crowd</td>
+<td>hear what <|det2|> thinks of her playing</td>
+<td>feel pie filling on his chest</td>
+<td>figure out how to approach eating the burger</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>181</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. Because <|det1|> wanted to </td>
+<td>catch up on some reading</td>
+<td>show off her violin skills to <|det2|></td>
+<td>hide the extent of his injuries from <|det2|></td>
+<td>figure out what he is talking about</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>182</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. Before <|det1|> needed to </td>
+<td>take their guns out</td>
+<td>arrive onstage</td>
+<td>be hungry</td>
+<td>call the coach on the phone</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>183</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. Before <|det1|> needed to </td>
+<td>check if the aliens are coming</td>
+<td>rehearse for a performance</td>
+<td>stand behind his student</td>
+<td>enter the bar</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>184</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. Before <|det1|> needed to </td>
+<td>get in the car</td>
+<td>pick up her violin</td>
+<td style="background-color: lightgreen">be invited to dinner</td>
+<td>get up from his seat</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>185</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. Before <|det1|> needed to </td>
+<td>go to a restaurant to wait tables</td>
+<td>prepare to play a violin</td>
+<td>leave a tense meeting</td>
+<td>have there guns with them</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>186</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. Before <|det1|> needed to </td>
+<td>follow <|det2|> outside to his car</td>
+<td>be in the theater with <|det2|></td>
+<td>fix his glasses</td>
+<td>want to pay his last respects</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>187</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. Before <|det1|> needed to </td>
+<td>have picked up his cell phone</td>
+<td>show <|det2|> her violin</td>
+<td>open the door</td>
+<td>pick up a glass of champagne</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>188</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. Before <|det1|> needed to </td>
+<td>gather the team for a conference</td>
+<td>tell <|det2|> how much she enjoys playing her violin</td>
+<td>stand up at the dinner table</td>
+<td>braid his hair</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>189</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. After <|det1|> will most likely </td>
+<td>listen to the speaker</td>
+<td>ask <|det2|> what he is doing there</td>
+<td>pitch concert ideas to <|det2|></td>
+<td>put her arm down</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>190</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. After <|det1|> will most likely </td>
+<td>go through the papers quickly</td>
+<td>read music</td>
+<td>sit in the chair</td>
+<td>animate themselves while yelling</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>191</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. After <|det1|> will most likely </td>
+<td>get himself a drink from the bar</td>
+<td>play her violin</td>
+<td>pick up the money</td>
+<td>finish off the bottle</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>192</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. After <|det1|> will most likely </td>
+<td>land a successful hit</td>
+<td>face the empty auditorium</td>
+<td style="background-color: lightgreen">chase after him</td>
+<td>throw her bouquet to the bridesmaids</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>193</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. After <|det1|> will most likely </td>
+<td>tell the woman how beautiful she is</td>
+<td>be asked to play something for <|det2|></td>
+<td style="background-color: lightgreen">clap</td>
+<td>test the balance of <|det2|></td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>194</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. After <|det1|> will most likely </td>
+<td>escort <|det2|> to the box</td>
+<td>play a quick pretty song that <|det2|> would like</td>
+<td>say how great is what he hears</td>
+<td>take some notes</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>195</th>
+<td><|det1|> is a child holding a violin and smiles at <|det2|>. After <|det1|> will most likely </td>
+<td>join the came</td>
+<td>be told she is amazing by <|det2|></td>
+<td>watch the whole match</td>
+<td>wait for the women to get his mail</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>196</th>
+<td><|det2|> is conversing with <|det1|> while motioning his hand forward. Because <|det2|> wanted to </td>
+<td>avoid distractions</td>
+<td>grab a bite to eat</td>
+<td>tell <|det1|> what he thinks</td>
+<td>make <|det1|>  's nails nice</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>197</th>
+<td><|det2|> is conversing with <|det1|> while motioning his hand forward. Because <|det2|> wanted to </td>
+<td>make a barrier over the door</td>
+<td>avoid getting a ticket</td>
+<td>emphasize his points</td>
+<td>find the way through the forest</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>198</th>
+<td style="background-color: lightgreen"><|det2|> is conversing with <|det1|> while motioning his hand forward. Before <|det2|> needed to </td>
+<td>get dressed to have breakfast with friends</td>
+<td>be knocked down</td>
+<td>enter the theater</td>
+<td>mount his horse</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>199</th>
+<td><|det2|> is conversing with <|det1|> while motioning his hand forward. Before <|det2|> needed to </td>
+<td>feel sick while at school</td>
+<td>chat intimately with <|det1|></td>
+<td>walk onto the stage where <|det1|> is playing</td>
+<td>turn on engine</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>200</th>
+<td><|det2|> is conversing with <|det1|> while motioning his hand forward. Before <|det2|> needed to </td>
+<td>dismount his horse</td>
+<td>feel maudlin needing advice</td>
+<td style="background-color: lightgreen">say hello to <|det1|></td>
+<td>attend the visitation of a political figure</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>201</th>
+<td><|det2|> is conversing with <|det1|> while motioning his hand forward. Before <|det2|> needed to </td>
+<td>grab the flag</td>
+<td>have chosen his toys</td>
+<td>hear <|det1|> playing her instrument</td>
+<td>learn what the flags mean</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>202</th>
+<td><|det2|> is conversing with <|det1|> while motioning his hand forward. Before <|det2|> needed to </td>
+<td>pull out some old paperwork</td>
+<td>see something flying in the air</td>
+<td>call to towards <|det1|></td>
+<td>canvas the neighborhood for votes</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>203</th>
+<td><|det2|> is conversing with <|det1|> while motioning his hand forward. After <|det2|> will most likely </td>
+<td style="background-color: lightgreen">get in the backseat of the police car</td>
+<td>attack <|det1|> with their martial arts moves</td>
+<td>watch <|det1|> play the violin</td>
+<td>close the book</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>204</th>
+<td><|det2|> is conversing with <|det1|> while motioning his hand forward. After <|det2|> will most likely </td>
+<td>dance the night away with <|det1|></td>
+<td>think very low of <|det1|></td>
+<td>tell <|det1|> that she is a great violin player</td>
+<td>cheer on their teammates</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>205</th>
+<td><|det2|> is conversing with <|det1|> while motioning his hand forward. After <|det2|> will most likely </td>
+<td>walk away from <|det1|></td>
+<td>ask <|det1|> on a date</td>
+<td>show <|det1|> what he can do</td>
+<td>decide what they want to eat</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>206</th>
+<td><|det2|> is conversing with <|det1|> while motioning his hand forward. After <|det2|> will most likely </td>
+<td>unpack her clothes from the luggage</td>
+<td>hear the pilot speak</td>
+<td>become fast friends with <|det1|></td>
+<td>follow the parade</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>207</th>
+<td><|det1|> studies the picture in <|det2|>  's locket. Because <|det1|> wanted to </td>
+<td>see if he could help out</td>
+<td>get to the other side of the road</td>
+<td style="background-color: lightgreen">hurry up to seal the deal</td>
+<td>compliment the photo</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>208</th>
+<td><|det1|> studies the picture in <|det2|>  's locket. Because <|det1|> wanted to </td>
+<td>not show much emotion</td>
+<td>confirm the details of the story she needs</td>
+<td>get his order</td>
+<td>comment on the locket</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>209</th>
+<td><|det1|> studies the picture in <|det2|>  's locket. Before <|det1|> needed to </td>
+<td>be in the room with people</td>
+<td>put on a hat and coat</td>
+<td>work out in gym class</td>
+<td>ride in a bus</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>210</th>
+<td><|det1|> studies the picture in <|det2|>  's locket. Before <|det1|> needed to </td>
+<td>show they found something disturbing</td>
+<td>grab the instrument</td>
+<td>put his superhero on</td>
+<td>befriend a stranger</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>211</th>
+<td><|det1|> studies the picture in <|det2|>  's locket. Before <|det1|> needed to </td>
+<td>witness <|det2|> using the hall</td>
+<td>be seated by a waitress in the diner</td>
+<td>attend a court case</td>
+<td>get on a bus with <|det2|></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>212</th>
+<td><|det1|> studies the picture in <|det2|>  's locket. Before <|det1|> needed to </td>
+<td>go out on a date</td>
+<td>notice the incoming danger</td>
+<td style="background-color: lightgreen">finish her dinner</td>
+<td>find a seat next to <|det2|></td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>213</th>
+<td><|det1|> studies the picture in <|det2|>  's locket. Before <|det1|> needed to </td>
+<td>call the class to order</td>
+<td>enter the market</td>
+<td>express happiness at seeing <|det2|></td>
+<td>ask <|det2|> if she can examine the locket</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>214</th>
+<td><|det1|> studies the picture in <|det2|>  's locket. After <|det1|> will most likely </td>
+<td>fight each other</td>
+<td>vomit</td>
+<td>wander to their hotel room</td>
+<td>share stories</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>215</th>
+<td><|det1|> studies the picture in <|det2|>  's locket. After <|det1|> will most likely </td>
+<td>attend to patients</td>
+<td>wait for the meeting inside the tent to end</td>
+<td>put the phone to his ear</td>
+<td>feel positive</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>216</th>
+<td><|det1|> studies the picture in <|det2|>  's locket. After <|det1|> will most likely </td>
+<td>eat his popcorn</td>
+<td>assess <|det2|>  's condition</td>
+<td>take a bite of his bread</td>
+<td>talk about the picture with <|det2|></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>217</th>
+<td><|det1|> studies the picture in <|det2|>  's locket. After <|det1|> will most likely </td>
+<td>ask <|det2|> what she thinks</td>
+<td>start his fight over confident</td>
+<td>walk towards <|det2|></td>
+<td>allow <|det2|> to put it away</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>218</th>
+<td><|det2|> holds the open locket toward where <|det1|> can easily see it. Because <|det2|> wanted to </td>
+<td>share something important to him</td>
+<td>fight through the pain</td>
+<td>mourn their losses</td>
+<td>take notes for her boss</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>219</th>
+<td><|det2|> holds the open locket toward where <|det1|> can easily see it. Because <|det2|> wanted to </td>
+<td>use to locket to illustrate his story</td>
+<td>get medical attention</td>
+<td>warm the atmosphere</td>
+<td>support his favorite team</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>220</th>
+<td><|det2|> holds the open locket toward where <|det1|> can easily see it. Before <|det2|> needed to </td>
+<td>compliment the locket</td>
+<td>turn the tv on</td>
+<td>have had a call from dispatch to come</td>
+<td>try to sneak away</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>221</th>
+<td><|det2|> holds the open locket toward where <|det1|> can easily see it. Before <|det2|> needed to </td>
+<td style="background-color: lightgreen">ask to see the locket</td>
+<td>take off his shoes for security</td>
+<td>notice something dangerous</td>
+<td>get tickets to the comedy show</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>222</th>
+<td><|det2|> holds the open locket toward where <|det1|> can easily see it. Before <|det2|> needed to </td>
+<td>get onto a bus</td>
+<td>notice a fire starting</td>
+<td>be trained as a security guard</td>
+<td>feel hungry</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>223</th>
+<td><|det2|> holds the open locket toward where <|det1|> can easily see it. Before <|det2|> needed to </td>
+<td>talk to <|det1|> about his family</td>
+<td>put bases on the road</td>
+<td>turn on the television</td>
+<td>be doing research</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>224</th>
+<td><|det2|> holds the open locket toward where <|det1|> can easily see it. After <|det2|> will most likely </td>
+<td>hold the locket</td>
+<td>recommend that certain people be fired</td>
+<td>cry</td>
+<td>comment on what they see on the table</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>225</th>
+<td><|det2|> holds the open locket toward where <|det1|> can easily see it. After <|det2|> will most likely </td>
+<td>give the locket back</td>
+<td>jump off of the clothing line</td>
+<td>find a coffee shop</td>
+<td>pose for a photo</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>226</th>
+<td><|det2|> holds the open locket toward where <|det1|> can easily see it. After <|det2|> will most likely </td>
+<td>show pictures to <|det1|></td>
+<td>make a bet</td>
+<td style="background-color: lightgreen">take a bow before <|det1|></td>
+<td>work as a host for the party</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>227</th>
+<td><|det2|> holds the open locket toward where <|det1|> can easily see it. After <|det2|> will most likely </td>
+<td>close the lockett</td>
+<td>follow his teacher</td>
+<td>be brought to a hospital to be looked at</td>
+<td>take off his hat</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>228</th>
+<td><|det1|> and <|det2|> converse over a locket while sharing a bus seat. Because <|det1|> and <|det2|> wanted to </td>
+<td>say goodbye to the deceased</td>
+<td>get to know each other</td>
+<td>make sure that the guests are happy</td>
+<td>take notes</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>229</th>
+<td><|det1|> and <|det2|> converse over a locket while sharing a bus seat. Because <|det1|> and <|det2|> wanted to </td>
+<td>hear what the commander has to say</td>
+<td>take a trip together</td>
+<td>learn the rules</td>
+<td>be able to see the act onstage</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>230</th>
+<td><|det1|> and <|det2|> converse over a locket while sharing a bus seat. Before <|det1|> and <|det2|> needed to </td>
+<td>attend a funeral</td>
+<td>be on a long bus ride</td>
+<td>decide to go to the hardware store</td>
+<td>feel emotional</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>231</th>
+<td><|det1|> and <|det2|> converse over a locket while sharing a bus seat. Before <|det1|> and <|det2|> needed to </td>
+<td>buy the food</td>
+<td>keep the journey more pleasant by talking</td>
+<td>watch the matches</td>
+<td>wear his top hat to the table</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>232</th>
+<td><|det1|> and <|det2|> converse over a locket while sharing a bus seat. Before <|det1|> and <|det2|> needed to </td>
+<td>get up to the podium</td>
+<td>be going somewhere together</td>
+<td>pour a drink</td>
+<td>scream in terror</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>233</th>
+<td><|det1|> and <|det2|> converse over a locket while sharing a bus seat. Before <|det1|> and <|det2|> needed to </td>
+<td style="background-color: lightgreen">assess the possible danger</td>
+<td>find the locket on the floor</td>
+<td>make him stop</td>
+<td>hold auditions</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>234</th>
+<td><|det1|> and <|det2|> converse over a locket while sharing a bus seat. After <|det1|> and <|det2|> will most likely </td>
+<td>go to a bar with the man</td>
+<td>decide they really like each other</td>
+<td>frisk each attendee for weapons</td>
+<td>comment about the artwork laying around</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>235</th>
+<td><|det1|> and <|det2|> converse over a locket while sharing a bus seat. After <|det1|> and <|det2|> will most likely </td>
+<td>leave the stage</td>
+<td>agree to see each other later</td>
+<td>publish the photos</td>
+<td>start hitting random people</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>236</th>
+<td><|det1|> and <|det2|> converse over a locket while sharing a bus seat. After <|det1|> and <|det2|> will most likely </td>
+<td>ask to get into the game</td>
+<td>exchange phone numbers with each other</td>
+<td>sit back to listen to music</td>
+<td>run after the driver is killed</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>237</th>
+<td><|det1|> and <|det2|> converse over a locket while sharing a bus seat. After <|det1|> and <|det2|> will most likely </td>
+<td>clap excitedly</td>
+<td>wonder who it belongs to</td>
+<td>have sex</td>
+<td>have the girl seated</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>238</th>
+<td><|det1|> and <|det2|> converse over a locket while sharing a bus seat. After <|det1|> and <|det2|> will most likely </td>
+<td>go to sleep</td>
+<td>give it to the driver</td>
+<td>start chanting the word fight</td>
+<td>yell at him</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>239</th>
+<td><|det2|> looks sternly to his left. Because <|det2|> wanted to </td>
+<td>look for food</td>
+<td>arrive on time for their flight</td>
+<td>find out what was happening in that direction</td>
+<td>show the others the water is manageable</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>240</th>
+<td><|det2|> looks sternly to his left. Because <|det2|> wanted to </td>
+<td>show happiness</td>
+<td>find an adult somewhere</td>
+<td>let someone know how he was feeling by his look</td>
+<td>not look at his portfolio</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>241</th>
+<td><|det2|> looks sternly to his left. Before <|det2|> needed to </td>
+<td>put on her uniform</td>
+<td>see the neighbor kids</td>
+<td>have a meeting with <|det3|></td>
+<td>put on their uniforms</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>242</th>
+<td><|det2|> looks sternly to his left. Before <|det2|> needed to </td>
+<td style="background-color: lightgreen">go on a hike</td>
+<td>open the passport</td>
+<td>hear something concerning</td>
+<td>go to a karaoke bar</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>243</th>
+<td><|det2|> looks sternly to his left. Before <|det2|> needed to </td>
+<td>walk out of the house</td>
+<td>be craving a smoke</td>
+<td>attend a criminal meeting</td>
+<td>get dealt cards</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>244</th>
+<td><|det2|> looks sternly to his left. Before <|det2|> needed to </td>
+<td style="background-color: lightgreen">be dared to jump out the window</td>
+<td>take her shoes off</td>
+<td>get criticized by a henchman</td>
+<td>assemble their posse</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>245</th>
+<td><|det2|> looks sternly to his left. After <|det2|> will most likely </td>
+<td>have a drink together</td>
+<td>keep thinks safe</td>
+<td style="background-color: lightgreen">ask questions</td>
+<td>walk with her luggage</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>246</th>
+<td><|det2|> looks sternly to his left. After <|det2|> will most likely </td>
+<td style="background-color: lightgreen">notice an intruder</td>
+<td>reach his destination</td>
+<td>find out what is going on</td>
+<td>talk with their captors</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>247</th>
+<td><|det2|> looks sternly to his left. After <|det2|> will most likely </td>
+<td>call and let them know they are done</td>
+<td>get up from his seat</td>
+<td>get angry</td>
+<td>nod their heads to the rhythm</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>248</th>
+<td><|det2|> looks sternly to his left. After <|det2|> will most likely </td>
+<td>play the violin</td>
+<td style="background-color: lightgreen">take pictures of the back of her car</td>
+<td>slap the henchman</td>
+<td>talk about the latest sales figures</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>249</th>
+<td><|det1|> stares straight ahead and appears to be speaking. Because <|det1|> wanted to </td>
+<td>pick up the soup</td>
+<td>show their pleasure towards the corsage</td>
+<td>eat it</td>
+<td>look at whatever is in front of her</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>250</th>
+<td><|det1|> stares straight ahead and appears to be speaking. Because <|det1|> wanted to </td>
+<td>get onto the mat to show his skills</td>
+<td>keep order at the tournament</td>
+<td>let someone out of the cell</td>
+<td>speak her mind</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>251</th>
+<td><|det1|> stares straight ahead and appears to be speaking. Before <|det1|> needed to </td>
+<td>complete the editing of the papers</td>
+<td>be engaged in conversation with the boys</td>
+<td>want to make a point</td>
+<td>have her meeting interrupted with <|det2|></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>252</th>
+<td><|det1|> stares straight ahead and appears to be speaking. Before <|det1|> needed to </td>
+<td>fill up his tray with appetizers</td>
+<td>finish his coffee</td>
+<td>hear a bad report from 2s school</td>
+<td>ask someone to join her in her meeting with <|det2|></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>253</th>
+<td><|det1|> stares straight ahead and appears to be speaking. Before <|det1|> needed to </td>
+<td>find where the free food was at</td>
+<td>hear the bell ring</td>
+<td>decide to drink from keg</td>
+<td>meet in a basement</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>254</th>
+<td><|det1|> stares straight ahead and appears to be speaking. Before <|det1|> needed to </td>
+<td>decide he would back up his friends</td>
+<td>walk down the sidewalk</td>
+<td>check the perimeter of the structure</td>
+<td>listen to the boss lay out the plan</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>255</th>
+<td><|det1|> stares straight ahead and appears to be speaking. Before <|det1|> needed to </td>
+<td>join in a family meeting</td>
+<td>know that was not the right speech</td>
+<td>see his team get fouled</td>
+<td>ask the boss for clarification</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>256</th>
+<td><|det1|> stares straight ahead and appears to be speaking. After <|det1|> will most likely </td>
+<td>assist in the pursuit</td>
+<td>follow the crowd walking in the lot</td>
+<td style="background-color: lightgreen">step behind the camera to watch the viewfinder</td>
+<td>leave the room with <|det2|> from frustration</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>257</th>
+<td><|det1|> stares straight ahead and appears to be speaking. After <|det1|> will most likely </td>
+<td>help <|det2|> clear plates</td>
+<td>slowly back out of the bank</td>
+<td>fight to enter first</td>
+<td>make a deal with <|det2|> that benefits them both</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>258</th>
+<td><|det1|> stares straight ahead and appears to be speaking. After <|det1|> will most likely </td>
+<td>try to clean his shirt at the sink</td>
+<td>close door to office for privacy</td>
+<td>have his life saved by the robocop</td>
+<td>write down some notes</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>259</th>
+<td><|det1|> stares straight ahead and appears to be speaking. After <|det1|> will most likely </td>
+<td>ask <|det2|> some details about the criminal</td>
+<td>mount the horses</td>
+<td>smile and laugh</td>
+<td>share the notes with <|det2|></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>260</th>
+<td style="background-color: lightgreen"><|det1|> is holding his head in his hands. Because <|det1|> wanted to </td>
+<td>hide his embarrassment</td>
+<td>be part of the social gathering</td>
+<td>have a meeting</td>
+<td>monitor the data</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>261</th>
+<td><|det1|> is holding his head in his hands. Because <|det1|> wanted to </td>
+<td>brace for being the butt of the joke</td>
+<td>give him a big hug</td>
+<td>not be bothered by the large crowd of people</td>
+<td>find a solution to a problem</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>262</th>
+<td><|det1|> is holding his head in his hands. Before <|det1|> needed to </td>
+<td style="background-color: lightgreen">write the jokes for the set with <|det3|> and <|det4|></td>
+<td>become frustrated with the meeting</td>
+<td>start a tournament fight for kids</td>
+<td>play a few innings already</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>263</th>
+<td style="background-color: lightgreen"><|det1|> is holding his head in his hands. Before <|det1|> needed to </td>
+<td>try not to laugh during the scene</td>
+<td>have a journey to undertake</td>
+<td>get injured in an accident</td>
+<td>get bullied</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>264</th>
+<td><|det1|> is holding his head in his hands. Before <|det1|> needed to </td>
+<td>be upset about something</td>
+<td>tell his partner to watch the hostages</td>
+<td>round the group up</td>
+<td>enter the saloon</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>265</th>
+<td><|det1|> is holding his head in his hands. Before <|det1|> needed to </td>
+<td>want to take a break</td>
+<td>pack his backpack</td>
+<td>park in the front row</td>
+<td>see a giant monster break the wall down</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>266</th>
+<td><|det1|> is holding his head in his hands. After <|det1|> will most likely </td>
+<td>interrupt <|det3|>  's story</td>
+<td>put on the corsage</td>
+<td>deliver news to them</td>
+<td>get in the backseat of the police car</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>267</th>
+<td><|det1|> is holding his head in his hands. After <|det1|> will most likely </td>
+<td>tell the crowd a funny joke</td>
+<td style="background-color: lightgreen">tell his client to tell him his story again</td>
+<td>not know what to expect</td>
+<td>regain his balance</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>268</th>
+<td><|det1|> is holding his head in his hands. After <|det1|> will most likely </td>
+<td>try to calm down</td>
+<td>check his passport</td>
+<td>demand to know what is going on</td>
+<td>find what she  's looking for</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>269</th>
+<td><|det1|> is holding his head in his hands. After <|det1|> will most likely </td>
+<td>think about what has happened</td>
+<td>take the bag off her shoulder</td>
+<td>put the drink down</td>
+<td>continue what he was saying</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>270</th>
+<td><|det3|> is center stage talking into a microphone. Because <|det3|> wanted to </td>
+<td>get out of the car</td>
+<td>show his comedy routine</td>
+<td>think about the deceased</td>
+<td>stretch her body after sitting too long</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>271</th>
+<td><|det3|> is center stage talking into a microphone. Because <|det3|> wanted to </td>
+<td>see the path in front of them</td>
+<td>get the audience involved</td>
+<td>board her plane</td>
+<td>spend time with family</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>272</th>
+<td><|det3|> is center stage talking into a microphone. Before <|det3|> needed to </td>
+<td>start to bump and grind</td>
+<td>warm up backstage</td>
+<td style="background-color: lightgreen">load film into his camera</td>
+<td>have a trophy to give away</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>273</th>
+<td><|det3|> is center stage talking into a microphone. Before <|det3|> needed to </td>
+<td>look around</td>
+<td>walk on stage</td>
+<td>watch his team play</td>
+<td>tell his men to stand guard</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>274</th>
+<td><|det3|> is center stage talking into a microphone. Before <|det3|> needed to </td>
+<td>see what they are going to do</td>
+<td>practice his speech</td>
+<td>see a stranger in the distance</td>
+<td>dig through his pockets for some change</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>275</th>
+<td><|det3|> is center stage talking into a microphone. Before <|det3|> needed to </td>
+<td>enter the restaurant</td>
+<td>introduce himself to the attendees</td>
+<td>be a great fighter</td>
+<td>steal diapers</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>276</th>
+<td><|det3|> is center stage talking into a microphone. After <|det3|> will most likely </td>
+<td>become concerned</td>
+<td>tell jokes</td>
+<td>start up the helicopter</td>
+<td>clasp her bag back up</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>277</th>
+<td><|det3|> is center stage talking into a microphone. After <|det3|> will most likely </td>
+<td>grab a book</td>
+<td>be praised</td>
+<td>feel ashamed</td>
+<td>pull a lever to hang the condemned</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>278</th>
+<td><|det3|> is center stage talking into a microphone. After <|det3|> will most likely </td>
+<td>drop the grenade after pulling the pin</td>
+<td>poll the audience for input</td>
+<td>draft a response to the letter</td>
+<td>goes into a fight pose</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>279</th>
+<td><|det3|> is center stage talking into a microphone. After <|det3|> will most likely </td>
+<td>ask a clerk for assistance</td>
+<td>bow to the crowd after the show</td>
+<td>rush over to try to help</td>
+<td>collect the payment</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>280</th>
+<td><|det5|> is sitting behind a dais with a microphone. Because <|det5|> wanted to </td>
+<td>steal something from the gas station</td>
+<td>leave</td>
+<td>observe the show</td>
+<td>eat dinner</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>281</th>
+<td><|det5|> is sitting behind a dais with a microphone. Because <|det5|> wanted to </td>
+<td>wait for his turn to speak</td>
+<td>see if someone is going to jump</td>
+<td>moderate any disputes</td>
+<td>see if that vehicle left</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>282</th>
+<td><|det5|> is sitting behind a dais with a microphone. Because <|det5|> wanted to </td>
+<td>look through the magazine for good ideas</td>
+<td>just get his fighter ready</td>
+<td style="background-color: lightgreen">make sure rules are followed</td>
+<td>apologize</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>283</th>
+<td><|det5|> is sitting behind a dais with a microphone. Before <|det5|> needed to </td>
+<td>load the tray</td>
+<td>be asked to identify the body of a deceased</td>
+<td>get the worst seat in the house</td>
+<td>hear the dismissal bell</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>284</th>
+<td><|det5|> is sitting behind a dais with a microphone. Before <|det5|> needed to </td>
+<td>see some bad guys outside</td>
+<td>put on his biking gear</td>
+<td>try to look past the microphone</td>
+<td>put on a red outfit</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>285</th>
+<td><|det5|> is sitting behind a dais with a microphone. Before <|det5|> needed to </td>
+<td>bring out an instrument</td>
+<td>work for the facility</td>
+<td>attend the event</td>
+<td>read the newspaper with his wife that afternoon</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>286</th>
+<td><|det5|> is sitting behind a dais with a microphone. Before <|det5|> needed to </td>
+<td>pick up the rifle</td>
+<td>attend a funeral</td>
+<td>watch the comedy routine</td>
+<td>be at dinner with friends</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>287</th>
+<td><|det5|> is sitting behind a dais with a microphone. After <|det5|> will most likely </td>
+<td>finish their salads</td>
+<td>enter the barn and start line dancing</td>
+<td>cheer for the event</td>
+<td>make plans</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>288</th>
+<td><|det5|> is sitting behind a dais with a microphone. After <|det5|> will most likely </td>
+<td>see the train pulling in</td>
+<td>turn back and keep traveling to their destination</td>
+<td>move the microphone to the side</td>
+<td>look in the mirror</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>289</th>
+<td><|det5|> is sitting behind a dais with a microphone. After <|det5|> will most likely </td>
+<td>wait for the enemy to arrive</td>
+<td>ask the driver to go somewhere secret</td>
+<td>laugh at the jokes</td>
+<td>start to make wild assumptions</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>290</th>
+<td><|det5|> is sitting behind a dais with a microphone. After <|det5|> will most likely </td>
+<td>hang up the phone</td>
+<td>get up to go to the restroom</td>
+<td>clap for the performers</td>
+<td>convince the robber that he will provide money</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>291</th>
+<td><|det3|> is holding a video game controller while sitting on a couch and laughing with <|det2|>. Because <|det3|> wanted to </td>
+<td>get through the crowd</td>
+<td style="background-color: lightgreen">help his muscles recover</td>
+<td>go along with the crowd applauding the performance</td>
+<td>play video games</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>292</th>
+<td><|det3|> is holding a video game controller while sitting on a couch and laughing with <|det2|>. Because <|det3|> wanted to </td>
+<td>start the date off on the right foot</td>
+<td>watch the karate match excitedly</td>
+<td>show everyone how confident he is</td>
+<td>have a laugh with <|det2|></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>293</th>
+<td><|det3|> is holding a video game controller while sitting on a couch and laughing with <|det2|>. Because <|det3|> wanted to </td>
+<td>go someplace else fast</td>
+<td style="background-color: lightgreen">see where the other boat is</td>
+<td>keep from falling off the train</td>
+<td>show they find something funny</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>294</th>
+<td><|det3|> is holding a video game controller while sitting on a couch and laughing with <|det2|>. Before <|det3|> needed to </td>
+<td>call <|det2|> over</td>
+<td>be assigned as a jury duty member</td>
+<td>accept the dinner invitation</td>
+<td>ask <|det2|> if he wanted to hang out</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>295</th>
+<td><|det3|> is holding a video game controller while sitting on a couch and laughing with <|det2|>. Before <|det3|> needed to </td>
+<td>walk out of the dugout</td>
+<td>get dressed in the room</td>
+<td>jump up into the air</td>
+<td>suggest that they play video games</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>296</th>
+<td><|det3|> is holding a video game controller while sitting on a couch and laughing with <|det2|>. Before <|det3|> needed to </td>
+<td>have a student fighting</td>
+<td>watch as the fighters entered the ring</td>
+<td>go to a sporting event</td>
+<td>come over to 2s house</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>297</th>
+<td><|det3|> is holding a video game controller while sitting on a couch and laughing with <|det2|>. Before <|det3|> needed to </td>
+<td style="background-color: lightgreen">realize they have been bad</td>
+<td>mount the horse  's and start down the road</td>
+<td>approach a landmark on her fieldtrip</td>
+<td>hook up the game console</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>298</th>
+<td><|det3|> is holding a video game controller while sitting on a couch and laughing with <|det2|>. After <|det3|> will most likely </td>
+<td>give orders to the men</td>
+<td>grab a weapon to defend the kids</td>
+<td>take control of a fighter  's anger</td>
+<td>crack open some beers</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>299</th>
+<td><|det3|> is holding a video game controller while sitting on a couch and laughing with <|det2|>. After <|det3|> will most likely </td>
+<td>listen to the speaker</td>
+<td>get into a battle with the good guys</td>
+<td>drop the shield</td>
+<td>order pizza and keep hanging out</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>300</th>
+<td><|det3|> is holding a video game controller while sitting on a couch and laughing with <|det2|>. After <|det3|> will most likely </td>
+<td>close the book</td>
+<td>take a piece of steak into his mouth</td>
+<td>ask where they are</td>
+<td>start to play a competitive game</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>301</th>
+<td><|det3|> is holding a video game controller while sitting on a couch and laughing with <|det2|>. After <|det3|> will most likely </td>
+<td>have the ball tossed to him again</td>
+<td>take pictures of <|det2|></td>
+<td>dance until the song ends</td>
+<td>get very frustrated with <|det2|></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>302</th>
+<td><|det2|> is holding a video game controller laughing with <|det2|> as they sit on a couch with plates in front. Because <|det2|> wanted to </td>
+<td>hang out with <|det2|></td>
+<td>get on the plane quickly</td>
+<td>threaten to kill the hostages</td>
+<td>show off her new baby</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>303</th>
+<td><|det2|> is holding a video game controller laughing with <|det2|> as they sit on a couch with plates in front. Because <|det2|> wanted to </td>
+<td>show they  're having fun</td>
+<td style="background-color: lightgreen">be background actors on the set</td>
+<td>notice the gap between the train and the platform</td>
+<td>ask a question</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>304</th>
+<td style="background-color: lightgreen"><|det2|> is holding a video game controller laughing with <|det2|> as they sit on a couch with plates in front. Because <|det2|> wanted to </td>
+<td>eat some snacks</td>
+<td>park the bike</td>
+<td>prevent further violence</td>
+<td>tear it off</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>305</th>
+<td><|det2|> is holding a video game controller laughing with <|det2|> as they sit on a couch with plates in front. Before <|det2|> needed to </td>
+<td style="background-color: lightgreen">sit on the couch</td>
+<td>see his shadow on the wall</td>
+<td>climb the steps</td>
+<td>find a kidnapped girl</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>306</th>
+<td><|det2|> is holding a video game controller laughing with <|det2|> as they sit on a couch with plates in front. Before <|det2|> needed to </td>
+<td>grab the controller</td>
+<td>undress each other</td>
+<td>take an order</td>
+<td>put a bike on the street</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>307</th>
+<td><|det2|> is holding a video game controller laughing with <|det2|> as they sit on a couch with plates in front. Before <|det2|> needed to </td>
+<td>turn on the tv</td>
+<td>play basketball</td>
+<td>be asked to deliver something</td>
+<td>open his case</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>308</th>
+<td><|det2|> is holding a video game controller laughing with <|det2|> as they sit on a couch with plates in front. Before <|det2|> needed to </td>
+<td>pick up the controllers to the video game</td>
+<td>go to the local club to get protection money</td>
+<td>start filming the event</td>
+<td>enter the waiting area</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>309</th>
+<td><|det2|> is holding a video game controller laughing with <|det2|> as they sit on a couch with plates in front. After <|det2|> will most likely </td>
+<td>play the game</td>
+<td>give a speech at the podium</td>
+<td>stand by the gate</td>
+<td>get out of bed</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>310</th>
+<td><|det2|> is holding a video game controller laughing with <|det2|> as they sit on a couch with plates in front. After <|det2|> will most likely </td>
+<td style="background-color: lightgreen">enjoy time with <|det2|></td>
+<td>walk away from the table a winner</td>
+<td>tell <|det2|> they are very sorry for what happened</td>
+<td>still stand in line</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>311</th>
+<td><|det2|> is holding a video game controller laughing with <|det2|> as they sit on a couch with plates in front. After <|det2|> will most likely </td>
+<td>stare at the tv</td>
+<td>give their verdict on the participants</td>
+<td>find relief when the song is over</td>
+<td>try to appear having more fun</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>312</th>
+<td><|det2|> is holding a video game controller laughing with <|det2|> as they sit on a couch with plates in front. After <|det2|> will most likely </td>
+<td>look angrily at the screen</td>
+<td>give orders</td>
+<td>shout encouragement</td>
+<td>hear the pilot speak</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>313</th>
+<td><|det2|> is holding on to the leash of a dog. Because <|det2|> wanted to </td>
+<td>watch the conversation</td>
+<td>keep it in place</td>
+<td>enjoy the nice cold air</td>
+<td>put on a different outfit</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>314</th>
+<td><|det2|> is holding on to the leash of a dog. Because <|det2|> wanted to </td>
+<td>humor the man</td>
+<td>save the civilians</td>
+<td>get to his vehicle</td>
+<td>use his powers</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>315</th>
+<td><|det2|> is holding on to the leash of a dog. Before <|det2|> needed to </td>
+<td style="background-color: lightgreen">go to the beach</td>
+<td>put a leash on the dog</td>
+<td>come to work at the internet company</td>
+<td>have wine in his glass</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>316</th>
+<td><|det2|> is holding on to the leash of a dog. Before <|det2|> needed to </td>
+<td>remember the cheer</td>
+<td style="background-color: lightgreen">lead the dog to the area</td>
+<td>make the hats</td>
+<td>head toward the large crowd</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>317</th>
+<td><|det2|> is holding on to the leash of a dog. Before <|det2|> needed to </td>
+<td>pay attention</td>
+<td>see the truck pull up</td>
+<td>sit down on the chair</td>
+<td>join the conversation</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>318</th>
+<td><|det2|> is holding on to the leash of a dog. Before <|det2|> needed to </td>
+<td>get out of the army tank</td>
+<td>try to sniff out any illegal substances</td>
+<td>see what the experiment was</td>
+<td>grab the phone</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>319</th>
+<td><|det2|> is holding on to the leash of a dog. After <|det2|> will most likely </td>
+<td>return his focus to his own work</td>
+<td>let the dog search the area</td>
+<td>be tied up</td>
+<td>kiss passionately</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>320</th>
+<td><|det2|> is holding on to the leash of a dog. After <|det2|> will most likely </td>
+<td>apologize</td>
+<td style="background-color: lightgreen">give the dog affection</td>
+<td>boo any foul play</td>
+<td>show boxing technique</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>321</th>
+<td><|det2|> is holding on to the leash of a dog. After <|det2|> will most likely </td>
+<td>shake the bouncer  's hand</td>
+<td>jump on the truck</td>
+<td style="background-color: lightgreen">watch for any unauthorized behavior</td>
+<td>go to the coat rack</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>322</th>
+<td style="background-color: lightgreen"><|det2|> is holding on to the leash of a dog. After <|det2|> will most likely </td>
+<td>walk to the front of the house</td>
+<td>find some drugs</td>
+<td>clap with the others</td>
+<td>place the booklet in his pocket</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>323</th>
+<td><|det2|> is following the movements of the search dog. Because <|det2|> wanted to </td>
+<td>be a good sport</td>
+<td>make sure there are no terrorists around</td>
+<td>sniff the evidence</td>
+<td>make sure he didn  't forget anything</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>324</th>
+<td><|det2|> is following the movements of the search dog. Because <|det2|> wanted to </td>
+<td>hop into the ring</td>
+<td>make sure the ambulance is stocked</td>
+<td>find the culprit</td>
+<td>take it to a lonely elderly man who lives alone</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>325</th>
+<td><|det2|> is following the movements of the search dog. Before <|det2|> needed to </td>
+<td>go to the dock</td>
+<td>lean on the wall</td>
+<td style="background-color: lightgreen">get a call about a missing person search</td>
+<td>be ticked off</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>326</th>
+<td><|det2|> is following the movements of the search dog. Before <|det2|> needed to </td>
+<td>push through the crowd</td>
+<td>want to dance</td>
+<td>board the truck with the search dog</td>
+<td>hear his sister get second thoughts about marriage</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>327</th>
+<td><|det2|> is following the movements of the search dog. Before <|det2|> needed to </td>
+<td>go to the mountain resort</td>
+<td>mix chemicals</td>
+<td>be out with police dog</td>
+<td>buy the drink</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>328</th>
+<td><|det2|> is following the movements of the search dog. Before <|det2|> needed to </td>
+<td>feel the mission would failtr</td>
+<td>approach the aquarium</td>
+<td>be trying to locate a suspect</td>
+<td>start going through the store</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>329</th>
+<td><|det2|> is following the movements of the search dog. After <|det2|> will most likely </td>
+<td>take a picture of the license plate</td>
+<td>examine something closely</td>
+<td>arrive at the last location of the missing person</td>
+<td>wash his clothes</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>330</th>
+<td style="background-color: lightgreen"><|det2|> is following the movements of the search dog. After <|det2|> will most likely </td>
+<td>win his match</td>
+<td>carry the casket out of the church</td>
+<td>find the missing person lost in the woods</td>
+<td>ask questions</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>331</th>
+<td><|det2|> is following the movements of the search dog. After <|det2|> will most likely </td>
+<td>ask others what they think of it</td>
+<td>switch her purse to the other shoulder</td>
+<td>have the dog help find them</td>
+<td>open the wine bottle</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>332</th>
+<td><|det2|> is following the movements of the search dog. After <|det2|> will most likely </td>
+<td>say something rude to the black boy</td>
+<td>practice as much as he can to get better</td>
+<td>capture them with dogs assitance</td>
+<td>take his child for some ice cream</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>333</th>
+<td style="background-color: lightgreen"><|det2|> is looking worriedly at <|det4|>. Because <|det2|> wanted to </td>
+<td>make sure everyone knows she is in charge</td>
+<td>hold <|det4|> up as she falls</td>
+<td>figure out his budget</td>
+<td>help <|det4|> get better</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>334</th>
+<td style="background-color: lightgreen"><|det2|> is looking worriedly at <|det4|>. Because <|det2|> wanted to </td>
+<td>show <|det4|> new equipment</td>
+<td>make sure the dog was healthy</td>
+<td>show <|det4|> how mad he is</td>
+<td>see what is wrong with <|det4|></td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>335</th>
+<td><|det2|> is looking worriedly at <|det4|>. Before <|det2|> needed to </td>
+<td>tell the kids to do their best</td>
+<td>hear commotion from the kitchen</td>
+<td>notice that <|det4|> is bleeding</td>
+<td>look in the direction of <|det4|></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>336</th>
+<td><|det2|> is looking worriedly at <|det4|>. Before <|det2|> needed to </td>
+<td>be near the street</td>
+<td>enter a tournament</td>
+<td>lean back in the chair</td>
+<td>realize that something is wrong</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>337</th>
+<td><|det2|> is looking worriedly at <|det4|>. Before <|det2|> needed to </td>
+<td>think she heard her name being called</td>
+<td>get up from her seat</td>
+<td>want to converse with <|det4|></td>
+<td>walk over to <|det4|></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>338</th>
+<td><|det2|> is looking worriedly at <|det4|>. Before <|det2|> needed to </td>
+<td>train his student to become an expert fighter</td>
+<td>go for a ride in the car</td>
+<td>stretch his legs</td>
+<td>notice something frightening</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>339</th>
+<td><|det2|> is looking worriedly at <|det4|>. After <|det2|> will most likely </td>
+<td>sign a document</td>
+<td>finish watching the performance</td>
+<td>jump up in their seat</td>
+<td>find out what is going on with <|det4|></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>340</th>
+<td><|det2|> is looking worriedly at <|det4|>. After <|det2|> will most likely </td>
+<td>remove his clothes</td>
+<td>miss the swimming pool</td>
+<td style="background-color: lightgreen">not agree with everyone  's opinion</td>
+<td>say something to <|det1|> about <|det4|></td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>341</th>
+<td><|det2|> is looking worriedly at <|det4|>. After <|det2|> will most likely </td>
+<td>decide to do something else</td>
+<td style="background-color: lightgreen">tell the group facts about the castle</td>
+<td>get the information she needs</td>
+<td>back up from <|det4|></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>342</th>
+<td><|det2|> is looking worriedly at <|det4|>. After <|det2|> will most likely </td>
+<td>dance</td>
+<td>confront an enemy</td>
+<td>be surprised the owner <|det1|> is a woman</td>
+<td>turn to <|det1|></td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>343</th>
+<td><|det4|> is laying on the sofa still. Because <|det4|> wanted to </td>
+<td>get help to get well</td>
+<td>make the suspects stop running</td>
+<td>take his mind off the fact that he is stranded</td>
+<td>refrain from drinking</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>344</th>
+<td><|det4|> is laying on the sofa still. Because <|det4|> wanted to </td>
+<td>rest <|det4|>  's body</td>
+<td style="background-color: lightgreen">send a text</td>
+<td>keep her child safe</td>
+<td>go through a battle strategy</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>345</th>
+<td><|det4|> is laying on the sofa still. Before <|det4|> needed to </td>
+<td>lay down</td>
+<td>be engaged in conversation with someone</td>
+<td>buy a ticket to the hockey game</td>
+<td>go to work</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>346</th>
+<td><|det4|> is laying on the sofa still. Before <|det4|> needed to </td>
+<td style="background-color: lightgreen">want to rest</td>
+<td>show off their skills</td>
+<td>hear the piano start playing</td>
+<td>hear some shouting coming from another booth</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>347</th>
+<td><|det4|> is laying on the sofa still. Before <|det4|> needed to </td>
+<td>feel really tired</td>
+<td>find a couch to sit on</td>
+<td style="background-color: lightgreen">be a police officer</td>
+<td>notice that there are intruders</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>348</th>
+<td><|det4|> is laying on the sofa still. Before <|det4|> needed to </td>
+<td>fall asleep unexpectedly</td>
+<td>approach the light</td>
+<td>decide to fill out paperwork together</td>
+<td>go to the locker room</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>349</th>
+<td><|det4|> is laying on the sofa still. After <|det4|> will most likely </td>
+<td>get up from the couch</td>
+<td>listen to what is being said in the tv broadcast</td>
+<td>pull the gun</td>
+<td>enjoy the meal with their family</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>350</th>
+<td><|det4|> is laying on the sofa still. After <|det4|> will most likely </td>
+<td>be yelled at to get up</td>
+<td>go into a phone booth</td>
+<td>bandage a wound</td>
+<td>sit for a while</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>351</th>
+<td><|det4|> is laying on the sofa still. After <|det4|> will most likely </td>
+<td>hear all the commotion</td>
+<td>set the bottle aside once its empty</td>
+<td>push people out of the way</td>
+<td>correct any mistakes</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>352</th>
+<td><|det4|> is laying on the sofa still. After <|det4|> will most likely </td>
+<td>wake up and look around</td>
+<td>get upset about the bedroom</td>
+<td>work together on something</td>
+<td>work out</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>353</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. Because <|det2|> wanted to </td>
+<td>give them an inspiration speech</td>
+<td>dance together</td>
+<td style="background-color: lightgreen">try not to be hit</td>
+<td>report a dangerous area to security</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>354</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. Because <|det2|> wanted to </td>
+<td>let them know he  's surprised</td>
+<td>have fun</td>
+<td>check on the passengers</td>
+<td>go home he  's sick</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>355</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. Before <|det2|> needed to </td>
+<td>walk into the office</td>
+<td>get <|det6|> ready for the wedding</td>
+<td>want to be alone</td>
+<td>pack his bag</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>356</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. Before <|det2|> needed to </td>
+<td>be worried about the crying baby</td>
+<td>find a gift to bring to the wedding</td>
+<td>call a friend</td>
+<td>be in art school</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>357</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. Before <|det2|> needed to </td>
+<td>be in mourning</td>
+<td>go to a big outdoor party</td>
+<td>be forced up the stairs</td>
+<td>find a hidden object</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>358</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. Before <|det2|> needed to </td>
+<td>walk over to his desk</td>
+<td>hear festive music playing</td>
+<td>look at the religious figurines</td>
+<td>get out of the car</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>359</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. Before <|det2|> needed to </td>
+<td>go to the theater</td>
+<td>ask <|det6|> if she would like to dance with him</td>
+<td>park the car</td>
+<td>see s battle going on</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>360</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. After <|det2|> will most likely </td>
+<td>explain he should have never trained him</td>
+<td>take <|det6|> to get a piece of cake</td>
+<td>say goodbye</td>
+<td>respond to <|det6|></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>361</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. After <|det2|> will most likely </td>
+<td>rush to the terminal</td>
+<td>find some other kids for <|det6|> to play with</td>
+<td>check the contents of the bag</td>
+<td>see an ambulance arrive</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>362</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. After <|det2|> will most likely </td>
+<td>defend his actions</td>
+<td style="background-color: lightgreen">clap their hands when the song ends</td>
+<td>try to keep others from winning</td>
+<td>punch their opponent in the face</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>363</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. After <|det2|> will most likely </td>
+<td>enjoy the fresh air</td>
+<td>go back to their table</td>
+<td>put his phone away</td>
+<td>use every soldier at disposal to search</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>364</th>
+<td><|det2|> is holding hands with <|det6|> as they dance. After <|det2|> will most likely </td>
+<td>take it all back to his hotel room</td>
+<td>mingle with the other guests</td>
+<td>yell commands</td>
+<td>smile largely</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>365</th>
+<td><|det14|> is sitting at a table eating food. Because <|det14|> wanted to </td>
+<td>hear what the sentence is</td>
+<td>check on the passengers</td>
+<td>eat food</td>
+<td>interview them about what happened</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>366</th>
+<td><|det14|> is sitting at a table eating food. Because <|det14|> wanted to </td>
+<td>impress the audience</td>
+<td>sell some wares to customers</td>
+<td>rest</td>
+<td>get a good shot for his media outlet</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>367</th>
+<td><|det14|> is sitting at a table eating food. Before <|det14|> needed to </td>
+<td>pick up children in the morning</td>
+<td style="background-color: lightgreen">hear news that the war is over</td>
+<td>shake hands with the guest of honor</td>
+<td>realize the groom isn  't there</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>368</th>
+<td><|det14|> is sitting at a table eating food. Before <|det14|> needed to </td>
+<td>commit several heinous crimes</td>
+<td>pack his duffel bag of items</td>
+<td style="background-color: lightgreen">get a drink</td>
+<td>fall down</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>369</th>
+<td><|det14|> is sitting at a table eating food. Before <|det14|> needed to </td>
+<td style="background-color: lightgreen">put on gloves</td>
+<td>turn on the tv</td>
+<td>arrive at the event</td>
+<td>put on his name tag for work</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>370</th>
+<td><|det14|> is sitting at a table eating food. Before <|det14|> needed to </td>
+<td>be at a ski resort</td>
+<td>press the typewriter buttons</td>
+<td>say excuse me to the man next to him</td>
+<td>pick up her fork</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>371</th>
+<td><|det14|> is sitting at a table eating food. After <|det14|> will most likely </td>
+<td>put away the papers</td>
+<td>cheer for the country</td>
+<td>go to the head table</td>
+<td>make sure they are departing on time</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>372</th>
+<td><|det14|> is sitting at a table eating food. After <|det14|> will most likely </td>
+<td>turn off the engine of the car</td>
+<td>be dissatisfied</td>
+<td>order a drink from the waiter</td>
+<td>keep watching the fight</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>373</th>
+<td><|det14|> is sitting at a table eating food. After <|det14|> will most likely </td>
+<td>eat dinner with his family</td>
+<td>frisk <|det1|></td>
+<td>say hello to <|det1|></td>
+<td>face the danger head on</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>374</th>
+<td><|det14|> is sitting at a table eating food. After <|det14|> will most likely </td>
+<td>bob his head</td>
+<td>shoot at something</td>
+<td>leave the table</td>
+<td>pack the van</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>375</th>
+<td><|det10|> is holding hands and dancing. Because <|det10|> wanted to </td>
+<td>see what everyone wants</td>
+<td>talk with friends</td>
+<td>react to a disturbance nearby</td>
+<td>dance to music</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>376</th>
+<td><|det10|> is holding hands and dancing. Because <|det10|> wanted to </td>
+<td>protest against something</td>
+<td>stop the action</td>
+<td>show others what it  's llike</td>
+<td>feel the beat</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>377</th>
+<td><|det10|> is holding hands and dancing. Before <|det10|> needed to </td>
+<td>be on a basketball team</td>
+<td>get down on the ground</td>
+<td>take out a piece of evidence</td>
+<td>come to a wedding</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>378</th>
+<td><|det10|> is holding hands and dancing. Before <|det10|> needed to </td>
+<td>get out and yell at the pedestrian</td>
+<td>print off the badges</td>
+<td>have a gun</td>
+<td>enjoy the music played by the live band</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>379</th>
+<td><|det10|> is holding hands and dancing. Before <|det10|> needed to </td>
+<td>have a umbrella</td>
+<td>join the crowd in the store</td>
+<td>put a blank tape in the recorder</td>
+<td>like the song being played</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>380</th>
+<td><|det10|> is holding hands and dancing. Before <|det10|> needed to </td>
+<td>go shopping</td>
+<td>sit down at the table</td>
+<td>drive to the hotel</td>
+<td>ask someone to dance</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>381</th>
+<td><|det10|> is holding hands and dancing. After <|det10|> will most likely </td>
+<td>fix the machine</td>
+<td>make a plan with his friends</td>
+<td>get a prize</td>
+<td>kiss one another</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>382</th>
+<td style="background-color: lightgreen"><|det10|> is holding hands and dancing. After <|det10|> will most likely </td>
+<td>show off her arm</td>
+<td>agree with his wife</td>
+<td>put the coat down somewhere</td>
+<td>have drinks with one another</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>383</th>
+<td><|det10|> is holding hands and dancing. After <|det10|> will most likely </td>
+<td>head to the center of town</td>
+<td>cuddle the baby</td>
+<td>decide to continue walking</td>
+<td>make a song request to the band</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>384</th>
+<td><|det10|> is holding hands and dancing. After <|det10|> will most likely </td>
+<td>decide to leave the place</td>
+<td>practice the move again</td>
+<td>look for a safe place</td>
+<td>have fun at the party</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>385</th>
+<td><|det1|> is standing guard at the gate of the building. Because <|det1|> wanted to </td>
+<td>check the people coming in</td>
+<td>clean up the mess</td>
+<td style="background-color: lightgreen">study a sample through the microscope</td>
+<td>show his exasperation</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>386</th>
+<td><|det1|> is standing guard at the gate of the building. Because <|det1|> wanted to </td>
+<td>keep the building secure</td>
+<td>be relaxed as she talks on the phone</td>
+<td style="background-color: lightgreen">think about pouring himself a drink</td>
+<td>catch his bus</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>387</th>
+<td><|det1|> is standing guard at the gate of the building. Before <|det1|> needed to </td>
+<td>keep the peace</td>
+<td>find something shocking</td>
+<td>finish his cup of coffee</td>
+<td>place his feet on the desk</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>388</th>
+<td><|det1|> is standing guard at the gate of the building. Before <|det1|> needed to </td>
+<td>protect the occupants of the building</td>
+<td>have a company meeting</td>
+<td>arrive at the auditorium</td>
+<td>experience an earthquake</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>389</th>
+<td><|det1|> is standing guard at the gate of the building. Before <|det1|> needed to </td>
+<td>get assigned to guard the gate</td>
+<td>be making a movie</td>
+<td style="background-color: lightgreen">want to stand out</td>
+<td>look all around at the machinery</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>390</th>
+<td><|det1|> is standing guard at the gate of the building. Before <|det1|> needed to </td>
+<td>take up his post outside the gate</td>
+<td>open his notebook to a certain page</td>
+<td>buy a corsage</td>
+<td>speak to the audience</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>391</th>
+<td><|det1|> is standing guard at the gate of the building. After <|det1|> will most likely </td>
+<td>speak to people</td>
+<td>cheer on a fighter</td>
+<td>hail a taxi</td>
+<td>giddy up the horses</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>392</th>
+<td><|det1|> is standing guard at the gate of the building. After <|det1|> will most likely </td>
+<td>prevent people from entering</td>
+<td>take a bite</td>
+<td>listen to some instructions from a superior</td>
+<td>point out her favorite player</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>393</th>
+<td><|det1|> is standing guard at the gate of the building. After <|det1|> will most likely </td>
+<td>continue standing at the gate</td>
+<td>shout out orders to the team</td>
+<td>bob his head</td>
+<td>hit the ball</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>394</th>
+<td><|det1|> is standing guard at the gate of the building. After <|det1|> will most likely </td>
+<td>look out for any suspicious individuals</td>
+<td>realize reading is more boring</td>
+<td>get bored and leave</td>
+<td>call a foul</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>395</th>
+<td><|det1|> is standing guard at the gate of the building. After <|det1|> will most likely </td>
+<td style="background-color: lightgreen">prevent any suspicious individuals from entering the gate</td>
+<td>tell guests about treat available</td>
+<td>go to the swings</td>
+<td>turn the tv off</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>396</th>
+<td><|det1|> is wearing an official uniform including a hat as he stands guard. Because <|det1|> wanted to </td>
+<td style="background-color: lightgreen">bring the container to the home</td>
+<td>obey the rules</td>
+<td>admit he was an alcoholic</td>
+<td>show her enthusiasm</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>397</th>
+<td><|det1|> is wearing an official uniform including a hat as he stands guard. Because <|det1|> wanted to </td>
+<td>follow the dance steps</td>
+<td style="background-color: lightgreen">look official</td>
+<td>stay calm</td>
+<td>hit the car</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>398</th>
+<td><|det1|> is wearing an official uniform including a hat as he stands guard. Before <|det1|> needed to </td>
+<td>have a horse</td>
+<td>be assigned as the school sentry</td>
+<td>order a drink</td>
+<td>see a gun being drawn</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>399</th>
+<td><|det1|> is wearing an official uniform including a hat as he stands guard. Before <|det1|> needed to </td>
+<td>gather with the other holiday shoppers</td>
+<td>guard against intruders</td>
+<td>have someplace to be</td>
+<td>rally the horses</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>400</th>
+<td><|det1|> is wearing an official uniform including a hat as he stands guard. Before <|det1|> needed to </td>
+<td>pull out binoculars</td>
+<td>receive orders to guard the front gate</td>
+<td>know when the meeting was taking place</td>
+<td>enter the bizarre living room</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>401</th>
+<td><|det1|> is wearing an official uniform including a hat as he stands guard. Before <|det1|> needed to </td>
+<td>be in the locker room</td>
+<td style="background-color: lightgreen">stand at attention</td>
+<td>grab her bag</td>
+<td>join the check in line</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>402</th>
+<td><|det1|> is wearing an official uniform including a hat as he stands guard. After <|det1|> will most likely </td>
+<td>tell the stewardess his drink order</td>
+<td>observe the students and parents</td>
+<td>get knocked to the ground</td>
+<td>approach the opponent</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>403</th>
+<td><|det1|> is wearing an official uniform including a hat as he stands guard. After <|det1|> will most likely </td>
+<td>negotiate with the other side</td>
+<td>report problems</td>
+<td style="background-color: lightgreen">get hit by a car</td>
+<td>go inside</td>
+<td>3</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>404</th>
+<td><|det1|> is wearing an official uniform including a hat as he stands guard. After <|det1|> will most likely </td>
+<td>point to things on the whiteboard</td>
+<td>keep intruders from getting inside</td>
+<td>put the wallet back</td>
+<td>tell them they are doing great</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>405</th>
+<td><|det1|> is wearing an official uniform including a hat as he stands guard. After <|det1|> will most likely </td>
+<td>dodge incoming traffic while running away</td>
+<td>make sure visitors stay safe</td>
+<td>climb on the game and dance alongside</td>
+<td>discuss several options to resolve</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>406</th>
+<td><|det1|> falls to the mat holding the side of his face. Because <|det1|> wanted to </td>
+<td>use the pen</td>
+<td>get intoxicated</td>
+<td>forfeit the fight</td>
+<td>get ready to catch the ball</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>407</th>
+<td style="background-color: lightgreen"><|det1|> falls to the mat holding the side of his face. Because <|det1|> wanted to </td>
+<td>grade the fighters</td>
+<td>alert the station of what he sees</td>
+<td>recover and stand up again</td>
+<td>get a clean sample for the courts</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>408</th>
+<td><|det1|> falls to the mat holding the side of his face. Before <|det1|> needed to </td>
+<td>guard the president</td>
+<td>walk down the street</td>
+<td>get hit hard by his opponent</td>
+<td>pick up the hammers</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>409</th>
+<td><|det1|> falls to the mat holding the side of his face. Before <|det1|> needed to </td>
+<td style="background-color: lightgreen">attend the meeting</td>
+<td>be angry with each other</td>
+<td>realize his face is in pain</td>
+<td>wait for the bell to sound</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>410</th>
+<td><|det1|> falls to the mat holding the side of his face. Before <|det1|> needed to </td>
+<td>raise his hands in fear</td>
+<td>be handed someone  's card</td>
+<td style="background-color: lightgreen">be in a karate match</td>
+<td>hear the phone ring</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>411</th>
+<td><|det1|> falls to the mat holding the side of his face. Before <|det1|> needed to </td>
+<td>hop on the jeep</td>
+<td>take water from the pipe</td>
+<td>be kicked in the face</td>
+<td>walk through the market</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>412</th>
+<td><|det1|> falls to the mat holding the side of his face. After <|det1|> will most likely </td>
+<td>shakily stand up</td>
+<td>try to get the rebound</td>
+<td>scream for a medic to help</td>
+<td>make sure that his friend doesn  't get in a fight</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>413</th>
+<td><|det1|> falls to the mat holding the side of his face. After <|det1|> will most likely </td>
+<td>walk down the hill</td>
+<td>fall to the ground from the explosion</td>
+<td>ask the medic if he will be okay</td>
+<td>begin booing louder</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>414</th>
+<td style="background-color: lightgreen"><|det1|> falls to the mat holding the side of his face. After <|det1|> will most likely </td>
+<td>stand up after landing</td>
+<td>go get something for one of the passengers</td>
+<td>cry out in agony</td>
+<td>have his life saved by the robocop</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>415</th>
+<td><|det1|> falls to the mat holding the side of his face. After <|det1|> will most likely </td>
+<td>quickly arrive at location</td>
+<td>keep painting his face</td>
+<td>return to the fight</td>
+<td>put the equipment in a bag</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>416</th>
+<td><|det2|> waits with his knees bent as <|det1|> falls to the floor. Because <|det2|> wanted to </td>
+<td>show off a cool car</td>
+<td>express his wonder at hat  's in the box</td>
+<td>keep from talking</td>
+<td>give <|det1|> a moment to recover</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>417</th>
+<td><|det2|> waits with his knees bent as <|det1|> falls to the floor. Because <|det2|> wanted to </td>
+<td>express his joy</td>
+<td>see what his scent smelled like</td>
+<td>attract customers to come in</td>
+<td>kick <|det1|> as soon as he stands up</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>418</th>
+<td><|det2|> waits with his knees bent as <|det1|> falls to the floor. Before <|det2|> needed to </td>
+<td style="background-color: lightgreen">ride a private jet</td>
+<td>ride out into the water</td>
+<td>have the van stop</td>
+<td>enter the martial arts tournament</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>419</th>
+<td><|det2|> waits with his knees bent as <|det1|> falls to the floor. Before <|det2|> needed to </td>
+<td>get a gym membership</td>
+<td>have teken <|det1|> to see the palace</td>
+<td>bus a table of the former customers</td>
+<td>make a great move and knock <|det1|> down</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>420</th>
+<td><|det2|> waits with his knees bent as <|det1|> falls to the floor. Before <|det2|> needed to </td>
+<td>get on stage</td>
+<td>grab two shotguns</td>
+<td>boil some water</td>
+<td>work as a referee at the karate tournament</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>421</th>
+<td><|det2|> waits with his knees bent as <|det1|> falls to the floor. Before <|det2|> needed to </td>
+<td>get a call to backup a fellow agent</td>
+<td>go to the bedroom</td>
+<td>be tripped by something on the ground</td>
+<td>stop the fight</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>422</th>
+<td style="background-color: lightgreen"><|det2|> waits with his knees bent as <|det1|> falls to the floor. After <|det2|> will most likely </td>
+<td>wait for <|det1|> to take a seat</td>
+<td>focus his pain on something else</td>
+<td>hang out with her friends</td>
+<td>taunt <|det1|> and tell him that he is a loser</td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>423</th>
+<td><|det2|> waits with his knees bent as <|det1|> falls to the floor. After <|det2|> will most likely </td>
+<td style="background-color: lightgreen">be killed</td>
+<td>announce <|det1|> as the winner</td>
+<td>explain he should have never trained him</td>
+<td>bend down and extend hand to <|det1|></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>424</th>
+<td><|det2|> waits with his knees bent as <|det1|> falls to the floor. After <|det2|> will most likely </td>
+<td>fix the equipment</td>
+<td style="background-color: lightgreen">eat their food</td>
+<td>ask their friend to visit again</td>
+<td>decide the winner</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>425</th>
+<td><|det2|> waits with his knees bent as <|det1|> falls to the floor. After <|det2|> will most likely </td>
+<td>miss the swimming pool</td>
+<td>wait for the enemy to walk away</td>
+<td>drag the luggage into the lobby</td>
+<td>congratulate the winner</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>426</th>
+<td><|det3|> is driving the boat very fast. Because <|det3|> wanted to </td>
+<td>make the ride more fun</td>
+<td>watch the team practice</td>
+<td>provide evidence</td>
+<td>look at data</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>427</th>
+<td><|det3|> is driving the boat very fast. Because <|det3|> wanted to </td>
+<td>entertain his friends</td>
+<td>stand up and address the group</td>
+<td>unlock the door to his apartment</td>
+<td>read the document on the table</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>428</th>
+<td><|det3|> is driving the boat very fast. Before <|det3|> needed to </td>
+<td>get on the boat</td>
+<td>hear a loud siren</td>
+<td>pick up her glass</td>
+<td>attend a dance party</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>429</th>
+<td><|det3|> is driving the boat very fast. Before <|det3|> needed to </td>
+<td>help the others</td>
+<td>commit a crime and be sent to jail</td>
+<td>set up a meeting</td>
+<td>hear a gunshot go off</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>430</th>
+<td><|det3|> is driving the boat very fast. Before <|det3|> needed to </td>
+<td>have gotten onto the boat with <|det1|> and <|det2|></td>
+<td>speak to their players</td>
+<td>grab her bag</td>
+<td>pack up a package</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>431</th>
+<td><|det3|> is driving the boat very fast. Before <|det3|> needed to </td>
+<td>have been standing up on the boat</td>
+<td>grab his baton</td>
+<td style="background-color: lightgreen">see someone needs help</td>
+<td>sit down at the desk</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>432</th>
+<td><|det3|> is driving the boat very fast. After <|det3|> will most likely </td>
+<td>make a fast getaway</td>
+<td style="background-color: lightgreen">show their phone that they were busy</td>
+<td>ignore what  's going on in the room</td>
+<td>turn to look behind him</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>433</th>
+<td><|det3|> is driving the boat very fast. After <|det3|> will most likely </td>
+<td>lose the people chasing them</td>
+<td>order some drinks for the couple</td>
+<td>get something to drink</td>
+<td>decide to play a game together</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>434</th>
+<td><|det3|> is driving the boat very fast. After <|det3|> will most likely </td>
+<td>drive to their destination</td>
+<td>pound the stick on the floor</td>
+<td>jump into the dance battle</td>
+<td>listen to the prisoner  's story</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>435</th>
+<td><|det3|> is driving the boat very fast. After <|det3|> will most likely </td>
+<td>chat with <|det1|> and <|det2|> while sailing</td>
+<td>determine who is approaching the table</td>
+<td>get something for the passenger</td>
+<td>ask a teacher</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>436</th>
+<td><|det1|> leans back and laughs in the back of the boat. Because <|det1|> wanted to </td>
+<td>get the white dress clean</td>
+<td style="background-color: lightgreen">have a good time</td>
+<td>open the bookbag</td>
+<td>use the truck as cover</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>437</th>
+<td><|det1|> leans back and laughs in the back of the boat. Because <|det1|> wanted to </td>
+<td>do something else</td>
+<td>spend time playing with friends</td>
+<td style="background-color: lightgreen">stop feeling shocked</td>
+<td>root for their team</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>438</th>
+<td><|det1|> leans back and laughs in the back of the boat. Before <|det1|> needed to </td>
+<td>take a break from her performance</td>
+<td>board a small boat</td>
+<td>get back to his commander</td>
+<td>sign up for a tour</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>439</th>
+<td><|det1|> leans back and laughs in the back of the boat. Before <|det1|> needed to </td>
+<td>join a karate fight</td>
+<td>put his hands on the boat</td>
+<td>notice the suitcase on the bed</td>
+<td>see a student fighting</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>440</th>
+<td><|det1|> leans back and laughs in the back of the boat. Before <|det1|> needed to </td>
+<td>accept the job of patrolling</td>
+<td>climb aboard the boat</td>
+<td>remove something from their pockets</td>
+<td>be sitting down</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>441</th>
+<td><|det1|> leans back and laughs in the back of the boat. Before <|det1|> needed to </td>
+<td>walk thru the airport</td>
+<td>sit behind <|det2|></td>
+<td>get up from the table</td>
+<td>pull up her hood</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>442</th>
+<td><|det1|> leans back and laughs in the back of the boat. Before <|det1|> needed to </td>
+<td>feel nervous</td>
+<td>watch <|det1|> steer the boat</td>
+<td>walk up to <|det1|></td>
+<td>need <|det1|>  's help to fight a villian</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>443</th>
+<td><|det1|> leans back and laughs in the back of the boat. After <|det1|> will most likely </td>
+<td>fil till the end of the performance</td>
+<td>enjoy the ride</td>
+<td>introduce them by name</td>
+<td>release the frisbee</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>444</th>
+<td><|det1|> leans back and laughs in the back of the boat. After <|det1|> will most likely </td>
+<td>hit someone</td>
+<td>take in the warm sun</td>
+<td>get in trouble for fighting</td>
+<td>tell the chef he did a fabulous job</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>445</th>
+<td><|det1|> leans back and laughs in the back of the boat. After <|det1|> will most likely </td>
+<td>hand the person the object</td>
+<td>watch the scenery as he goes by</td>
+<td>grab his coat off the chair</td>
+<td>start making silly faces</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>446</th>
+<td><|det1|> leans back and laughs in the back of the boat. After <|det1|> will most likely </td>
+<td>walk out of the office</td>
+<td>remain in the boat until the get to the dock</td>
+<td>talk into the headset</td>
+<td>try to defeat each other in combat</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>447</th>
+<td><|det1|> leans back and laughs in the back of the boat. After <|det1|> will most likely </td>
+<td style="background-color: lightgreen">direct the paramedics to the injured person</td>
+<td>watch <|det2|> and <|det3|> get off of the boat</td>
+<td>talk to <|det2|> about how he got his trophy</td>
+<td>hit the switch</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>448</th>
+<td><|det1|> leans back and laughs in the back of the boat. After <|det1|> will most likely </td>
+<td>lead them on</td>
+<td>get out of the boat</td>
+<td>move to the sidewalk</td>
+<td>look at the deceased</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>449</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. Because <|det2|> wanted to </td>
+<td>claim the territory for their gang</td>
+<td>escape harm</td>
+<td style="background-color: lightgreen">mourn the loss of a loved one</td>
+<td>make sure her team won</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>450</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. Because <|det2|> wanted to </td>
+<td>make sure she filled out the paperwork correctly</td>
+<td>be in the training film</td>
+<td>be alone with his thoughts</td>
+<td>put the food in a bag</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>451</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. Because <|det2|> wanted to </td>
+<td>see something surprising</td>
+<td>applaud for someone competing</td>
+<td>get the funeral over with</td>
+<td>try to help run the presentation smoothly</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>452</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. Before <|det2|> needed to </td>
+<td>put on his biking gear</td>
+<td>be dared to jump out the window</td>
+<td>enters the church</td>
+<td>get in his seat</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>453</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. Before <|det2|> needed to </td>
+<td>be talking to the school guidance counselor</td>
+<td>be near a protest</td>
+<td>sits down in a pew</td>
+<td>ask for an eye mask</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>454</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. Before <|det2|> needed to </td>
+<td>take off his wet shirt</td>
+<td>arrive at the soccer field</td>
+<td>watches a bride and groom walk down the aisle</td>
+<td>call the kids to the kitchen</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>455</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. Before <|det2|> needed to </td>
+<td>trick them in to fighting</td>
+<td>let it slip from his hands</td>
+<td>sit with <|det1|></td>
+<td>pick up his surfboard</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>456</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. Before <|det2|> needed to </td>
+<td>look for cheaters</td>
+<td>finish her work</td>
+<td>be upset</td>
+<td>check his hair</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>457</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. After <|det2|> will most likely </td>
+<td>try to comfort the injured man</td>
+<td>cautiously take the prisoner back to his cell</td>
+<td>watch the end of the wedding</td>
+<td>respond in anger</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>458</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. After <|det2|> will most likely </td>
+<td>applaud at intermission</td>
+<td>look at the menu</td>
+<td>clench his fist and frown</td>
+<td>climb through the window</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>459</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. After <|det2|> will most likely </td>
+<td>wake up when the train stops</td>
+<td>have a long talk</td>
+<td>leave the church</td>
+<td>ask for a fresh drink</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>460</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. After <|det2|> will most likely </td>
+<td>spit it out</td>
+<td>cross the street</td>
+<td>get comfort from <|det1|></td>
+<td>finish checking <|det1|> in</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>461</th>
+<td><|det2|> is sitting next to <|det1|> looking extremely sorrowful and stoic. After <|det2|> will most likely </td>
+<td style="background-color: lightgreen">eat some snacks</td>
+<td>start a fight with someone</td>
+<td>think about his feelings</td>
+<td>approach the vehicle</td>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>462</th>
+<td><|det1|> is looking up watching something intensely with <|det2|> by her side. Because <|det1|> wanted to </td>
+<td>get his friends attention</td>
+<td>be ready for a mission</td>
+<td>retrieve her phone</td>
+<td>hear the eulogy being read</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>463</th>
+<td><|det1|> is looking up watching something intensely with <|det2|> by her side. Because <|det1|> wanted to </td>
+<td>keep an eye on the bed</td>
+<td>carry the battle to the enemy</td>
+<td>build her muscles</td>
+<td>be supportive towards <|det2|></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>464</th>
+<td><|det1|> is looking up watching something intensely with <|det2|> by her side. Before <|det1|> needed to </td>
+<td>try to sneak away</td>
+<td>do a series of experiments in the lab</td>
+<td>have a microphone</td>
+<td>attend a court case</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>465</th>
+<td><|det1|> is looking up watching something intensely with <|det2|> by her side. Before <|det1|> needed to </td>
+<td>see an accident happen</td>
+<td>go to the renaissance fair</td>
+<td>come off of the dance floor</td>
+<td>listen to the lawyer</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>466</th>
+<td><|det1|> is looking up watching something intensely with <|det2|> by her side. Before <|det1|> needed to </td>
+<td>wait for the car to stop</td>
+<td style="background-color: lightgreen">make an announcement to the prison</td>
+<td>lead up from his seat</td>
+<td>attend a funeral</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>467</th>
+<td><|det1|> is looking up watching something intensely with <|det2|> by her side. Before <|det1|> needed to </td>
+<td>hear a loud noise</td>
+<td>have their mom drop them off at the auditorium</td>
+<td>learn how to use a handgun</td>
+<td>watch the eulogy</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>468</th>
+<td style="background-color: lightgreen"><|det1|> is looking up watching something intensely with <|det2|> by her side. After <|det1|> will most likely </td>
+<td>perform for a crowd</td>
+<td>order a drink</td>
+<td>eat some soup</td>
+<td>listen to the prosecutor</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>469</th>
+<td><|det1|> is looking up watching something intensely with <|det2|> by her side. After <|det1|> will most likely </td>
+<td>put her phone away</td>
+<td>take pictures of the temple</td>
+<td>sing along to the song</td>
+<td>wait for the judge  's decision</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>470</th>
+<td><|det1|> is looking up watching something intensely with <|det2|> by her side. After <|det1|> will most likely </td>
+<td>clap her hands</td>
+<td>eat dinner</td>
+<td>read the menu</td>
+<td>start to cry</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>471</th>
+<td><|det1|> is looking up watching something intensely with <|det2|> by her side. After <|det1|> will most likely </td>
+<td>ask the others about the song</td>
+<td>squirm in the chair</td>
+<td>watch the men play ping pong</td>
+<td>pray for the deceased</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>472</th>
+<td><|det1|> stands with his arm out as hoe concentrates. Because <|det1|> wanted to </td>
+<td>paint something in front of him</td>
+<td>have a good time with his friends</td>
+<td>find out where she was going</td>
+<td>be ready for seconds</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>473</th>
+<td><|det1|> stands with his arm out as hoe concentrates. Because <|det1|> wanted to </td>
+<td>cut something in front of him</td>
+<td>show support for the team</td>
+<td>see what moves the gymnast had</td>
+<td>express astonishment toward what she sees</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>474</th>
+<td><|det1|> stands with his arm out as hoe concentrates. Before <|det1|> needed to </td>
+<td>powder his face</td>
+<td>take the glass from the waitress</td>
+<td>walk up to the car with his friends</td>
+<td>meet up with the friend</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>475</th>
+<td><|det1|> stands with his arm out as hoe concentrates. Before <|det1|> needed to </td>
+<td>be troubled by something</td>
+<td>join the little league team</td>
+<td>put on shoes</td>
+<td>capture a hostage</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>476</th>
+<td><|det1|> stands with his arm out as hoe concentrates. Before <|det1|> needed to </td>
+<td>be painting</td>
+<td>attend a timeshare event</td>
+<td>reach into their pocket</td>
+<td>get a ride in this car</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>477</th>
+<td><|det1|> stands with his arm out as hoe concentrates. Before <|det1|> needed to </td>
+<td>get his canvas and paints ready</td>
+<td>approach the grill</td>
+<td>get a ride home</td>
+<td>hear of a robbery taking place</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>478</th>
+<td><|det1|> stands with his arm out as hoe concentrates. Before <|det1|> needed to </td>
+<td>ask <|det2|> to pose for him</td>
+<td>look around worried</td>
+<td>fill the water bottle</td>
+<td>find out why there are bodies every where</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>479</th>
+<td><|det1|> stands with his arm out as hoe concentrates. After <|det1|> will most likely </td>
+<td>discuss the situation with <|det2|></td>
+<td>look at <|det2|> happlyly</td>
+<td>hear someone approaching outside</td>
+<td>stand back up</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>480</th>
+<td><|det1|> stands with his arm out as hoe concentrates. After <|det1|> will most likely </td>
+<td>be dissatisfied</td>
+<td>take a bite of food</td>
+<td>look at her sheet music</td>
+<td>get a closer look</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>481</th>
+<td><|det1|> stands with his arm out as hoe concentrates. After <|det1|> will most likely </td>
+<td>start over</td>
+<td>ask him a question</td>
+<td>pump her fists</td>
+<td>follow her to a burial site or specific grave stone</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>482</th>
+<td><|det1|> stands with his arm out as hoe concentrates. After <|det1|> will most likely </td>
+<td>paint <|det2|>  's portrait</td>
+<td>learn to trust <|det2|></td>
+<td>ask them if they can breathe alright</td>
+<td>hang up</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>483</th>
+<td><|det1|> stands with his arm out as hoe concentrates. After <|det1|> will most likely </td>
+<td>adjust <|det2|>  's pose</td>
+<td>listen to the rap battle</td>
+<td>draw their weapons as they exit the vehicle</td>
+<td>compliment him</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+ <th>484</th>
+<td><|det2|> stands titling her head talking as <|det1|>  's busy. Because <|det2|> wanted to </td>
+<td>be a gentleman</td>
+<td style="background-color: lightgreen">examine what <|det1|> was doing</td>
+<td>not get shot</td>
+<td>stop drinking but was succumbing to peer pressure</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>485</th>
+<td style="background-color: lightgreen"><|det2|> stands titling her head talking as <|det1|>  's busy. Because <|det2|> wanted to </td>
+<td>make sure that the machines were not tampered with</td>
+<td>have a conversation with <|det1|></td>
+<td>practice his punches</td>
+<td>try to defeat <|det1|></td>
+<td>0</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>486</th>
+<td><|det2|> stands titling her head talking as <|det1|>  's busy. Because <|det2|> wanted to </td>
+<td>give reports to board members</td>
+<td>express her frustration at being ignored with body language</td>
+<td>attract everyone  's attention</td>
+<td>get his gun ready</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>487</th>
+<td><|det2|> stands titling her head talking as <|det1|>  's busy. Before <|det2|> needed to </td>
+<td>gossip about the nieghbors</td>
+<td>wake up from the wrong side of the bed</td>
+<td>train his student to become an expert fighter</td>
+<td>thank the maitre d  '</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>488</th>
+<td><|det2|> stands titling her head talking as <|det1|>  's busy. Before <|det2|> needed to </td>
+<td>wait for the hand off</td>
+<td>walk past a mirror</td>
+<td>dance on the stage for tips</td>
+<td>be written up by the teacher</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>489</th>
+<td><|det2|> stands titling her head talking as <|det1|>  's busy. Before <|det2|> needed to </td>
+<td>go outside</td>
+<td style="background-color: lightgreen">say somethiing upsetting</td>
+<td>find the job listing</td>
+<td>be called to the scene of the explosion</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>490</th>
+<td><|det2|> stands titling her head talking as <|det1|>  's busy. Before <|det2|> needed to </td>
+<td>find out where <|det2|> was going</td>
+<td>be at home with <|det2|></td>
+<td>have a drink to wet his throat</td>
+<td>stop at a bar for a drink</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>491</th>
+<td><|det2|> stands titling her head talking as <|det1|>  's busy. After <|det2|> will most likely </td>
+<td>remove his clothes</td>
+<td>grab the attention of <|det1|></td>
+<td>roll his eyes</td>
+<td>have their pinky chopped off</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>492</th>
+<td style="background-color: lightgreen"><|det2|> stands titling her head talking as <|det1|>  's busy. After <|det2|> will most likely </td>
+<td>present the finished cake to the crowd</td>
+<td>walk closer to <|det1|></td>
+<td>put valuables in the blanket</td>
+<td>watch as <|det1|> rides the car down the street</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>493</th>
+<td><|det2|> stands titling her head talking as <|det1|>  's busy. After <|det2|> will most likely </td>
+<td>find a place to settle for the night</td>
+<td>get <|det2|>  's attention</td>
+<td>hang up the phone</td>
+<td>beg for his life</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>494</th>
+<td><|det2|> stands titling her head talking as <|det1|>  's busy. After <|det2|> will most likely </td>
+<td>walk away from the other guys</td>
+<td>confront <|det2|></td>
+<td>try out some new food</td>
+<td>feel scared</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+ <th>495</th>
+<td style="background-color: lightgreen"><|det2|> and <|det3|> hustle <|det1|> to the door. Because <|det2|> and <|det3|> wanted to </td>
+<td>get to the other side where there is an awning</td>
+<td>make sure no one overheard</td>
+<td>have some private time together</td>
+<td>deliver paperwork to a colleague</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>496</th>
+<td><|det2|> and <|det3|> hustle <|det1|> to the door. Because <|det2|> and <|det3|> wanted to </td>
+<td>ask the girl on a date</td>
+<td>follow <|det1|>  's lead</td>
+<td>get <|det1|> out of the house before her ex arrived</td>
+<td>prepare for battle</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>497</th>
+<td><|det2|> and <|det3|> hustle <|det1|> to the door. Before <|det2|> and <|det3|> needed to </td>
+<td>greet the crowd and audience</td>
+<td>attend the hockey game</td>
+<td>get <|det1|> out of the apartment</td>
+<td>hear a creepy noise</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>498</th>
+<td><|det2|> and <|det3|> hustle <|det1|> to the door. Before <|det2|> and <|det3|> needed to </td>
+<td>see a car accident</td>
+<td>go t a laboratory</td>
+<td>have some time to themselves</td>
+<td>go on stage</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>499</th>
+<td><|det2|> and <|det3|> hustle <|det1|> to the door. Before <|det2|> and <|det3|> needed to </td>
+<td>see a shadow</td>
+<td>be a student at the school</td>
+<td>have poured a drink</td>
+<td>keep the peace</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>500</th>
+<td><|det2|> and <|det3|> hustle <|det1|> to the door. Before <|det2|> and <|det3|> needed to </td>
+<td>decide to join her friend for dinner</td>
+<td>get inside quickly</td>
+<td>have something to hide</td>
+<td>jump out of a plane</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+ <th>501</th>
+<td><|det2|> and <|det3|> hustle <|det1|> to the door. After <|det2|> and <|det3|> will most likely </td>
+<td>threaten the person</td>
+<td style="background-color: lightgreen">help the person get up to their feet</td>
+<td>say goodbye to <|det1|></td>
+<td>scan the area for the missing person</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>502</th>
+<td><|det2|> and <|det3|> hustle <|det1|> to the door. After <|det2|> and <|det3|> will most likely </td>
+<td>take pictures</td>
+<td>try to intervene in the fight</td>
+<td>enjoy some time with each other</td>
+<td>fall on his face</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>503</th>
+<td><|det2|> and <|det3|> hustle <|det1|> to the door. After <|det2|> and <|det3|> will most likely </td>
+<td>finish his chips</td>
+<td>talk to the team</td>
+<td>open the door</td>
+<td>address everyone from above</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>504</th>
+<td><|det2|> and <|det3|> hustle <|det1|> to the door. After <|det2|> and <|det3|> will most likely </td>
+<td>tell the kids to start the fight</td>
+<td style="background-color: lightgreen">tell his men to attack</td>
+<td>escort <|det1|> out of the door</td>
+<td>be rejected by the group</td>
+<td>2</td>
+<td>0</td>
+</tr>
+<tr style="background-color: white">
+ <th>505</th>
+<td><|det1|> looks confused as she listens to what <|det3|> is telling her as she escorts her to the door. Because <|det1|> wanted to </td>
+<td>listen to what someone had to say</td>
+<td>wait for his turn to speak</td>
+<td>get on with his presentation</td>
+<td>understand why she was being rushed out</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr style="background-color: white">
+ <th>506</th>
+<td><|det1|> looks confused as she listens to what <|det3|> is telling her as she escorts her to the door. Because <|det1|> wanted to </td>
+<td>knock him over</td>
+<td>listen to a message</td>
+<td>take some food to someone who dropped it</td>
+<td>stay longer</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>507</th>
+<td><|det1|> looks confused as she listens to what <|det3|> is telling her as she escorts her to the door. Before <|det1|> needed to </td>
+<td>hear <|det2|> make a rude comment</td>
+<td>grab the pencil</td>
+<td style="background-color: lightgreen">get into a fight with <|det2|></td>
+<td>walk up to <|det1|> and <|det2|></td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>508</th>
+<td><|det1|> looks confused as she listens to what <|det3|> is telling her as she escorts her to the door. Before <|det1|> needed to </td>
+<td>put on the referee name tag</td>
+<td>put on his security gear in the employee locker room</td>
+<td>feel sad on a supposedly happy day</td>
+<td>tell <|det1|> and <|det2|> to take her someone</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+ <th>509</th>
+<td><|det1|> looks confused as she listens to what <|det3|> is telling her as she escorts her to the door. Before <|det1|> needed to </td>
+<td style="background-color: lightgreen">put on a uniform</td>
+<td>drive somewhere with <|det3|></td>
+<td>stop talking to <|det3|></td>
+<td>be seeing <|det3|> out</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr style="background-color: white">
+ <th>510</th>
+<td><|det1|> looks confused as she listens to what <|det3|> is telling her as she escorts her to the door. Before <|det1|> needed to </td>
+<td>be working as a receptionist</td>
+<td>turn on the camera</td>
+<td>hold auditions</td>
+<td>saying goodbye to <|det3|></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr style="background-color: white">
+ <th>511</th>
+<td><|det1|> looks confused as she listens to what <|det3|> is telling her as she escorts her to the door. After <|det1|> will most likely </td>
+<td>suck in the inhaler</td>
+<td>dry his hands off</td>
+<td>go to his desk</td>
+<td>walk outside the house</td>
+<td>2</td>
+<td>2</td>
+</tr>
+ </tbody>
+ </table>
+ </body>
+ </html>
