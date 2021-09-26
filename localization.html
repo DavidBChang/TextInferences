@@ -582,6 +582,7 @@
             'url': 'relation_predictions_9000_57000.json?sigh=' + Math.floor(Math.random() * 1000),
             'dataType': "json",
             'success': function (data) {
+                console.log(data)
                 for (let d of data) {
                   max += 1;
                 }
