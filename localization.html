@@ -478,9 +478,9 @@
                     html_text += j + ': ' + relation_data[idx]['ending' + j] + '<br>';
                 }
                 let gt_idx = relation_data[idx].label;
-                html_text += `<b>GT</b>: (${gt_idx}): ` + relation_data[idx]['ending' + gt_idx] + '<br>';
+                html_text += `<b>GT</b>: (${gt_idx}) ` + relation_data[idx]['ending' + gt_idx] + '<br>';
                 let predicted_idx = relation_data[idx].predicted;
-                html_text += `<b>Predicted</b>: (${predicted_idx}): ` + relation_data[idx]['ending' + predicted_idx];
+                html_text += `<b>Predicted</b>: (${predicted_idx}) ` + relation_data[idx]['ending' + predicted_idx];
                 $('#place').html(html_text);
 
                 // $('#place').html('<b> Place </b>: ' + relation_data[idx].place);
