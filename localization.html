@@ -464,6 +464,11 @@
                 $("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
                 $('#img_id').text('Image ID: ' + relation_data[idx].img_id);
                 $('#place').html(relation_data[idx].ending0);
+                $('#place').html(relation_data[idx].ending1);
+                $('#place').html(relation_data[idx].ending2);
+                $('#place').html(relation_data[idx].ending3);
+                let predicted_idx = relation_data[idx].predicted;
+                $('#place').html('<b> Predicted </b>: ' + relation_data[idx]['ending' + predicted_idx]);
 
                 // $('#place').html('<b> Place </b>: ' + relation_data[idx].place);
 
