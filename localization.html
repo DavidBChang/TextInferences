@@ -601,11 +601,12 @@
                   // $.getJSON('all_relations.json?t=' + new Date, function (data) {
                   // Show or hide on hover
                   console.log(data);
-                  const palette = new DistinctColors({count: data.names.length, lightMin: 25});
-                  console.log(palette)
+                  // const palette = new DistinctColors({count: data.names.length, lightMin: 25});
+                  const palette = new DistinctColors({count: 4, lightMin: 25});
+                  // console.log(palette)
                   // const palette = ['limegreen', 'red', 'blue', 'yellow'];
                   // const palette = [chroma('limegreen'), chroma('red'), chroma('blue').rgb(), chroma('yellow').rgb()];
-                  console.log(palette)
+                  // console.log(palette)
                   // chroma('orange').rgb();
 
                   $('.buttonrow > button.active').click();
