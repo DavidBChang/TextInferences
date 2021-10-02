@@ -332,11 +332,11 @@
       <!-- HIT START -->
       <div id="hit" class="container">
           <div class="body">
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <button id='event' type="button" class="btn btn-primary">Event</button>
                 <button id='person_id' type="button" class="btn btn-primary">Person ID</button>
-            </div>
-            <!-- <button type="button" class="btn btn-info" id="event">Event<i class="fas fa-play"></i></button> -->
+            </div> -->
+            <button type="button" class="btn btn-info" id="event">Event<i class="fas fa-play"></i></button>
             <button type="button" class="btn btn-info" id="person_id">Person ID<i class="fas fa-play"></i></button>
                     <div class="input-group-prepend" style="padding-top: 1rem">
                         <input type="text" class="col-lg-2 form-control" placeholder="(0-5972)" id="imgid">
@@ -687,7 +687,13 @@
         $('#event').click(function(){
             max = 2684;
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
-            $(".person_id").button("toggle");
+            
+        });
+
+        $('#person_id').click(function(){
+            max = 2684;
+            dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
+            
         });
 
         // const palette = new DistinctColors({count: 1, lightMin: 25});
