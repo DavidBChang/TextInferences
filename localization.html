@@ -338,7 +338,7 @@
             </div> -->
             <button type="button" class="btn btn-info" id="event">Event<i class="fas fa-play"></i></button>
             <button type="button" class="btn btn-info" id="person_id">Person ID<i class="fas fa-play"></i></button>
-            <p id="task_description"></p>
+            <p><b id="task_description"></b></p>
                     <div class="input-group-prepend" style="padding-top: 1rem">
                         <input type="text" class="col-lg-2 form-control" placeholder="(0-5972)" id="imgid">
 <!--                        <label for="imgid"></label><input type="text" class="col-lg-2 form-control" placeholder="(0-87)" id="imgid">-->
@@ -668,8 +668,8 @@
       $(document ).ready(function() {
 
         var idx = 0;
-        var max = 5972;
-        var dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
+        var max = 0;
+        var dataFile = '';
         // $.ajax({
         //     'async': false,
         //     'global': false,
@@ -683,20 +683,20 @@
         //     }
         // });
         // max = max - 1;
-        $('#imgid').attr("placeholder", "(0-" + max + ")");
 
         $('#event').click(function(){
             max = 2684;
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
             console.log('clicked event')
-            $("#task_description").text(<b>Event</b>);
+            $("#task_description").text("Event");
         });
 
         $('#person_id').click(function(){
             max = 2684;
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
-            $('#task_description').text(<b>Person ID</b>);
+            $('#task_description').text("Person ID");
         });
+        $('#imgid').attr("placeholder", "(0-" + max + ")");
 
         // const palette = new DistinctColors({count: 1, lightMin: 25});
         // let bgcolor = palette[0].darker().hex();
