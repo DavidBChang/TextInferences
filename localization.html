@@ -338,7 +338,7 @@
             </div> -->
             <button type="button" class="btn btn-info" id="event">Event<i class="fas fa-play"></i></button>
             <button type="button" class="btn btn-info" id="person_id">Person ID<i class="fas fa-play"></i></button>
-            <p id="task_description">task</p>
+            <p id="task_description"></p>
                     <div class="input-group-prepend" style="padding-top: 1rem">
                         <input type="text" class="col-lg-2 form-control" placeholder="(0-5972)" id="imgid">
 <!--                        <label for="imgid"></label><input type="text" class="col-lg-2 form-control" placeholder="(0-87)" id="imgid">-->
@@ -689,13 +689,13 @@
             max = 2684;
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
             console.log('clicked event')
-            $("#task_description").text('Event');
+            $("#task_description").text(<b>Event</b>);
         });
 
         $('#person_id').click(function(){
             max = 2684;
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
-            $('#task_description').text('Person ID');
+            $('#task_description').text(<b>Person ID</b>);
         });
 
         // const palette = new DistinctColors({count: 1, lightMin: 25});
