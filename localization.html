@@ -332,6 +332,8 @@
       <!-- HIT START -->
       <div id="hit" class="container">
           <div class="body">
+            <button type="button" class="btn btn-success" id="event">Event<i class="fas fa-play"></i></button>
+            <button type="button" class="btn btn-success" id="person_id">Person ID<i class="fas fa-play"></i></button>
                     <div class="input-group-prepend" style="padding-top: 1rem">
                         <input type="text" class="col-lg-2 form-control" placeholder="(0-5972)" id="imgid">
 <!--                        <label for="imgid"></label><input type="text" class="col-lg-2 form-control" placeholder="(0-87)" id="imgid">-->
@@ -467,12 +469,7 @@
                 console.log(relation_data[0]);
                 $("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
                 $('#img_id').text('Image ID: ' + relation_data[idx].img_id);
-                // $('#place').html(relation_data[idx].ending0);
-                // $('#place').html(relation_data[idx].ending1);
-                // $('#place').html(relation_data[idx].ending2);
-                // $('#place').html(relation_data[idx].ending3);
-                // let predicted_idx = relation_data[idx].predicted;
-                // $('#place').html('<b> Predicted </b>: ' + relation_data[idx]['ending' + predicted_idx]);
+                
                 let html_text = '';
                 for (let j = 0; j < 4; j++) {
                     html_text += j + ': ' + relation_data[idx]['ending' + j] + '<br>';
@@ -680,6 +677,8 @@
         // });
         // max = max - 1;
         $('#imgid').attr("placeholder", "(0-" + max + ")");
+
+
 
         if (searchParams.has('im')) {
             idx = parseInt(searchParams.get('im'));
