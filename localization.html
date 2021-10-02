@@ -332,7 +332,10 @@
       <!-- HIT START -->
       <div id="hit" class="container">
           <div class="body">
-            <div class="event"></div>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <button id='event' type="button" class="btn btn-primary">Event</button>
+                <button id='person_id' type="button" class="btn btn-primary">Person ID</button>
+            </div>
             <!-- <button type="button" class="btn btn-info" id="event">Event<i class="fas fa-play"></i></button> -->
             <button type="button" class="btn btn-info" id="person_id">Person ID<i class="fas fa-play"></i></button>
                     <div class="input-group-prepend" style="padding-top: 1rem">
@@ -686,18 +689,20 @@
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
         });
 
-        const palette = new DistinctColors({count: 1, lightMin: 25});
-        let bgcolor = palette[0].darker().hex();
-        let bgcolorHighlight = palette[0].brighten().hex();
-        let eventButton = $('<button type="button" class="btn image-toggle active" data-toggle="button" aria-pressed="true">').text('Event');
-            eventButton.on('click', function () {
-            if (eventButton.attr('aria-pressed') === 'true') {
-                eventButton.css({backgroundColor: bgcolor, color: '#fff'});
-            } else {
-            eventButton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-            }
-        });
-        $('.event').append(eventButton);
+        // const palette = new DistinctColors({count: 1, lightMin: 25});
+        // let bgcolor = palette[0].darker().hex();
+        // let bgcolorHighlight = palette[0].brighten().hex();
+        // let eventButton = $('<button type="button" class="btn btn-info">').text('Event');
+        // eventButton.on('click', function () {
+        //     if (eventButton.attr('aria-pressed') === 'true') {
+        //         eventButton.css({backgroundColor: bgcolor, color: '#fff'});
+        //         max = 2684;
+        //         dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
+        //     } else {
+        //     eventButton.css({backgroundColor: bgcolorHighlight, color: '#000'});
+        //     }
+        // });
+        // $('.event').append(eventButton);
 
         if (searchParams.has('im')) {
             idx = parseInt(searchParams.get('im'));
