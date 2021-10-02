@@ -332,7 +332,8 @@
       <!-- HIT START -->
       <div id="hit" class="container">
           <div class="body">
-            <button type="button" class="btn btn-info" id="event">Event<i class="fas fa-play"></i></button>
+            <div class="event"></div>
+            <!-- <button type="button" class="btn btn-info" id="event">Event<i class="fas fa-play"></i></button> -->
             <button type="button" class="btn btn-info" id="person_id">Person ID<i class="fas fa-play"></i></button>
                     <div class="input-group-prepend" style="padding-top: 1rem">
                         <input type="text" class="col-lg-2 form-control" placeholder="(0-5972)" id="imgid">
@@ -685,17 +686,18 @@
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
         });
 
-        // let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
-        // let draw = drawSegmentation(name_i, data.boxes[i], data.segms[i], palette[i], data.width, data.height);
-        // mybutton.on('click', function () {
-        //     if (mybutton.attr('aria-pressed') === 'true') {
-        //     mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-        //     draw.attr('opacity', 0);
-        //     } else {
-        //     draw.attr('opacity', 1);
-        //     mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-        //     }
-        // });
+        const palette = new DistinctColors({count: 1, lightMin: 25});
+        let bgcolor = palette[0].darker().hex();
+        let bgcolorHighlight = palette[0].brighten().hex();
+        let eventButton = $('<button type="button" class="btn image-toggle active" data-toggle="button" aria-pressed="true">').text('Event');
+            eventButton.on('click', function () {
+            if (eventButton.attr('aria-pressed') === 'true') {
+                eventButton.css({backgroundColor: bgcolor, color: '#fff'});
+            } else {
+            eventButton.css({backgroundColor: bgcolorHighlight, color: '#000'});
+            }
+        });
+        $('.event').append(eventButton);
 
         if (searchParams.has('im')) {
             idx = parseInt(searchParams.get('im'));
