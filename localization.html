@@ -687,15 +687,17 @@
         $('#event').click(function(){
             max = 2684;
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
-            console.log('clicked event')
             $("#task_description").text("Event");
-            location.reload();
+            $('#imgid').attr("placeholder", "(0-" + max + ")");
+            displayPic(idx, dataFile);
         });
 
         $('#person_id').click(function(){
             max = 2684;
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
             $('#task_description').text("Person ID");
+            $('#imgid').attr("placeholder", "(0-" + max + ")");
+            displayPic(idx, dataFile);
         });
         $('#imgid').attr("placeholder", "(0-" + max + ")");
 
