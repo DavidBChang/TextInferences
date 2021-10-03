@@ -491,7 +491,7 @@
                 html_text += `<b>Percentages</b>: ` + relation_data[idx]['percentages'];
                 $('#place').html(html_text);
 
-                let answers = $('<div class="btn-group-vertical answergroup style="width:100%"" id="a' + idx + '">');
+                let answers = $('<div class="btn-group-vertical answergroup btn-block" id="a' + idx + '">');
 
                 for (let j=0; j < 4; j++) {
                     let letter='abcd'[j] + ') ';
