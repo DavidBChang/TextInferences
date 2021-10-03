@@ -495,7 +495,7 @@
 
                 for (let j=0; j < 4; j++) {
                     let letter='abcd'[j] + ') ';
-                    answers.append($('<button type="button" class="btn btn-lg btn-outline-dark answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+                    answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
                 }
                 answers.children().eq(relation_data[idx].label).addClass('clicked-correct');
 
