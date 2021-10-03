@@ -502,7 +502,7 @@
                 if (relation_data[idx].predicted !== relation_data[idx].label) {
                     answers.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
                 }
-                let qablock = $('<div class="card box-shadow">').append($('<div class="card-body">').append(answers).append($('<p class="msg">')));
+                let qablock = $('<div class="card box-shadow">').append($('<div class="card-body" style="justify-content: center;">').append(answers).append($('<p class="msg">')));
                 // qablock.appendTo('#annots');
 
 
