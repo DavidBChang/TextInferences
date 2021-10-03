@@ -92,8 +92,6 @@ h2 {
     padding: 0.5rem;
     padding-left: 15px;
     padding-right: 15px;
-    justify-content: center;
-    display: flex;
 }
 
 #rationalex {
@@ -102,7 +100,6 @@ h2 {
 
 .box-shadow {
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-    justify-content: center;
 }
 
 .fig-shadow {
@@ -124,7 +121,6 @@ h2 {
     white-space: normal;
     word-wrap: break-word;
     text-align: center;
-    display: flex;
 }
 
 .answerbutton {
