@@ -727,6 +727,7 @@
         if (searchParams.has('im')) {
             idx = parseInt(searchParams.get('im'));
             if (max > 0 && (idx < 0) || (idx > max)) {
+                console.log(max)
               alert("index must be between 0 and "+ max + " inclusive");
             }
         }
