@@ -489,6 +489,19 @@
                 html_text += `<b>Percentages</b>: ` + relation_data[idx]['percentages'];
                 $('#place').html(html_text);
 
+                let answers = $('<div class="btn-group-vertical answergroup" id="a' + idx + '">');
+
+                for (let j=0; j < 4; j++) {
+                    let letter='abcd'[j] + ') ';
+                    answers.append($('<button type="button" class="btn btn-sm btn-outline-dark answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append(relation_data[idx]['percentages'][j] + '%')));
+                }
+                answers.children().eq(relation_data[idx].label).addClass('clicked-correct');
+
+                // if (argMax(data[i]['pred_a']) !== data[i]['answer_label']) {
+                //     answers.children().eq(argMax(data[i]['pred_a'])).addClass('clicked-wrong');
+                // }
+
+
                 // $('#place').html('<b> Place </b>: ' + relation_data[idx].place);
 
                 // i = 0;
