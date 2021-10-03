@@ -484,7 +484,7 @@
                 let gt_idx = relation_data[idx].label;
                 html_text += `<b>GT</b>: (${gt_idx}) ` + relation_data[idx]['ending' + gt_idx] + '<br>';
                 let predicted_idx = relation_data[idx].predicted;
-                html_text += `<b>Predicted</b>: (${predicted_idx}) ` + relation_data[idx]['ending' + predicted_idx];
+                html_text += `<b>Predicted</b>: (${predicted_idx}) ` + relation_data[idx]['ending' + predicted_idx] + '<br>';
                 html_text += `<b>Percentages</b>: ` + relation_data[idx]['predictions'];
                 $('#place').html(html_text);
 
