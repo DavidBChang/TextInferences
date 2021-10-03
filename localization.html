@@ -336,6 +336,7 @@
                 <button id='event' type="button" class="btn btn-primary">Event</button>
                 <button id='person_id' type="button" class="btn btn-primary">Person ID</button>
             </div> -->
+            <p><b>Tasks: </b></p>
             <button type="button" class="btn btn-info" id="event">Event<i class="fas fa-play"></i></button>
             <button type="button" class="btn btn-info" id="person_id">Person ID<i class="fas fa-play"></i></button>
             <p><b id="task_description"></b></p>
@@ -484,6 +485,7 @@
                 html_text += `<b>GT</b>: (${gt_idx}) ` + relation_data[idx]['ending' + gt_idx] + '<br>';
                 let predicted_idx = relation_data[idx].predicted;
                 html_text += `<b>Predicted</b>: (${predicted_idx}) ` + relation_data[idx]['ending' + predicted_idx];
+                html_text += `<b>Percentages</b>: ` + relation_data[idx]['predictions'];
                 $('#place').html(html_text);
 
                 // $('#place').html('<b> Place </b>: ' + relation_data[idx].place);
@@ -687,7 +689,7 @@
         $('#event').click(function(){
             max = 2684;
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
-            $("#task_description").text("Event");
+            $("#task_description").text("Event task using train_localization_event.json and val_localization_event_eq.json");
             $('#imgid').attr("placeholder", "(0-" + max + ")");
             displayPic(idx, dataFile);
         });
@@ -695,26 +697,11 @@
         $('#person_id').click(function(){
             max = 2684;
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
-            $('#task_description').text("Person ID");
+            $('#task_description').text("Person ID task using train_localization_event_eq.json and val_localization_event_eq.json");
             $('#imgid').attr("placeholder", "(0-" + max + ")");
             displayPic(idx, dataFile);
         });
         $('#imgid').attr("placeholder", "(0-" + max + ")");
-
-        // const palette = new DistinctColors({count: 1, lightMin: 25});
-        // let bgcolor = palette[0].darker().hex();
-        // let bgcolorHighlight = palette[0].brighten().hex();
-        // let eventButton = $('<button type="button" class="btn btn-info">').text('Event');
-        // eventButton.on('click', function () {
-        //     if (eventButton.attr('aria-pressed') === 'true') {
-        //         eventButton.css({backgroundColor: bgcolor, color: '#fff'});
-        //         max = 2684;
-        //         dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
-        //     } else {
-        //     eventButton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-        //     }
-        // });
-        // $('.event').append(eventButton);
 
         if (searchParams.has('im')) {
             idx = parseInt(searchParams.get('im'));
