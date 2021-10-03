@@ -93,6 +93,7 @@ h2 {
     padding-left: 15px;
     padding-right: 15px;
     justify-content: center;
+    display: flex;
 }
 
 #rationalex {
@@ -123,6 +124,7 @@ h2 {
     white-space: normal;
     word-wrap: break-word;
     text-align: center;
+    display: flex;
 }
 
 .answerbutton {
