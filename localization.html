@@ -479,17 +479,17 @@
                 $("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
                 $('#img_id').text('Image ID: ' + relation_data[idx].img_id);
                 
-                let html_text = '';
-                for (let j = 0; j < 4; j++) {
-                    html_text += j + ': ' + relation_data[idx]['ending' + j] + '<br>';
-                }
-                console.log(relation_data[idx])
-                let gt_idx = relation_data[idx].label;
-                html_text += `<b>GT</b>: (${gt_idx}) ` + relation_data[idx]['ending' + gt_idx] + '<br>';
-                let predicted_idx = relation_data[idx].predicted;
-                html_text += `<b>Predicted</b>: (${predicted_idx}) ` + relation_data[idx]['ending' + predicted_idx] + '<br>';
-                html_text += `<b>Percentages</b>: ` + relation_data[idx]['percentages'];
-                $('#place').html(html_text);
+                // let html_text = '';
+                // for (let j = 0; j < 4; j++) {
+                //     html_text += j + ': ' + relation_data[idx]['ending' + j] + '<br>';
+                // }
+                // console.log(relation_data[idx])
+                // let gt_idx = relation_data[idx].label;
+                // html_text += `<b>GT</b>: (${gt_idx}) ` + relation_data[idx]['ending' + gt_idx] + '<br>';
+                // let predicted_idx = relation_data[idx].predicted;
+                // html_text += `<b>Predicted</b>: (${predicted_idx}) ` + relation_data[idx]['ending' + predicted_idx] + '<br>';
+                // html_text += `<b>Percentages</b>: ` + relation_data[idx]['percentages'];
+                // $('#place').html(html_text);
 
                 let answers = $('<div class="btn-group-vertical answergroup btn-block" id="a' + idx + '">');
 
