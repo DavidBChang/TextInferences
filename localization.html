@@ -494,7 +494,7 @@
                 // html_text += `<b>Predicted</b>: (${predicted_idx}) ` + relation_data[idx]['ending' + predicted_idx] + '<br>';
                 // html_text += `<b>Percentages</b>: ` + relation_data[idx]['percentages'];
                 // $('#place').html(html_text);
-
+                // btn-block
                 let answers = $('<div class="btn-group-vertical answergroup " id="a' + idx + '">');
                 let rationales = $('<div class="btn-group-vertical answergroup" id="r' + i + '">');
 
@@ -504,14 +504,14 @@
                     rationales.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
                 }
                 answers.children().eq(relation_data[idx].label).addClass('clicked-correct');
-                rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
+                // rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
 
                 if (relation_data[idx].predicted !== relation_data[idx].label) {
                     answers.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
                 }
-                if (relation_data[idx].predicted !== relation_data[idx].label) {
-                    rationales.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
-                }
+                // if (relation_data[idx].predicted !== relation_data[idx].label) {
+                //     rationales.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
+                // }
                 let qablock = $('<div class="card box-shadow">').append($('<div class="card-body">').append(answers).append($('<p class="msg">')));
                 let qarblock = $('<div class="card box-shadow">').append($('<div class="card-body">').append(answers).append($('<p class="msg">')));
 
