@@ -508,9 +508,46 @@
                 }
                 let qablock = $('<div class="card box-shadow">').append($('<div class="card-body">').append(answers).append($('<p class="msg">')));
                 // qablock.appendTo('#annots');
-                let qarblock = $('<div class="card box-shadow">').append($('<div class="card-body">').append(answers).append($('<p class="msg">')));
+                  $.getJSON(dataFile, function (relation_data) {
 
-                $('<div class="row annotationrow">').append($('<div class="col-lg-6">').append(qablock)).append($('<div class="col-lg-6">').append(qarblock)).appendTo('#annots');
+                      console.log('blah');
+                      $('#annots').empty();
+                      $('#imgid').val(idx);
+
+                      console.log(relation_data[0]);
+                      $("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
+                      $('#img_id').text('Image ID: ' + relation_data[idx].img_id);
+
+                      // let html_text = '';
+                      // for (let j = 0; j < 4; j++) {
+                      //     html_text += j + ': ' + relation_data[idx]['ending' + j] + '<br>';
+                      // }
+                      // console.log(relation_data[idx])
+                      // let gt_idx = relation_data[idx].label;
+                      // html_text += `<b>GT</b>: (${gt_idx}) ` + relation_data[idx]['ending' + gt_idx] + '<br>';
+                      // let predicted_idx = relation_data[idx].predicted;
+                      // html_text += `<b>Predicted</b>: (${predicted_idx}) ` + relation_data[idx]['ending' + predicted_idx] + '<br>';
+                      // html_text += `<b>Percentages</b>: ` + relation_data[idx]['percentages'];
+                      // $('#place').html(html_text);
+
+                      let answers = $('<div class="btn-group-vertical answergroup btn-block" id="a' + idx + '">');
+
+                      for (let j = 0; j < 4; j++) {
+                          let letter = 'abcd'[j] + ') ';
+                          answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+                      }
+                      answers.children().eq(relation_data[idx].label).addClass('clicked-correct');
+
+                      if (relation_data[idx].predicted !== relation_data[idx].label) {
+                          answers.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
+                      }
+                      let qarblock = $('<div class="card box-shadow">').append($('<div class="card-body">').append(answers).append($('<p class="msg">')));
+                      $('<div class="row annotationrow">').append($('<div class="col-lg-6">').append(qarblock)).appendTo('#annots');
+
+                  });// qablock.appendTo('#annots');
+                // let qarblock = $('<div class="card box-shadow">').append($('<div class="card-body">').append(answers).append($('<p class="msg">')));
+
+                $('<div class="row annotationrow">').append($('<div class="col-lg-6">').append(qablock)).appendTo('#annots');
                 // $('<div class="row annotationrow">').append($('<div class="col-lg-6">').append(qablock)).appendTo('#annots');
 
 
