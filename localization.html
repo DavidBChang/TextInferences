@@ -470,6 +470,9 @@
               // 'https://visualcomet.s3-us-west-2.amazonaws.com/explore/relation_predictions_' + idx + '.json'
               // 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json'
 
+              dataFileEvent = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
+              dataFilePersonID = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
+
               $.getJSON(dataFile, function (relation_data) {
 
                 console.log('blah');
@@ -507,6 +510,7 @@
                 // qablock.appendTo('#annots');
 
 
+                $('<div class="row annotationrow">').append($('<div class="col-lg-10">').append(qablock)).appendTo('#annots');
                 $('<div class="row annotationrow">').append($('<div class="col-lg-10">').append(qablock)).appendTo('#annots');
 
 
@@ -723,6 +727,12 @@
             $('#imgid').attr("placeholder", "(0-" + max + ")");
             displayPic(idx, dataFile);
         });
+        // max = 2684;
+        // dataFileEvent = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
+        // dataFilePersonID = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
+        // $('#task_description').text("Person ID task using train_localization_event_eq.json and test_localization_event_eq.json");
+        // $('#imgid').attr("placeholder", "(0-" + max + ")");
+        // displayPic(idx, dataFile);
         $('#imgid').attr("placeholder", "(0-" + max + ")");
 
         if (searchParams.has('im')) {
