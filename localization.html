@@ -496,15 +496,15 @@
                 // $('#place').html(html_text);
                 // btn-block
                 let answers = $('<div class="btn-group-vertical answergroup btn-block" id="a' + idx + '">');
-                // let rationales = $('<div class="btn-group-vertical answergroup btn-block" id="r' + idx + '">');
+                let rationales = $('<div class="btn-group-vertical answergroup btn-block" id="r' + idx + '">');
 
                 for (let j=0; j < 4; j++) {
                     let letter='abcd'[j] + ') ';
                     answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
-                    // rationales.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+                    rationales.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
                 }
                 answers.children().eq(relation_data[idx].label).addClass('clicked-correct');
-                // rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
+                rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
 
                 if (relation_data[idx].predicted !== relation_data[idx].label) {
                     answers.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
