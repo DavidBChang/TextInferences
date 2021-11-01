@@ -340,7 +340,7 @@
             <p><b>Tasks: </b></p>
             <button type="button" class="btn btn-info" id="event">Event<i class="fas fa-play"></i></button>
             <button type="button" class="btn btn-info" id="person_id">Person ID<i class="fas fa-play"></i></button>
-            
+
                     <div class="input-group-prepend" style="padding-top: 1rem">
                         <input type="text" class="col-lg-2 form-control" placeholder="(0-5972)" id="imgid">
 <!--                        <label for="imgid"></label><input type="text" class="col-lg-2 form-control" placeholder="(0-87)" id="imgid">-->
@@ -370,7 +370,7 @@
                     <div class="collapse show" id="comet">
                         <div class="questionrow">
                           <p id="place"><b></b></p>
-                            
+
 
 <!--                          <div class="card-body ctable0">-->
 <!--                              <p id="event_orig0"><b></b></p>-->
@@ -482,7 +482,7 @@
                 console.log(relation_data[0]);
                 $("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
                 $('#img_id').text('Image ID: ' + relation_data[idx].img_id);
-                
+
                 // let html_text = '';
                 // for (let j = 0; j < 4; j++) {
                 //     html_text += j + ': ' + relation_data[idx]['ending' + j] + '<br>';
@@ -500,7 +500,8 @@
 
                 for (let j=0; j < 4; j++) {
                     let letter='abcd'[j] + ') ';
-                    answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id)).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+                    let img_fn =
+                    answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx]['ending' + j])).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
                     rationales.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
                 }
                 answers.children().eq(relation_data[idx].label).addClass('clicked-correct');
