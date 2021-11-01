@@ -542,6 +542,7 @@
 
                     let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
                     let draw = drawSegmentation(name_i, data.boxes[i], data.segms[i], palette[i], data.width, data.height);
+                    console.log(draw)
                     mybutton.on('click', function () {
                       if (mybutton.attr('aria-pressed') === 'true') {
                         mybutton.css({backgroundColor: bgcolor, color: '#fff'});
