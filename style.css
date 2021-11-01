@@ -52,6 +52,14 @@ h2 {
     border-radius: .3rem;
 }
 
+.mcimage {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    margin-top: 0;
+    border-radius: .3rem;
+}
+
 .drawing-class {
     height: 0;
 }
