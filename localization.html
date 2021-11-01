@@ -500,7 +500,20 @@
 
                 for (let j=0; j < 4; j++) {
                     let letter='abcd'[j] + ') ';
-                    answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($('<img class="img-fluid mcimage">').attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id)).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+                    // <div class="img-container">
+                    //     <img class="img-fluid annotimage" id='img2show'>
+                    //     <div id="drawing" class="drawing-class"></div>
+                    // </div>
+                    // <div class="row">
+                    //     <div id="globalbutton" class="col-lg-2 text-center" style="padding:0"></div>
+                    //     <div class="col-lg-10 buttonrow"></div>
+                    // </div>
+                    // answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($('<img class="img-fluid mcimage">').attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id)).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+                    answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter)
+                        .append($('<div class="img-container">').append($('<img class="img-fluid mcimage">').attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id))
+                        .append($('<div id="drawing" class="drawing-class">'))).append($('<div class="row">')
+                        .append($('<div id="globalbutton" class="col-lg-2 text-center" style="padding:0">'))
+                        .append($('<div class="col-lg-10 buttonrow">'))).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
 
                     $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[idx].img_id.replace('jpg', 'json') + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
                 // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[0].metadata_fn + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
