@@ -350,11 +350,35 @@
                     <a href="#" id="next">Next &raquo;</a>
 
                     <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show'>
+                        <img class="img-fluid annotimage" id='img2show0'>
                         <div id="drawing" class="drawing-class"></div>
                     </div>
                     <div class="row">
-                        <div id="globalbutton" class="col-lg-2 text-center" style="padding:0"></div>
+                        <div id="globalbutton0" class="col-lg-2 text-center" style="padding:0"></div>
+                        <div class="col-lg-10 buttonrow"></div>
+                    </div>
+              <div class="img-container">
+                        <img class="img-fluid annotimage" id='img2show1'>
+                        <div id="drawing" class="drawing-class"></div>
+                    </div>
+                    <div class="row">
+                        <div id="globalbutton1" class="col-lg-2 text-center" style="padding:0"></div>
+                        <div class="col-lg-10 buttonrow"></div>
+                    </div>
+              <div class="img-container">
+                        <img class="img-fluid annotimage" id='img2show2'>
+                        <div id="drawing" class="drawing-class"></div>
+                    </div>
+                    <div class="row">
+                        <div id="globalbutton2" class="col-lg-2 text-center" style="padding:0"></div>
+                        <div class="col-lg-10 buttonrow"></div>
+                    </div>
+              <div class="img-container">
+                        <img class="img-fluid annotimage" id='img2show3'>
+                        <div id="drawing" class="drawing-class"></div>
+                    </div>
+                    <div class="row">
+                        <div id="globalbutton3" class="col-lg-2 text-center" style="padding:0"></div>
                         <div class="col-lg-10 buttonrow"></div>
                     </div>
 
@@ -443,8 +467,8 @@
               return scaledPoints
           }
 
-          function drawSegmentation(name, box, segm, color, width, height) {
-              const draw = SVG('drawing').viewbox(0, 0, width, height);
+          function drawSegmentation(name, box, segm, color, width, height, drawing_id) {
+              const draw = SVG(drawing_id).viewbox(0, 0, width, height);
               draw.addClass('segmentation');
               for (let i=0; i < segm.length; i++) {
                   draw.polygon(flattenPoints(segm[i])).fill({color: color.brighten(2).hex(), opacity: 0.3}).stroke({opacity:0.5, width:2, color:color.darken(2).hex()});
@@ -480,8 +504,25 @@
                 $('#imgid').val(idx);
 
                 console.log(relation_data[0]);
-                $("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
-                $('#img_id').text('Image ID: ' + relation_data[idx].img_id);
+                let person_indices = []
+                for (let j = 0; j < 4; j++) {
+                    let img_id = relation_data[idx]['ending' + j];
+                    img_id = img_id.split('/');
+                    let img_dir = img_id[0]
+                    let img_file = img_id[1]
+                    let underscore_idx = img_file.indexOf('_')
+                    let person_idx = parseInt(img_file.slice(0, underscore_idx))
+                    person_indices.push(person_idx)
+                    let orig_img_file = img_file.slice(underscore_idx + 1)
+                    let orig_img_id = img_dir + '/' + orig_img_file
+                    $("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + orig_img_id);
+                    $('#img_id' + j.toString()).text('Image ID: ' + relation_data[idx]['ending' + j]);
+                }
+                // $("#img2show0").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
+                // $("#img2show1").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
+                // $("#img2show2").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
+                // $("#img2show3").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
+                // $('#img_id').text('Image ID: ' + relation_data[idx].img_id);
 
                 // let html_text = '';
                 // for (let j = 0; j < 4; j++) {
@@ -500,7 +541,6 @@
 
                 for (let j=0; j < 4; j++) {
                     let letter='abcd'[j] + ') ';
-                    let img_fn =
                     answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx]['ending' + j])).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
                     rationales.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
                 }
@@ -635,7 +675,7 @@
                 //     }
                 // });
 
-                $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[idx].img_id.replace('jpg', 'json') + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
+                $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[idx].orig_img_id.replace('jpg', 'json') + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
                 // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[0].metadata_fn + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
                 // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[idx].metadata_fn + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
 
@@ -650,18 +690,23 @@
                   // console.log(palette)
                   // chroma('orange').rgb();
 
-                  $('.buttonrow > button.active').click();
-                  $('.buttonrow').empty();
-                  $('#globalbutton').empty();
+                  // $('.buttonrow > button.active').click();
+                  // $('.buttonrow').empty();
+                  // $('#globalbutton').empty();
 
                   // let i = 0; i < data.names.length; i++
                   for (let i = 0; i < 4; i++) {
-                    let bgcolor = palette[i].darker().hex();
-                    let bgcolorHighlight = palette[i].brighten().hex();
-                    let name_i = (i + 1).toString() + " (" + data.names[i] + ")";
+                      $('.buttonrow > button.active').click();
+                      $('.buttonrow').empty();
+                      $('#globalbutton' + i.toString()).empty();
+                      let person_idx = person_indices[i]
+                    let bgcolor = palette[person_idx].darker().hex();
+                    let bgcolorHighlight = palette[person_idx].brighten().hex();
+                    let name_i = (person_idx + 1).toString() + " (" + data.names[person_idx] + ")";
 
                     let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
-                    let draw = drawSegmentation(name_i, data.boxes[i], data.segms[i], palette[i], data.width, data.height);
+                    let drawing_id = 'drawing' + i.toString()
+                    let draw = drawSegmentation(name_i, data.boxes[person_idx], data.segms[person_idx], palette[person_idx], data.width, data.height, drawing_id);
                     mybutton.on('click', function () {
                       if (mybutton.attr('aria-pressed') === 'true') {
                         mybutton.css({backgroundColor: bgcolor, color: '#fff'});
@@ -724,7 +769,7 @@
 
         $('#event').click(function(){
             max = 2684;
-            dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
+            dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_event_reverse.json';
             $("#task_description").text("Event task using train_localization_event.json and test_localization_event_eq.json");
             $('#imgid').attr("placeholder", "(0-" + max + ")");
             displayPic(idx, dataFile);
@@ -732,7 +777,7 @@
 
         $('#person_id').click(function(){
             max = 2684;
-            dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
+            dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_person_reverse.json';
             $('#task_description').text("Person ID task using train_localization_event_eq.json and test_localization_event_eq.json");
             $('#imgid').attr("placeholder", "(0-" + max + ")");
             displayPic(idx, dataFile);
