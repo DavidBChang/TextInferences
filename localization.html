@@ -500,86 +500,14 @@
 
                 for (let j=0; j < 4; j++) {
                     let letter='abcd'[j] + ') ';
-                    // <div class="img-container">
-                    //     <img class="img-fluid annotimage" id='img2show'>
-                    //     <div id="drawing" class="drawing-class"></div>
-                    // </div>
-                    // <div class="row">
-                    //     <div id="globalbutton" class="col-lg-2 text-center" style="padding:0"></div>
-                    //     <div class="col-lg-10 buttonrow"></div>
-                    // </div>
-                    // answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($('<img class="img-fluid mcimage">').attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id)).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
-                    answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter)
-                        .append($('<div class="img-container">').append($('<img class="img-fluid mcimage">').attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id))
-                        .append($('<div id="drawing" class="drawing-class">'))).append($('<div class="row">')
-                        .append($('<div id="globalbutton" class="col-lg-2 text-center" style="padding:0">'))
-                        .append($('<div class="col-lg-10 buttonrow">'))).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+                    answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+                    // answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter)
+                    //     .append($('<div class="img-container">').append($('<img class="img-fluid mcimage">').attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id))
+                    //     .append($('<div id="drawing" class="drawing-class">'))).append($('<div class="row">')
+                    //     .append($('<div id="globalbutton" class="col-lg-2 text-center" style="padding:0">'))
+                    //     .append($('<div class="col-lg-10 buttonrow">'))).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
 
-                    $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[idx].img_id.replace('jpg', 'json') + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
-                // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[0].metadata_fn + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
-                // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[idx].metadata_fn + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
 
-                  // $.getJSON('all_relations.json?t=' + new Date, function (data) {
-                  // Show or hide on hover
-                  console.log(data);
-                  // const palette = new DistinctColors({count: data.names.length, lightMin: 25});
-                  const palette = new DistinctColors({count: 4, lightMin: 25});
-                  // console.log(palette)
-                  // const palette = ['limegreen', 'red', 'blue', 'yellow'];
-                  // const palette = [chroma('limegreen'), chroma('red'), chroma('blue').rgb(), chroma('yellow').rgb()];
-                  // console.log(palette)
-                  // chroma('orange').rgb();
-
-                  $('.buttonrow > button.active').click();
-                  $('.buttonrow').empty();
-                  $('#globalbutton').empty();
-
-                  // let i = 0; i < data.names.length; i++
-                  for (let i = 0; i < 4; i++) {
-                    let bgcolor = palette[i].darker().hex();
-                    let bgcolorHighlight = palette[i].brighten().hex();
-                    let name_i = (i + 1).toString() + " (" + data.names[i] + ")";
-
-                    let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
-                    let draw = drawSegmentation(name_i, data.boxes[i], data.segms[i], palette[i], data.width, data.height);
-                    console.log(draw)
-                    mybutton.on('click', function () {
-                      if (mybutton.attr('aria-pressed') === 'true') {
-                        mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                        draw.attr('opacity', 0);
-                      } else {
-                        draw.attr('opacity', 1);
-                        mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                      }
-                    });
-
-                    mybutton.hover(function () {
-                      if (mybutton.attr('aria-pressed') === 'true') {
-                        mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                      } else {
-                        mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                      }
-                    }, function () {
-                      if (mybutton.attr('aria-pressed') === 'true') {
-                        mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                      } else {
-                        mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                      }
-                    });
-                    $('.buttonrow').append(mybutton);
-
-                  }
-                  let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton');
-                  hideall.on('click', function () {
-                    $('.buttonrow > button.active').click();
-                  });
-
-                  let showall = $('<button type="button" class="btn btn-outline-dark">').text('show all').appendTo('#globalbutton');
-                  showall.on('click', function () {
-                    $('.buttonrow > button:not(.active)').click();
-                  });
-
-                });
                     rationales.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
                 }
                 answers.children().eq(relation_data[idx].label).addClass('clicked-correct');
@@ -713,70 +641,70 @@
                 //     }
                 // });
 
-                // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[idx].img_id.replace('jpg', 'json') + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
-                // // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[0].metadata_fn + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
-                // // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[idx].metadata_fn + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
-                //
-                //   // $.getJSON('all_relations.json?t=' + new Date, function (data) {
-                //   // Show or hide on hover
-                //   console.log(data);
-                //   // const palette = new DistinctColors({count: data.names.length, lightMin: 25});
-                //   const palette = new DistinctColors({count: 4, lightMin: 25});
-                //   // console.log(palette)
-                //   // const palette = ['limegreen', 'red', 'blue', 'yellow'];
-                //   // const palette = [chroma('limegreen'), chroma('red'), chroma('blue').rgb(), chroma('yellow').rgb()];
-                //   // console.log(palette)
-                //   // chroma('orange').rgb();
-                //
-                //   $('.buttonrow > button.active').click();
-                //   $('.buttonrow').empty();
-                //   $('#globalbutton').empty();
-                //
-                //   // let i = 0; i < data.names.length; i++
-                //   for (let i = 0; i < 4; i++) {
-                //     let bgcolor = palette[i].darker().hex();
-                //     let bgcolorHighlight = palette[i].brighten().hex();
-                //     let name_i = (i + 1).toString() + " (" + data.names[i] + ")";
-                //
-                //     let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
-                //     let draw = drawSegmentation(name_i, data.boxes[i], data.segms[i], palette[i], data.width, data.height);
-                //     mybutton.on('click', function () {
-                //       if (mybutton.attr('aria-pressed') === 'true') {
-                //         mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                //         draw.attr('opacity', 0);
-                //       } else {
-                //         draw.attr('opacity', 1);
-                //         mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                //       }
-                //     });
-                //
-                //     mybutton.hover(function () {
-                //       if (mybutton.attr('aria-pressed') === 'true') {
-                //         mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                //       } else {
-                //         mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                //       }
-                //     }, function () {
-                //       if (mybutton.attr('aria-pressed') === 'true') {
-                //         mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                //       } else {
-                //         mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                //       }
-                //     });
-                //     $('.buttonrow').append(mybutton);
-                //
-                //   }
-                //   let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton');
-                //   hideall.on('click', function () {
-                //     $('.buttonrow > button.active').click();
-                //   });
-                //
-                //   let showall = $('<button type="button" class="btn btn-outline-dark">').text('show all').appendTo('#globalbutton');
-                //   showall.on('click', function () {
-                //     $('.buttonrow > button:not(.active)').click();
-                //   });
-                //
-                // });
+                $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[idx].img_id.replace('jpg', 'json') + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
+                // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[0].metadata_fn + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
+                // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[idx].metadata_fn + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
+
+                  // $.getJSON('all_relations.json?t=' + new Date, function (data) {
+                  // Show or hide on hover
+                  console.log(data);
+                  // const palette = new DistinctColors({count: data.names.length, lightMin: 25});
+                  const palette = new DistinctColors({count: 4, lightMin: 25});
+                  // console.log(palette)
+                  // const palette = ['limegreen', 'red', 'blue', 'yellow'];
+                  // const palette = [chroma('limegreen'), chroma('red'), chroma('blue').rgb(), chroma('yellow').rgb()];
+                  // console.log(palette)
+                  // chroma('orange').rgb();
+
+                  $('.buttonrow > button.active').click();
+                  $('.buttonrow').empty();
+                  $('#globalbutton').empty();
+
+                  // let i = 0; i < data.names.length; i++
+                  for (let i = 0; i < 4; i++) {
+                    let bgcolor = palette[i].darker().hex();
+                    let bgcolorHighlight = palette[i].brighten().hex();
+                    let name_i = (i + 1).toString() + " (" + data.names[i] + ")";
+
+                    let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
+                    let draw = drawSegmentation(name_i, data.boxes[i], data.segms[i], palette[i], data.width, data.height);
+                    mybutton.on('click', function () {
+                      if (mybutton.attr('aria-pressed') === 'true') {
+                        mybutton.css({backgroundColor: bgcolor, color: '#fff'});
+                        draw.attr('opacity', 0);
+                      } else {
+                        draw.attr('opacity', 1);
+                        mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
+                      }
+                    });
+
+                    mybutton.hover(function () {
+                      if (mybutton.attr('aria-pressed') === 'true') {
+                        mybutton.css({backgroundColor: bgcolor, color: '#fff'});
+                      } else {
+                        mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
+                      }
+                    }, function () {
+                      if (mybutton.attr('aria-pressed') === 'true') {
+                        mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
+                      } else {
+                        mybutton.css({backgroundColor: bgcolor, color: '#fff'});
+                      }
+                    });
+                    $('.buttonrow').append(mybutton);
+
+                  }
+                  let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton');
+                  hideall.on('click', function () {
+                    $('.buttonrow > button.active').click();
+                  });
+
+                  let showall = $('<button type="button" class="btn btn-outline-dark">').text('show all').appendTo('#globalbutton');
+                  showall.on('click', function () {
+                    $('.buttonrow > button:not(.active)').click();
+                  });
+
+                });
                 });
           }
 
