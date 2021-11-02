@@ -548,13 +548,15 @@
                     // if (relation_data[idx]['predicted'] === relation_data[idx]['label']) {
                     //     $('#button' + ).addClass('clicked-correct')
                     // }
+                    $('#button' + j.toString()).removeClass('clicked-wrong');
+                    $('#button0' + j.toString()).removeClass('clicked-correct');
                 }
                 let event = relation_data[idx]['event'];
                 event = 'person' + event.slice(event.indexOf('|>') + 2);
                 // $('#event_text').text('Text: ' + event);
                 $('#event_text').html('<b>Text: </b>' + event);
                 $('#img_id').html('<b>Image ID: </b>' + orig_img_id);
-                $('#button0').addClass('clicked-wrong');
+
                 // let choices = $('<div class="btn-group-vertical answergroup btn-block">');
                 // choices.children().eq(relation_data[idx].label).addClass('clicked-correct');
                 // // rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
