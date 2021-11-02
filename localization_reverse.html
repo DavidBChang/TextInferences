@@ -349,6 +349,8 @@
                     <a href="#" id="prev">&laquo; Previous</a>
                     <a href="#" id="next">Next &raquo;</a>
 
+              <div class="btn-group-vertical answergroup btn-block">
+
                     <div class="img-container">
                         <img class="img-fluid annotimage" id='img2show0'>
                         <div id="drawing0" class="drawing-class"></div>
@@ -381,6 +383,7 @@
                         <div id="globalbutton3" class="col-lg-2 text-center" style="padding:0"></div>
                         <div id="buttonrow3" class="col-lg-10 buttonrow"></div>
                     </div>
+              </div>
 
                     <p id="img_id"> </p>
 
@@ -542,6 +545,9 @@
 
                 for (let j=0; j < 4; j++) {
                     let letter='abcd'[j] + ') ';
+                    // answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx]['ending' + j])).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+
+                    // <div class="img-container">
                     answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx]['ending' + j])).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
                     rationales.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
                 }
