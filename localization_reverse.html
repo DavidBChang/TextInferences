@@ -348,8 +348,8 @@
                     </div>
                     <a href="#" id="prev">&laquo; Previous</a>
                     <a href="#" id="next">Next &raquo;</a>
-
-              <p id="event_text"> </p>
+              <p><b id="task_description"></b></p>
+              <p id="event_text"><b>Test</b> </p>
               <p id="img_id"> </p>
               <div id="img_annots" class="col-lg-6">
               <div class="btn-group-vertical answergroup btn-block">
@@ -448,7 +448,7 @@
 
                         </div>
                     </div>
-                    <p><b id="task_description"></b></p>
+
                     <div id="annots">
                         <!-- things go here-->
                       </div>
@@ -804,7 +804,7 @@
         $('#event').click(function(){
             max = 2684;
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_event_reverse.json';
-            $("#task_description").text("Event task using train_localization_event.json and test_localization_event_eq.json");
+            $("#task_description").text("Event task using train_localization_event_reverse.json and val_localization_event_reverse.json");
             $('#imgid').attr("placeholder", "(0-" + max + ")");
             displayPic(idx, dataFile);
         });
@@ -812,7 +812,7 @@
         $('#person_id').click(function(){
             max = 2684;
             dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_person_reverse.json';
-            $('#task_description').text("Person ID task using train_localization_event_eq.json and test_localization_event_eq.json");
+            $('#task_description').text("Person ID task using train_localization_event_reverse.json and val_localization_event_reverse.json");
             $('#imgid').attr("placeholder", "(0-" + max + ")");
             displayPic(idx, dataFile);
         });
