@@ -548,8 +548,8 @@
                     // if (relation_data[idx]['predicted'] === relation_data[idx]['label']) {
                     //     $('#button' + ).addClass('clicked-correct')
                     // }
-                    $('#button' + j.toString()).removeClass('clicked-wrong');
-                    $('#button0' + j.toString()).removeClass('clicked-correct');
+                    $('#button' + j.toString()).removeClass('clicked-wrong').removeClass('clicked-correct');
+                    // $('#button' + j.toString());
                 }
                 let event = relation_data[idx]['event'];
                 event = 'person' + event.slice(event.indexOf('|>') + 2);
