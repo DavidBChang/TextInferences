@@ -468,7 +468,7 @@
           }
 
           function drawSegmentation(name, box, segm, color, width, height, drawing_id) {
-              const draw = SVG(drawing_id).viewbox(0, 0, width, height);
+              const draw = SVG('drawing1').viewbox(0, 0, width, height);
               draw.addClass('segmentation');
               for (let i=0; i < segm.length; i++) {
                   draw.polygon(flattenPoints(segm[i])).fill({color: color.brighten(2).hex(), opacity: 0.3}).stroke({opacity:0.5, width:2, color:color.darken(2).hex()});
