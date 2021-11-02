@@ -701,49 +701,49 @@
                       $('.buttonrow').empty();
                       $('#globalbutton' + i.toString()).empty();
                       let person_idx = person_indices[i]
-                    let bgcolor = palette[person_idx].darker().hex();
-                    let bgcolorHighlight = palette[person_idx].brighten().hex();
-                    let name_i = (person_idx + 1).toString() + " (" + data.names[person_idx] + ")";
-                    console.log(name_i)
-                    let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
-                    let drawing_id = 'drawing' + i.toString()
-                    let draw = drawSegmentation(name_i, data.boxes[person_idx], data.segms[person_idx], palette[person_idx], data.width, data.height, drawing_id);
-                    mybutton.on('click', function () {
-                      if (mybutton.attr('aria-pressed') === 'true') {
-                        mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                        draw.attr('opacity', 0);
-                      } else {
-                        draw.attr('opacity', 1);
-                        mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                      }
-                    });
+                      let bgcolor = palette[person_idx].darker().hex();
+                      let bgcolorHighlight = palette[person_idx].brighten().hex();
+                      let name_i = (person_idx + 1).toString() + " (" + data.names[person_idx] + ")";
+                      console.log(name_i)
+                      let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
+                      let drawing_id = 'drawing' + i.toString()
+                      let draw = drawSegmentation(name_i, data.boxes[person_idx], data.segms[person_idx], palette[person_idx], data.width, data.height, drawing_id);
+                      mybutton.on('click', function () {
+                          if (mybutton.attr('aria-pressed') === 'true') {
+                              mybutton.css({backgroundColor: bgcolor, color: '#fff'});
+                              draw.attr('opacity', 0);
+                          } else {
+                              draw.attr('opacity', 1);
+                              mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
+                          }
+                      });
 
-                    mybutton.hover(function () {
-                      if (mybutton.attr('aria-pressed') === 'true') {
-                        mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                      } else {
-                        mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                      }
-                    }, function () {
-                      if (mybutton.attr('aria-pressed') === 'true') {
-                        mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                      } else {
-                        mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                      }
-                    });
-                    $('.buttonrow').append(mybutton);
+                      mybutton.hover(function () {
+                          if (mybutton.attr('aria-pressed') === 'true') {
+                              mybutton.css({backgroundColor: bgcolor, color: '#fff'});
+                          } else {
+                              mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
+                          }
+                      }, function () {
+                          if (mybutton.attr('aria-pressed') === 'true') {
+                              mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
+                          } else {
+                              mybutton.css({backgroundColor: bgcolor, color: '#fff'});
+                          }
+                      });
+                      $('.buttonrow').append(mybutton);
 
+
+                      let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton');
+                      hideall.on('click', function () {
+                          $('.buttonrow > button.active').click();
+                      });
+
+                      let showall = $('<button type="button" class="btn btn-outline-dark">').text('show all').appendTo('#globalbutton');
+                      showall.on('click', function () {
+                          $('.buttonrow > button:not(.active)').click();
+                      });
                   }
-                  let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton');
-                  hideall.on('click', function () {
-                    $('.buttonrow > button.active').click();
-                  });
-
-                  let showall = $('<button type="button" class="btn btn-outline-dark">').text('show all').appendTo('#globalbutton');
-                  showall.on('click', function () {
-                    $('.buttonrow > button:not(.active)').click();
-                  });
-
                 });
                 });
           }
