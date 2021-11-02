@@ -734,7 +734,7 @@
                       $('.buttonrow').append(mybutton);
 
 
-                      let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton');
+                      let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton' + i.toString());
                       hideall.on('click', function () {
                           $('.buttonrow > button.active').click();
                       });
