@@ -349,7 +349,7 @@
                     <a href="#" id="prev">&laquo; Previous</a>
                     <a href="#" id="next">Next &raquo;</a>
               <p><b id="task_description"></b></p>
-              <p id="event_text"><b>Test</b> </p>
+              <p id="event_text"> </p>
               <p id="img_id"> </p>
               <div id="img_annots" class="col-lg-6">
               <div class="btn-group-vertical answergroup btn-block">
@@ -545,8 +545,8 @@
                 }
                 let event = relation_data[idx]['event'];
                 event = 'person' + event.slice(event.indexOf('|>') + 2);
-                $('#event_text').text('Text: ' + event);
-                $('#event_text2').html('<b>Text: </b>' + event);
+                // $('#event_text').text('Text: ' + event);
+                $('#event_text').html('<b>Text: </b>' + event);
                 $('#img_id').text('Image ID: ' + orig_img_id);
                 // $("#img2show0").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
                 // $("#img2show1").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
