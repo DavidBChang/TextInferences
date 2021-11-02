@@ -589,6 +589,7 @@
 
                 if (relation_data[idx].predicted !== relation_data[idx].label) {
                     answers.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
+                    console.log('answers:', answers)
                 }
                 if (relation_data[idx].predicted !== relation_data[idx].label) {
                     rationales.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
@@ -741,7 +742,7 @@
                       // $('.buttonrow' + i.toString()).empty();
                       $('#globalbutton' + i.toString()).empty();
                       let person_idx = person_indices[i]
-                      let bgcolor = palette[person_idx].darker().hex();
+                      let bgcolor = palette[i].darker().hex();
                       let bgcolorHighlight = palette[person_idx].brighten().hex();
                       let name_i = (person_idx + 1).toString() + " (" + data.names[person_idx] + ")";
                       console.log(name_i)
