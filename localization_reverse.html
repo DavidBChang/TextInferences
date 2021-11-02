@@ -540,7 +540,7 @@
                     // $('#img_id' + j.toString()).text('Image ID: ' + relation_data[idx]['ending' + j]);
                 }
                 let event = relation_data[idx]['event'];
-                event = event.slice(event.indexOf('|>') + 2);
+                event = 'person' + event.slice(event.indexOf('|>') + 2);
                 $('#event_text').append('Text: ' + event);
                 $('#img_id').append('Image ID: ' + orig_img_id);
                 // $("#img2show0").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
