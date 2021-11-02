@@ -351,8 +351,9 @@
 
               <div class="btn-group-vertical answergroup btn-block">
                     <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                        <div id="letter0"></div>
                     <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show0'>
+                        <img class="img-fluid mcimage" id='img2show0'>
                         <div id="drawing0" class="drawing-class"></div>
                     </div>
                     <div class="row">
@@ -361,8 +362,9 @@
                     </div>
                     </button>
                   <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                      <div id="letter1"></div>
               <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show1'>
+                        <img class="img-fluid mcimage" id='img2show1'>
                         <div id="drawing1" class="drawing-class"></div>
                     </div>
                     <div class="row">
@@ -371,8 +373,9 @@
                     </div>
                   </button>
                   <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                      <div id="letter2"></div>
               <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show2'>
+                        <img class="img-fluid mcimage" id='img2show2'>
                         <div id="drawing2" class="drawing-class"></div>
                     </div>
                     <div class="row">
@@ -381,8 +384,9 @@
                     </div>
                   </button>
                   <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                      <div id="letter3"></div>
               <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show3'>
+                        <img class="img-fluid mcimage" id='img2show3'>
                         <div id="drawing3" class="drawing-class"></div>
                     </div>
                     <div class="row">
@@ -526,6 +530,9 @@
                     person_indices.push(person_idx)
                     let orig_img_file = img_file.slice(underscore_idx + 1)
                     orig_img_id = img_dir + '/' + orig_img_file
+                    let letter='abcd'[j] + ') ';
+                    $('#letter' + j.toString()).append(letter);
+
                     $("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + orig_img_id);
                     $('#img_id' + j.toString()).text('Image ID: ' + relation_data[idx]['ending' + j]);
                 }
