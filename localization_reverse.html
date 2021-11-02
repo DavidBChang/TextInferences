@@ -366,7 +366,7 @@
                         <div id="buttonrow0" class="col-lg-10 buttonrow"></div>
                     </div>
                     </button>
-                  <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                  <button id="button1" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
                       <div id="letter1"></div>
               <div class="img-container">
                         <img class="img-fluid annotimage" id='img2show1'>
@@ -377,7 +377,7 @@
                         <div id="buttonrow1" class="col-lg-10 buttonrow"></div>
                     </div>
                   </button>
-                  <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                  <button id="button2" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
                       <div id="letter2"></div>
               <div class="img-container">
                         <img class="img-fluid annotimage" id='img2show2'>
@@ -388,7 +388,7 @@
                         <div id="buttonrow2" class="col-lg-10 buttonrow"></div>
                     </div>
                   </button>
-                  <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                  <button id="button3" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
                       <div id="letter3"></div>
               <div class="img-container">
                         <img class="img-fluid annotimage" id='img2show3'>
@@ -545,22 +545,26 @@
                     $('#letter' + j.toString()).append(letter).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)'));
 
                     $("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + orig_img_id);
-                    // $('#img_id' + j.toString()).text('Image ID: ' + relation_data[idx]['ending' + j]);
+                    // if (relation_data[idx]['predicted'] === relation_data[idx]['label']) {
+                    //     $('#button' + ).addClass('clicked-correct')
+                    // }
                 }
                 let event = relation_data[idx]['event'];
                 event = 'person' + event.slice(event.indexOf('|>') + 2);
                 // $('#event_text').text('Text: ' + event);
                 $('#event_text').html('<b>Text: </b>' + event);
                 $('#img_id').html('<b>Image ID: </b>' + orig_img_id);
-                $('#button0').addClass('clicked-wrong')
+                $('#button0').addClass('clicked-wrong');
                 // let choices = $('<div class="btn-group-vertical answergroup btn-block">');
                 // choices.children().eq(relation_data[idx].label).addClass('clicked-correct');
                 // // rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
                 // console.log('predicted:', relation_data[idx].predicted);
-                // if (relation_data[idx].predicted !== relation_data[idx].label) {
-                //     choices.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
-                //     console.log('choices:', choices.children())
-                // }
+                  let predicted_idx = relation_data[idx]['predicted'];
+                if (predicted_idx === relation_data[idx]['label']) {
+                    $('#button' + predicted_idx.toString()).addClass('clicked-correct')
+                } else {
+                    $('#button' + predicted_idx.toString()).addClass('clicked-wrong')
+                }
 
                 let answers = $('<div class="btn-group-vertical answergroup btn-block" id="a' + idx + '">');
                 let rationales = $('<div class="btn-group-vertical answergroup btn-block" id="r' + idx + '">');
