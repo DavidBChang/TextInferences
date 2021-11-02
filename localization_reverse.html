@@ -485,6 +485,7 @@
           }
 
           function drawSegmentation(name, box, segm, color, width, height, drawing_id) {
+              $('#' + drawing_id).empty();
               const draw = SVG(drawing_id).viewbox(0, 0, width, height);
               draw.addClass('segmentation');
               for (let i=0; i < segm.length; i++) {
@@ -518,7 +519,7 @@
 
                 console.log('blah');
                 $('#annots').empty();
-                $('#img_annots').empty();
+                // $('#img_annots').empty();
 
                 $('#imgid').val(idx);
 
