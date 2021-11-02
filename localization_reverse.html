@@ -490,6 +490,7 @@
 
           function drawSegmentation(name, box, segm, color, width, height, drawing_id) {
               $('#' + drawing_id).empty();
+              console.log('drawing_id:', drawing_id)
               const draw = SVG(drawing_id).viewbox(0, 0, width, height);
               draw.addClass('segmentation');
               for (let i=0; i < segm.length; i++) {
@@ -742,7 +743,6 @@
                       let bgcolor = palette[i].darker().hex();
                       let bgcolorHighlight = palette[person_idx].brighten().hex();
                       let name_i = (person_idx + 1).toString() + " (" + data.names[person_idx] + ")";
-                      console.log(name_i)
                       let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
                       let drawing_id = 'drawing' + i.toString()
                       let draw = drawSegmentation(name_i, data.boxes[person_idx], data.segms[person_idx], palette[person_idx], data.width, data.height, drawing_id);
