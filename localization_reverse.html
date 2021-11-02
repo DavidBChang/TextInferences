@@ -547,7 +547,14 @@
                 event = 'person' + event.slice(event.indexOf('|>') + 2);
                 // $('#event_text').text('Text: ' + event);
                 $('#event_text').html('<b>Text: </b>' + event);
-                $('#img_id').text('Image ID: ' + orig_img_id);
+                $('#img_id').html('<b>Image ID: </b>' + orig_img_id);
+                let choices = $('<div class="btn-group-vertical answergroup btn-block">');
+                choices.children().eq(relation_data[idx].label).addClass('clicked-correct');
+                // rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
+                console.log('predicted:', relation_data[idx].predicted);
+                if (relation_data[idx].predicted !== relation_data[idx].label) {
+                    choices.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
+                }
                 // $("#img2show0").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
                 // $("#img2show1").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
                 // $("#img2show2").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
