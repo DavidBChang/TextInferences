@@ -560,11 +560,13 @@
                 // // rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
                 // console.log('predicted:', relation_data[idx].predicted);
                   let predicted_idx = relation_data[idx]['predicted'];
-                if (predicted_idx === relation_data[idx]['label']) {
-                    $('#button' + predicted_idx.toString()).addClass('clicked-correct')
-                } else {
-                    $('#button' + predicted_idx.toString()).addClass('clicked-wrong')
-                }
+                  $('#button' + predicted_idx.toString()).addClass('clicked-wrong')
+                  $('#button' + relation_data[idx]['label'].toString()).addClass('clicked-correct')
+                // if (predicted_idx === relation_data[idx]['label']) {
+                //     $('#button' + predicted_idx.toString()).addClass('clicked-correct')
+                // } else {
+                //     $('#button' + predicted_idx.toString()).addClass('clicked-wrong')
+                // }
 
                 let answers = $('<div class="btn-group-vertical answergroup btn-block" id="a' + idx + '">');
                 let rationales = $('<div class="btn-group-vertical answergroup btn-block" id="r' + idx + '">');
