@@ -349,8 +349,8 @@
                     <a href="#" id="prev">&laquo; Previous</a>
                     <a href="#" id="next">Next &raquo;</a>
 
-              <p id="event_text"></p>
-              <p id="img_id"></p>
+              <p id="event_text"> </p>
+              <p id="img_id"> </p>
               <div class="col-lg-6">
               <div class="btn-group-vertical answergroup btn-block">
                     <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
@@ -534,16 +534,16 @@
                     let orig_img_file = img_file.slice(underscore_idx + 1)
                     orig_img_id = img_dir + '/' + orig_img_file
                     let letter='abcd'[j] + ') ';
-                    // $('#letter' + j.toString()).empty()
-                    $('#letter' + j.toString()).text(letter).text($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)'));
+                    $('#letter' + j.toString()).empty()
+                    $('#letter' + j.toString()).append(letter).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)'));
 
                     $("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + orig_img_id);
                     // $('#img_id' + j.toString()).text('Image ID: ' + relation_data[idx]['ending' + j]);
                 }
                 let event = relation_data[idx]['event'];
                 event = 'person' + event.slice(event.indexOf('|>') + 2);
-                $('#event_text').append('Text: ' + event);
-                $('#img_id').append('Image ID: ' + orig_img_id);
+                $('#event_text').text('Text: ' + event);
+                $('#img_id').text('Image ID: ' + orig_img_id);
                 // $("#img2show0").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
                 // $("#img2show1").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
                 // $("#img2show2").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
