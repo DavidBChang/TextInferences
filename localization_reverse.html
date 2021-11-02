@@ -698,7 +698,8 @@
                   // let i = 0; i < data.names.length; i++
                   for (let i = 0; i < 4; i++) {
                       // $('.buttonrow > button.active').click();
-                      $('.buttonrow' + i.toString()).empty();
+                      $('#buttonrow' + i.toString()).empty();
+                      // $('.buttonrow' + i.toString()).empty();
                       $('#globalbutton' + i.toString()).empty();
                       let person_idx = person_indices[i]
                       let bgcolor = palette[person_idx].darker().hex();
@@ -731,7 +732,7 @@
                               mybutton.css({backgroundColor: bgcolor, color: '#fff'});
                           }
                       });
-                      $('.buttonrow' + i.toString()).append(mybutton);
+                      $('#buttonrow' + i.toString()).append(mybutton);
 
 
                       // let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton' + i.toString());
