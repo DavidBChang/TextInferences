@@ -351,10 +351,10 @@
               <p><b id="task_description"></b></p>
               <p id="event_text"> </p>
               <p id="img_id"> </p>
-<!--              <div id="img_annots" class="col-lg-6">-->
-<!--                  <div class="card box-shadow">-->
-<!--                      <div class="card-body">-->
-<!--              <div class="btn-group-vertical answergroup btn-block">-->
+              <div id="img_annots" class="col-lg-6">
+                  <div class="card box-shadow">
+                      <div class="card-body">
+              <div class="btn-group-vertical answergroup btn-block">
                     <button id="button0" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
                         <div id="letter0"></div>
                     <div class="img-container">
@@ -399,10 +399,10 @@
                         <div id="buttonrow3" class="col-lg-10 buttonrow"></div>
                     </div>
                   </button>
-<!--              </div>-->
-<!--              </div>-->
-<!--              </div>-->
-<!--              </div>-->
+              </div>
+              </div>
+              </div>
+              </div>
 
 
 <!--                    <div class="card-header">-->
@@ -528,18 +528,15 @@
 
                 $('#imgid').val(idx);
 
-                console.log('relation_data:', relation_data[idx]);
                 let person_indices = [];
                   let orig_img_id = '';
                 for (let j = 0; j < 4; j++) {
                     let img_id = relation_data[idx]['ending' + j];
-                    console.log('img_id:', img_id);
                     img_id = img_id.split('/');
                     let img_dir = img_id[0]
                     let img_file = img_id[1]
                     let underscore_idx = img_file.indexOf('_')
                     let person_idx = parseInt(img_file.slice(0, underscore_idx))
-                    console.log('person_idx:', person_idx);
                     person_indices.push(person_idx)
                     let orig_img_file = img_file.slice(underscore_idx + 1)
                     orig_img_id = img_dir + '/' + orig_img_file
@@ -741,9 +738,7 @@
                       $('#buttonrow' + i.toString()).empty();
                       // $('.buttonrow' + i.toString()).empty();
                       $('#globalbutton' + i.toString()).empty();
-                      console.log('person_indices:', person_indices);
                       let person_idx = person_indices[i]
-                      console.log('person_idx:', person_idx)
                       let bgcolor = palette[i].darker().hex();
                       let bgcolorHighlight = palette[i].brighten().hex();
                       let name_i = (person_idx + 1).toString() + " (" + data.names[person_idx] + ")";
