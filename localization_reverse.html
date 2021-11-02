@@ -554,6 +554,7 @@
                 console.log('predicted:', relation_data[idx].predicted);
                 if (relation_data[idx].predicted !== relation_data[idx].label) {
                     choices.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
+                    console.log('choices:', choices)
                 }
                 // $("#img2show0").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
                 // $("#img2show1").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
