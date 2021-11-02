@@ -545,11 +545,7 @@
                     $('#letter' + j.toString()).append(letter).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)'));
 
                     $("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + orig_img_id);
-                    // if (relation_data[idx]['predicted'] === relation_data[idx]['label']) {
-                    //     $('#button' + ).addClass('clicked-correct')
-                    // }
                     $('#button' + j.toString()).removeClass('clicked-wrong').removeClass('clicked-correct');
-                    // $('#button' + j.toString());
                 }
                 let event = relation_data[idx]['event'];
                 event = 'person' + event.slice(event.indexOf('|>') + 2);
@@ -557,18 +553,9 @@
                 $('#event_text').html('<b>Text: </b>' + event);
                 $('#img_id').html('<b>Image ID: </b>' + orig_img_id);
 
-                // let choices = $('<div class="btn-group-vertical answergroup btn-block">');
-                // choices.children().eq(relation_data[idx].label).addClass('clicked-correct');
-                // // rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
-                // console.log('predicted:', relation_data[idx].predicted);
                   let predicted_idx = relation_data[idx]['predicted'];
                   $('#button' + predicted_idx.toString()).addClass('clicked-wrong')
                   $('#button' + relation_data[idx]['label'].toString()).removeClass('clicked-wrong').addClass('clicked-correct')
-                // if (predicted_idx === relation_data[idx]['label']) {
-                //     $('#button' + predicted_idx.toString()).addClass('clicked-correct')
-                // } else {
-                //     $('#button' + predicted_idx.toString()).addClass('clicked-wrong')
-                // }
 
                 let answers = $('<div class="btn-group-vertical answergroup btn-block" id="a' + idx + '">');
                 let rationales = $('<div class="btn-group-vertical answergroup btn-block" id="r' + idx + '">');
@@ -586,109 +573,14 @@
 
                 if (relation_data[idx].predicted !== relation_data[idx].label) {
                     answers.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
-                    console.log('answers:', answers.children())
                 }
                 if (relation_data[idx].predicted !== relation_data[idx].label) {
                     rationales.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
                 }
                 let qablock = $('<div class="card box-shadow">').append($('<div class="card-body">').append(answers).append($('<p class="msg">')));
-                // let qarblock = $('<div class="card box-shadow">').append($('<div class="card-body">').append($('<p class="card-text">').text('I think so because...')).append(answers).append($('<p class="msg">')));
 
-                // qablock.appendTo('#annots');
-                // qablock.appendTo('#annots');
-                // let qarblock = $('<div class="card box-shadow">').append($('<div class="card-body">').append(answers).append($('<p class="msg">')));
-
-                $('<div class="row annotationrow">').append($('<div class="col-lg-10">').append(qablock)).appendTo('#annots');
-                // $('<div class="row annotationrow">').append($('<div class="col-lg-6">').append(qablock)).appendTo('#annots');
-
-
-                // $('#place').html('<b> Place </b>: ' + relation_data[idx].place);
-
-                // i = 0;
-                // let modes = relation_data[0]['mode'];
-                // modes.push('GT');
-                //
-                // for (let i = 0; i < 2; i++) {
-                //   let event_orig = 'event_orig'+i;
-                //   if (typeof relation_data[idx]['event_orig'+i] !== 'undefined') {
-                //     $('#' + event_orig).html('<span style="background-color:white"><b>' + 'event: '+ relation_data[0]['event_orig'+i].replace(/\./g, '') + '</b> </span>');
-                //     $('.ctable' + i).show();
-                //     $('.table' + i + ' tbody').empty();
-                //     for (let mode of modes) {
-                //       $('.table' + i + ' tbody').append('<tr> <td> <b>' + mode + '</b></td> ' +
-                //                                            '<td class="need' + i +  ' ' + mode + '"></td>' +
-                //                                            '<td class="intent' + i +  ' ' + mode + '"></td>' +
-                //                                            '<td class="react' + i +  ' ' + mode + '"></td></tr>');
-                //       for (let relation of ['need', 'intent', 'react']) {
-                //
-                //         let relation_key = mode + ' ' + relation + i;
-                //         if (typeof relation_data[0][relation_key] !== 'undefined') {
-                //           let html_text = '';
-                //           for (let r of relation_data[0][relation_key])
-                //             html_text += '-' + r.replace(/\./g, '') + '<br>';
-                //
-                //           $('.' + relation + i + '.' + mode).html(html_text);
-                //         }
-                //
-                //         // let html_text = '';
-                //         // for (let r of relation_data[idx]['gt ' + relation + i])
-                //         //   html_text += r + '<br>';
-                //         // $('.' + relation + i + '.gt').html('<span style="color: blue; font-weight:bold">' + html_text + '</span>');
-                //       }
-                //     }
-                //
-                //   } else {
-                //     $('.ctable' + i).hide();
-                //   }
-                // }
-
-              // $.getJSON('relation_predictions_9000_57000.json?sigh=' + 3, function (relation_data) {
-              //
-              //   // console.log(relation_data[idx]);
-              //   console.log(relation_data[idx]);
-              //   $("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_fn);
-              //   $('#img_id').text('Image ID: ' + relation_data[idx].img_fn);
-              //   $('#place').html('<b> Place </b>: ' + relation_data[idx].place);
-              //
-              //   i = 0;
-              //   let modes = relation_data[idx]['mode'];
-              //   modes.push('gt');
-              //   console.log(modes);
-              //
-              //   for (let i = 0; i < 3; i++) {
-              //     let event_orig = 'event_orig'+i;
-              //     if (typeof relation_data[idx]['event_orig'+i] !== 'undefined') {
-              //       $('#' + event_orig).html('<span style="background-color:white"><b>' + 'event: '+ relation_data[idx]['event_orig'+i].replace(/\./g, '') + '</b> </span>');
-              //       $('.ctable' + i).show();
-              //       $('.table' + i + ' tbody').empty();
-              //       for (let mode of modes) {
-              //         $('.table' + i + ' tbody').append('<tr> <td> <b>' + mode + '</b></td> ' +
-              //                                              '<td class="need' + i +  ' ' + mode + '"></td>' +
-              //                                              '<td class="intent' + i +  ' ' + mode + '"></td>' +
-              //                                              '<td class="react' + i +  ' ' + mode + '"></td></tr>');
-              //         for (let relation of ['need', 'intent', 'react']) {
-              //
-              //           let relation_key = mode + ' ' + relation + i;
-              //           if (typeof relation_data[idx][relation_key] !== 'undefined') {
-              //             let html_text = '';
-              //             for (let r of relation_data[idx][relation_key])
-              //               html_text += r.replace(/\./g, '') + '<br>';
-              //
-              //             console.log(mode, relation_key, html_text);
-              //             $('.' + relation + i + '.' + mode).html(html_text);
-              //           }
-              //
-              //           // let html_text = '';
-              //           // for (let r of relation_data[idx]['gt ' + relation + i])
-              //           //   html_text += r + '<br>';
-              //           // $('.' + relation + i + '.gt').html('<span style="color: blue; font-weight:bold">' + html_text + '</span>');
-              //         }
-              //       }
-              //
-              //     } else {
-              //       $('.ctable' + i).hide();
-              //     }
-              //   }
+                // $('<div class="row annotationrow">').append($('<div class="col-lg-10">').append(qablock)).appendTo('#annots');
+                  
 
 
               $('.hitbox').each(function() {
