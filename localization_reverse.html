@@ -539,7 +539,8 @@
                     $("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + orig_img_id);
                     // $('#img_id' + j.toString()).text('Image ID: ' + relation_data[idx]['ending' + j]);
                 }
-                $('#event_text').text('Text:', relation_data[idx]['event'])
+                console.log(relation_data[idx]['event'])
+                $('#event_text').text('Text:' + relation_data[idx]['event'])
                 $('#img_id').text('Image ID: ' + orig_img_id);
                 // $("#img2show0").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
                 // $("#img2show1").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx].img_id);
