@@ -355,7 +355,7 @@
                     </div>
                     <div class="row">
                         <div id="globalbutton0" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div class="col-lg-10 buttonrow"></div>
+                        <div id="buttonrow0" class="col-lg-10 buttonrow"></div>
                     </div>
               <div class="img-container">
                         <img class="img-fluid annotimage" id='img2show1'>
@@ -363,7 +363,7 @@
                     </div>
                     <div class="row">
                         <div id="globalbutton1" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div class="col-lg-10 buttonrow"></div>
+                        <div id="buttonrow1" class="col-lg-10 buttonrow"></div>
                     </div>
               <div class="img-container">
                         <img class="img-fluid annotimage" id='img2show2'>
@@ -371,7 +371,7 @@
                     </div>
                     <div class="row">
                         <div id="globalbutton2" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div class="col-lg-10 buttonrow"></div>
+                        <div id="buttonrow2" class="col-lg-10 buttonrow"></div>
                     </div>
               <div class="img-container">
                         <img class="img-fluid annotimage" id='img2show3'>
@@ -379,7 +379,7 @@
                     </div>
                     <div class="row">
                         <div id="globalbutton3" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div class="col-lg-10 buttonrow"></div>
+                        <div id="buttonrow3" class="col-lg-10 buttonrow"></div>
                     </div>
 
                     <p id="img_id"> </p>
@@ -697,8 +697,8 @@
 
                   // let i = 0; i < data.names.length; i++
                   for (let i = 0; i < 4; i++) {
-                      $('.buttonrow > button.active').click();
-                      // $('.buttonrow').empty();
+                      // $('.buttonrow > button.active').click();
+                      $('.buttonrow' + i.toString()).empty();
                       $('#globalbutton' + i.toString()).empty();
                       let person_idx = person_indices[i]
                       let bgcolor = palette[person_idx].darker().hex();
@@ -731,18 +731,19 @@
                               mybutton.css({backgroundColor: bgcolor, color: '#fff'});
                           }
                       });
-                      $('.buttonrow').append(mybutton);
+                      $('.buttonrow' + i.toString()).append(mybutton);
 
 
-                      let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton' + i.toString());
-                      hideall.on('click', function () {
-                          $('.buttonrow > button.active').click();
-                      });
-
-                      let showall = $('<button type="button" class="btn btn-outline-dark">').text('show all').appendTo('#globalbutton');
-                      showall.on('click', function () {
-                          $('.buttonrow > button:not(.active)').click();
-                      });
+                      // let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton' + i.toString());
+                      // hideall.on('click', function () {
+                      //     $('.buttonrow${i} > button.active').click();
+                      //     // $('.buttonrow > button.active').click();
+                      // });
+                      //
+                      // let showall = $('<button type="button" class="btn btn-outline-dark">').text('show all').appendTo('#globalbutton' + i.toString());
+                      // showall.on('click', function () {
+                      //     $('.buttonrow > button:not(.active)').click();
+                      // });
                   }
                 });
                 });
