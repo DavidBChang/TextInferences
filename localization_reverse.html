@@ -740,6 +740,7 @@
                       // $('.buttonrow' + i.toString()).empty();
                       $('#globalbutton' + i.toString()).empty();
                       let person_idx = person_indices[i]
+                      print('person_idx:', person_idx)
                       let bgcolor = palette[i].darker().hex();
                       let bgcolorHighlight = palette[i].brighten().hex();
                       let name_i = (person_idx + 1).toString() + " (" + data.names[person_idx] + ")";
