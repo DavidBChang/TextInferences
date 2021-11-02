@@ -366,7 +366,7 @@
                         <div id="buttonrow0" class="col-lg-10 buttonrow"></div>
                     </div>
                     </button>
-                  <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton clicked-correct">
+                  <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
                       <div id="letter1"></div>
               <div class="img-container">
                         <img class="img-fluid annotimage" id='img2show1'>
@@ -388,7 +388,7 @@
                         <div id="buttonrow2" class="col-lg-10 buttonrow"></div>
                     </div>
                   </button>
-                  <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton clicked-wrong">
+                  <button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
                       <div id="letter3"></div>
               <div class="img-container">
                         <img class="img-fluid annotimage" id='img2show3'>
@@ -552,14 +552,15 @@
                 // $('#event_text').text('Text: ' + event);
                 $('#event_text').html('<b>Text: </b>' + event);
                 $('#img_id').html('<b>Image ID: </b>' + orig_img_id);
-                let choices = $('<div class="btn-group-vertical answergroup btn-block">');
-                choices.children().eq(relation_data[idx].label).addClass('clicked-correct');
-                // rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
-                console.log('predicted:', relation_data[idx].predicted);
-                if (relation_data[idx].predicted !== relation_data[idx].label) {
-                    choices.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
-                    console.log('choices:', choices.children())
-                }
+                $('#button0').addClass('clicked-wrong')
+                // let choices = $('<div class="btn-group-vertical answergroup btn-block">');
+                // choices.children().eq(relation_data[idx].label).addClass('clicked-correct');
+                // // rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
+                // console.log('predicted:', relation_data[idx].predicted);
+                // if (relation_data[idx].predicted !== relation_data[idx].label) {
+                //     choices.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
+                //     console.log('choices:', choices.children())
+                // }
 
                 let answers = $('<div class="btn-group-vertical answergroup btn-block" id="a' + idx + '">');
                 let rationales = $('<div class="btn-group-vertical answergroup btn-block" id="r' + idx + '">');
