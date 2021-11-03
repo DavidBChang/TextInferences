@@ -348,11 +348,14 @@
                     </div>
                     <a href="#" id="prev">&laquo; Previous</a>
                     <a href="#" id="next">Next &raquo;</a>
-              <p><b id="task_description"></b></p>
-              <p id="event_text"> </p>
-              <p id="img_id"> </p>
+<!--              <p><b id="task_description"></b></p>-->
+<!--              <p id="event_text"> </p>-->
+<!--              <p id="img_id"> </p>-->
               <div id="img_annots" class="row">
                   <div class="card box-shadow col-lg-6">
+                      <p><b id="task_description"></b></p>
+                      <p id="event_text"> </p>
+                      <p id="img_id"> </p>
                       <div class="card-body">
               <div class="btn-group-vertical answergroup btn-block">
                     <button id="button0" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
@@ -763,6 +766,11 @@
             $('#imgid').attr("placeholder", "(0-" + max + ")");
             displayPic(idx, dataFile);
         });
+        max = 2684;
+        dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_person_reverse.json';
+        $('#task_description').text("Person ID task using train_localization_event_reverse.json and val_localization_event_reverse.json");
+        $('#imgid').attr("placeholder", "(0-" + max + ")");
+        displayPic(idx, dataFile);
         // max = 2684;
         // dataFileEvent = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
         // dataFilePersonID = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
