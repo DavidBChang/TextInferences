@@ -608,7 +608,6 @@
 
               let predicted_idx = relation_data[idx]['predicted'];
               let label_idx = relation_data[idx]['label'];
-              console.log('predicted:', start_idx + predicted_idx.toString())
               $('#button' + (start_idx + predicted_idx).toString()).addClass('clicked-wrong')
               $('#button' + (start_idx + label_idx).toString()).removeClass('clicked-wrong').addClass('clicked-correct')
 
