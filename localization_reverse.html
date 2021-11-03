@@ -369,43 +369,43 @@
                                 </div>
                             </button>
                             <button id="button1" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
-                  <div id="letter1"></div>
-          <div class="img-container">
-                    <img class="img-fluid annotimage" id='img2show1'>
-                    <div id="drawing1" class="drawing-class"></div>
+                                <div id="letter1"></div>
+                                <div class="img-container">
+                                    <img class="img-fluid annotimage" id='img2show1'>
+                                    <div id="drawing1" class="drawing-class"></div>
+                                </div>
+                                <div class="row">
+                                    <div id="globalbutton1" class="col-lg-2 text-center" style="padding:0"></div>
+                                    <div id="buttonrow1" class="col-lg-10 buttonrow"></div>
+                                </div>
+                            </button>
+                            <button id="button2" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                                <div id="letter2"></div>
+                                <div class="img-container">
+                                    <img class="img-fluid annotimage" id='img2show2'>
+                                    <div id="drawing2" class="drawing-class"></div>
+                                </div>
+                                <div class="row">
+                                    <div id="globalbutton2" class="col-lg-2 text-center" style="padding:0"></div>
+                                    <div id="buttonrow2" class="col-lg-10 buttonrow"></div>
+                                </div>
+                            </button>
+                            <button id="button3" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                                <div id="letter3"></div>
+                                <div class="img-container">
+                                    <img class="img-fluid annotimage" id='img2show3'>
+                                    <div id="drawing3" class="drawing-class"></div>
+                                </div>
+                                <div class="row">
+                                    <div id="globalbutton3" class="col-lg-2 text-center" style="padding:0"></div>
+                                    <div id="buttonrow3" class="col-lg-10 buttonrow"></div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="row">
-                    <div id="globalbutton1" class="col-lg-2 text-center" style="padding:0"></div>
-                    <div id="buttonrow1" class="col-lg-10 buttonrow"></div>
-                </div>
-              </button>
-              <button id="button2" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
-                  <div id="letter2"></div>
-          <div class="img-container">
-                    <img class="img-fluid annotimage" id='img2show2'>
-                    <div id="drawing2" class="drawing-class"></div>
-                </div>
-                <div class="row">
-                    <div id="globalbutton2" class="col-lg-2 text-center" style="padding:0"></div>
-                    <div id="buttonrow2" class="col-lg-10 buttonrow"></div>
-                </div>
-              </button>
-              <button id="button3" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
-                  <div id="letter3"></div>
-          <div class="img-container">
-                    <img class="img-fluid annotimage" id='img2show3'>
-                    <div id="drawing3" class="drawing-class"></div>
-                </div>
-                <div class="row">
-                    <div id="globalbutton3" class="col-lg-2 text-center" style="padding:0"></div>
-                    <div id="buttonrow3" class="col-lg-10 buttonrow"></div>
-                </div>
-              </button>
-          </div>
-          </div>
-          </div>
 
-              <div class="card box-shadow col-lg-6">
+                <div class="card box-shadow col-lg-6">
                   <p><b id="task_description1"></b></p>
                   <p id="text1"> </p>
                   <p id="img_id1"> </p>
@@ -663,7 +663,6 @@
               // $('.buttonrow').empty();
               // $('#globalbutton').empty();
 
-              // let i = 0; i < data.names.length; i++
               for (let i = 0; i < 4; i++) {
                   // $('.buttonrow > button.active').click();
                   $('#buttonrow' + (start_idx + i).toString()).empty();
@@ -753,19 +752,23 @@
           alert("index must be between 0 and "+ max + " inclusive");
         }
     }
-    displayPic(idx, dataFile);
+    // displayPic(idx, dataFile);
     $('#prev').click(function(){
         idx = idx-1;
         if (idx < 0)
           idx = max;
-        displayPic(idx, dataFile);
+        // displayPic(idx, dataFile);
+        displayPic(idx, dataFile_event, 0);
+        displayPic(idx, dataFile_person, 4);
     });
 
     $('#next').click(function(){
         idx = idx + 1;
         if (idx > max)
           idx = 0;
-        displayPic(idx, dataFile);
+        // displayPic(idx, dataFile);
+        displayPic(idx, dataFile_event, 0);
+        displayPic(idx, dataFile_person, 4);
     });
 
     $('#goto').on('click', function() {
@@ -778,7 +781,9 @@
                 alert("ID must be between 0 and "+ max + " inclusive");
             } else {
                 idx = number;
-                displayPic(number, dataFile);
+                // displayPic(number, dataFile);
+                displayPic(idx, dataFile_event, 0);
+                displayPic(idx, dataFile_person, 4);
             }
         }
     });
