@@ -329,499 +329,469 @@
 
 
 </style>
-
-      <!-- HIT START -->
-      <div id="hit" class="container">
-          <div class="body">
-            <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <button id='event' type="button" class="btn btn-primary">Event</button>
-                <button id='person_id' type="button" class="btn btn-primary">Person ID</button>
-            </div> -->
+    <!-- HIT START -->
+    <div id="hit" class="container">
+        <div class="body">
+        <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <button id='event' type="button" class="btn btn-primary">Event</button>
+            <button id='person_id' type="button" class="btn btn-primary">Person ID</button>
+        </div> -->
             <p><b>Tasks: </b></p>
             <button type="button" class="btn btn-info" id="event">Event<i class="fas fa-play"></i></button>
             <button type="button" class="btn btn-info" id="person_id">Person ID<i class="fas fa-play"></i></button>
 
-                    <div class="input-group-prepend" style="padding-top: 1rem">
-                        <input type="text" class="col-lg-2 form-control" placeholder="(0-5972)" id="imgid">
-<!--                        <label for="imgid"></label><input type="text" class="col-lg-2 form-control" placeholder="(0-87)" id="imgid">-->
-                          <button type="button" class="btn btn-success" id="goto">Go! &nbsp;<i class="fas fa-play"></i></button>
-                    </div>
-                    <a href="#" id="prev">&laquo; Previous</a>
-                    <a href="#" id="next">Next &raquo;</a>
-<!--              <p><b id="task_description"></b></p>-->
-<!--              <p id="event_text"> </p>-->
-<!--              <p id="img_id"> </p>-->
-              <div id="img_annots" class="row">
-                  <div class="card box-shadow col-lg-6">
-                      <p><b id="task_description"></b></p>
-                      <p id="event_text"> </p>
-                      <p id="img_id"> </p>
-                      <div class="card-body">
-              <div class="btn-group-vertical answergroup btn-block">
-                    <button id="button0" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
-                        <div id="letter0"></div>
-                    <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show0'>
-                        <div id="drawing0" class="drawing-class"></div>
-                    </div>
-                    <div class="row">
-                        <div id="globalbutton0" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div id="buttonrow0" class="col-lg-10 buttonrow"></div>
-                    </div>
-                    </button>
-                  <button id="button1" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
-                      <div id="letter1"></div>
-              <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show1'>
-                        <div id="drawing1" class="drawing-class"></div>
-                    </div>
-                    <div class="row">
-                        <div id="globalbutton1" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div id="buttonrow1" class="col-lg-10 buttonrow"></div>
-                    </div>
-                  </button>
-                  <button id="button2" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
-                      <div id="letter2"></div>
-              <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show2'>
-                        <div id="drawing2" class="drawing-class"></div>
-                    </div>
-                    <div class="row">
-                        <div id="globalbutton2" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div id="buttonrow2" class="col-lg-10 buttonrow"></div>
-                    </div>
-                  </button>
-                  <button id="button3" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
-                      <div id="letter3"></div>
-              <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show3'>
-                        <div id="drawing3" class="drawing-class"></div>
-                    </div>
-                    <div class="row">
-                        <div id="globalbutton3" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div id="buttonrow3" class="col-lg-10 buttonrow"></div>
-                    </div>
-                  </button>
-              </div>
-              </div>
-              </div>
-
-                  <div class="card box-shadow col-lg-6">
-                      <div class="card-body">
-              <div class="btn-group-vertical answergroup btn-block">
-                    <button id="button4" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
-                        <div id="letter4"></div>
-                    <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show4'>
-                        <div id="drawing4" class="drawing-class"></div>
-                    </div>
-                    <div class="row">
-                        <div id="globalbutton4" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div id="buttonrow4" class="col-lg-10 buttonrow"></div>
-                    </div>
-                    </button>
-                  <button id="button5" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
-                      <div id="letter5"></div>
-              <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show5'>
-                        <div id="drawing5" class="drawing-class"></div>
-                    </div>
-                    <div class="row">
-                        <div id="globalbutton5" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div id="buttonrow5" class="col-lg-10 buttonrow"></div>
-                    </div>
-                  </button>
-                  <button id="button6" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
-                      <div id="letter6"></div>
-              <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show6'>
-                        <div id="drawing6" class="drawing-class"></div>
-                    </div>
-                    <div class="row">
-                        <div id="globalbutton6" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div id="buttonrow6" class="col-lg-10 buttonrow"></div>
-                    </div>
-                  </button>
-                  <button id="button7" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
-                      <div id="letter7"></div>
-              <div class="img-container">
-                        <img class="img-fluid annotimage" id='img2show7'>
-                        <div id="drawing7" class="drawing-class"></div>
-                    </div>
-                    <div class="row">
-                        <div id="globalbutton7" class="col-lg-2 text-center" style="padding:0"></div>
-                        <div id="buttonrow7" class="col-lg-10 buttonrow"></div>
-                    </div>
-                  </button>
-              </div>
-              </div>
-              </div>
-              </div>
-
-
-<!--                    <div class="card-header">-->
-<!--                        <h5 class="mb-0">-->
-<!--                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#comet" aria-expanded="true" aria-controls="instructions">-->
-<!--                                Comet Predictions (click to expand/collapse) <br>-->
-<!--                            </button>-->
-<!--                        </h5>-->
-<!--                    </div>-->
-                    <div class="collapse show" id="comet">
-                        <div class="questionrow">
-                          <p id="place"><b></b></p>
-
-
-<!--                          <div class="card-body ctable0">-->
-<!--                              <p id="event_orig0"><b></b></p>-->
-<!--                              <p id="event0"><b></b></p>-->
-<!--                              <table class="table table0" style="background-color: white">-->
-<!--                                <thead><tr><th></th><th><span class="btn-warning"> Before, PersonX needed to... </span></th> <th><span class="btn-secondary"> Because, PersonX wanted to... </span></th><th><span class="btn-success"> After, PersonX will most likely... </span></th></tr></thead>-->
-<!--                                <tbody>-->
-<!--                                  &lt;!&ndash;<tr><td style="color:blue; font-weight:bold">Actual:</td><td class="need0 gt"></td><td class="intent0 gt"> </td><td class="react0 gt"></td></tr>&ndash;&gt;-->
-<!--                                </tbody>-->
-<!--                              </table>-->
-<!--                          </div>-->
-
-<!--                          <div class="card-body ctable1">-->
-<!--                              <p id="event_orig1"><b></b></p>-->
-<!--                              <p id="event1"><b></b></p>-->
-<!--                              <table class="table table1" style="background-color: white">-->
-<!--                                <thead><tr><th></th><th><span class="btn-warning"> Before, PersonX needed to... </span></th> <th><span class="btn-secondary"> Because, PersonX wanted to... </span></th><th><span class="btn-success"> After, PersonX will most likely... </span></th></tr></thead>-->
-<!--                                <tbody>-->
-<!--                                  &lt;!&ndash;<tr><td style="color:blue; font-weight:bold">Actual:</td><td class="need1 gt"></td><td class="intent1 gt"> </td><td class="react1 gt"></td></tr>&ndash;&gt;-->
-<!--                                </tbody>-->
-<!--                              </table>-->
-<!--                          </div>-->
-
-<!--                          <div class="card-body ctable2">-->
-<!--                              <p id="event_orig2"><b></b></p>-->
-<!--                              <p id="event2"><b></b></p>-->
-<!--                              <table class="table table1" style="background-color: white">-->
-<!--                                <thead><tr><th></th><th><span class="btn-warning"> Before, PersonX needed to... </span></th> <th><span class="btn-secondary"> Because, PersonX wanted to... </span></th><th><span class="btn-success"> After, PersonX will most likely... </span></th></tr></thead>-->
-<!--                                <tbody>-->
-<!--                                  &lt;!&ndash;<tr><td style="color:blue; font-weight:bold">Actual:</td><td class="need2 gt"></td><td class="intent2 gt"> </td><td class="react2 gt"></td></tr>&ndash;&gt;-->
-<!--                                </tbody>-->
-<!--                              </table>-->
-<!--                          </div>-->
-
-                        </div>
-                    </div>
-
-                    <div id="annots">
-                        <!-- things go here-->
-                      </div>
-
+            <div class="input-group-prepend" style="padding-top: 1rem">
+                <input type="text" class="col-lg-2 form-control" placeholder="(0-5972)" id="imgid">
+        <!--                        <label for="imgid"></label><input type="text" class="col-lg-2 form-control" placeholder="(0-87)" id="imgid">-->
+                <button type="button" class="btn btn-success" id="goto">Go! &nbsp;<i class="fas fa-play"></i></button>
+            </div>
+            <a href="#" id="prev">&laquo; Previous</a>
+            <a href="#" id="next">Next &raquo;</a>
+        <!--              <p><b id="task_description"></b></p>-->
+        <!--              <p id="event_text"> </p>-->
+        <!--              <p id="img_id"> </p>-->
+            <div id="img_annots" class="row">
+                <div class="card box-shadow col-lg-6">
+                    <p><b id="task_description0"></b></p>
+                    <p id="text0"> </p>
+                    <p id="img_id"> </p>
+                    <div class="card-body">
+                        <div class="btn-group-vertical answergroup btn-block">
+                            <button id="button0" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                                <div id="letter0"></div>
+                                <div class="img-container">
+                                    <img class="img-fluid annotimage" id='img2show0'>
+                                    <div id="drawing0" class="drawing-class"></div>
+                                </div>
+                                <div class="row">
+                                    <div id="globalbutton0" class="col-lg-2 text-center" style="padding:0"></div>
+                                    <div id="buttonrow0" class="col-lg-10 buttonrow"></div>
+                                </div>
+                            </button>
+                            <button id="button1" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                  <div id="letter1"></div>
+          <div class="img-container">
+                    <img class="img-fluid annotimage" id='img2show1'>
+                    <div id="drawing1" class="drawing-class"></div>
+                </div>
+                <div class="row">
+                    <div id="globalbutton1" class="col-lg-2 text-center" style="padding:0"></div>
+                    <div id="buttonrow1" class="col-lg-10 buttonrow"></div>
+                </div>
+              </button>
+              <button id="button2" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                  <div id="letter2"></div>
+          <div class="img-container">
+                    <img class="img-fluid annotimage" id='img2show2'>
+                    <div id="drawing2" class="drawing-class"></div>
+                </div>
+                <div class="row">
+                    <div id="globalbutton2" class="col-lg-2 text-center" style="padding:0"></div>
+                    <div id="buttonrow2" class="col-lg-10 buttonrow"></div>
+                </div>
+              </button>
+              <button id="button3" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                  <div id="letter3"></div>
+          <div class="img-container">
+                    <img class="img-fluid annotimage" id='img2show3'>
+                    <div id="drawing3" class="drawing-class"></div>
+                </div>
+                <div class="row">
+                    <div id="globalbutton3" class="col-lg-2 text-center" style="padding:0"></div>
+                    <div id="buttonrow3" class="col-lg-10 buttonrow"></div>
+                </div>
+              </button>
           </div>
+          </div>
+          </div>
+
+              <div class="card box-shadow col-lg-6">
+                  <p><b id="task_description1"></b></p>
+                  <p id="text1"> </p>
+                  <p id="img_id"> </p>
+                  <div class="card-body">
+          <div class="btn-group-vertical answergroup btn-block">
+                <button id="button4" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                    <div id="letter4"></div>
+                <div class="img-container">
+                    <img class="img-fluid annotimage" id='img2show4'>
+                    <div id="drawing4" class="drawing-class"></div>
+                </div>
+                <div class="row">
+                    <div id="globalbutton4" class="col-lg-2 text-center" style="padding:0"></div>
+                    <div id="buttonrow4" class="col-lg-10 buttonrow"></div>
+                </div>
+                </button>
+              <button id="button5" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                  <div id="letter5"></div>
+          <div class="img-container">
+                    <img class="img-fluid annotimage" id='img2show5'>
+                    <div id="drawing5" class="drawing-class"></div>
+                </div>
+                <div class="row">
+                    <div id="globalbutton5" class="col-lg-2 text-center" style="padding:0"></div>
+                    <div id="buttonrow5" class="col-lg-10 buttonrow"></div>
+                </div>
+              </button>
+              <button id="button6" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                  <div id="letter6"></div>
+          <div class="img-container">
+                    <img class="img-fluid annotimage" id='img2show6'>
+                    <div id="drawing6" class="drawing-class"></div>
+                </div>
+                <div class="row">
+                    <div id="globalbutton6" class="col-lg-2 text-center" style="padding:0"></div>
+                    <div id="buttonrow6" class="col-lg-10 buttonrow"></div>
+                </div>
+              </button>
+              <button id="button7" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
+                  <div id="letter7"></div>
+          <div class="img-container">
+                    <img class="img-fluid annotimage" id='img2show7'>
+                    <div id="drawing7" class="drawing-class"></div>
+                </div>
+                <div class="row">
+                    <div id="globalbutton7" class="col-lg-2 text-center" style="padding:0"></div>
+                    <div id="buttonrow7" class="col-lg-10 buttonrow"></div>
+                </div>
+              </button>
+          </div>
+          </div>
+          </div>
+          </div>
+
+
+    <!--                    <div class="card-header">-->
+    <!--                        <h5 class="mb-0">-->
+    <!--                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#comet" aria-expanded="true" aria-controls="instructions">-->
+    <!--                                Comet Predictions (click to expand/collapse) <br>-->
+    <!--                            </button>-->
+    <!--                        </h5>-->
+    <!--                    </div>-->
+                <div class="collapse show" id="comet">
+                    <div class="questionrow">
+                      <p id="place"><b></b></p>
+
+
+    <!--                          <div class="card-body ctable0">-->
+    <!--                              <p id="event_orig0"><b></b></p>-->
+    <!--                              <p id="event0"><b></b></p>-->
+    <!--                              <table class="table table0" style="background-color: white">-->
+    <!--                                <thead><tr><th></th><th><span class="btn-warning"> Before, PersonX needed to... </span></th> <th><span class="btn-secondary"> Because, PersonX wanted to... </span></th><th><span class="btn-success"> After, PersonX will most likely... </span></th></tr></thead>-->
+    <!--                                <tbody>-->
+    <!--                                  &lt;!&ndash;<tr><td style="color:blue; font-weight:bold">Actual:</td><td class="need0 gt"></td><td class="intent0 gt"> </td><td class="react0 gt"></td></tr>&ndash;&gt;-->
+    <!--                                </tbody>-->
+    <!--                              </table>-->
+    <!--                          </div>-->
+
+    <!--                          <div class="card-body ctable1">-->
+    <!--                              <p id="event_orig1"><b></b></p>-->
+    <!--                              <p id="event1"><b></b></p>-->
+    <!--                              <table class="table table1" style="background-color: white">-->
+    <!--                                <thead><tr><th></th><th><span class="btn-warning"> Before, PersonX needed to... </span></th> <th><span class="btn-secondary"> Because, PersonX wanted to... </span></th><th><span class="btn-success"> After, PersonX will most likely... </span></th></tr></thead>-->
+    <!--                                <tbody>-->
+    <!--                                  &lt;!&ndash;<tr><td style="color:blue; font-weight:bold">Actual:</td><td class="need1 gt"></td><td class="intent1 gt"> </td><td class="react1 gt"></td></tr>&ndash;&gt;-->
+    <!--                                </tbody>-->
+    <!--                              </table>-->
+    <!--                          </div>-->
+
+    <!--                          <div class="card-body ctable2">-->
+    <!--                              <p id="event_orig2"><b></b></p>-->
+    <!--                              <p id="event2"><b></b></p>-->
+    <!--                              <table class="table table1" style="background-color: white">-->
+    <!--                                <thead><tr><th></th><th><span class="btn-warning"> Before, PersonX needed to... </span></th> <th><span class="btn-secondary"> Because, PersonX wanted to... </span></th><th><span class="btn-success"> After, PersonX will most likely... </span></th></tr></thead>-->
+    <!--                                <tbody>-->
+    <!--                                  &lt;!&ndash;<tr><td style="color:blue; font-weight:bold">Actual:</td><td class="need2 gt"></td><td class="intent2 gt"> </td><td class="react2 gt"></td></tr>&ndash;&gt;-->
+    <!--                                </tbody>-->
+    <!--                              </table>-->
+    <!--                          </div>-->
+
+                    </div>
+                </div>
+
+                <div id="annots">
+                    <!-- things go here-->
+                  </div>
+
       </div>
-      <!-- HIT END -->
+    </div>
+    <!-- HIT END -->
 
-      <!-- BOOSTRAP JS -->
+    <!-- BOOSTRAP JS -->
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
-        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-        crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.5/svg.min.js" integrity="sha256-QvaFssiJCr71CxCZfYVWAXXGlwAqXbXerSdoW2t/Few=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.7/chroma.min.js"></script>
-      <script src="https://cdn.rawgit.com/internalfx/distinct-colors/3bbd4cc2/dist/distinct-colors.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+    integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/2.6.5/svg.min.js" integrity="sha256-QvaFssiJCr71CxCZfYVWAXXGlwAqXbXerSdoW2t/Few=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.7/chroma.min.js"></script>
+    <script src="https://cdn.rawgit.com/internalfx/distinct-colors/3bbd4cc2/dist/distinct-colors.min.js"></script>
 
-      <!-- HITPUB JS -->
+    <!-- HITPUB JS -->
       <script>
-          const FONTSIZE=25;
-          const searchParams = new URLSearchParams(window.location.search);
+      const FONTSIZE=25;
+      const searchParams = new URLSearchParams(window.location.search);
 
-          function flattenPoints(points) {
-              const scaledPoints = [];
-              for(let i=0; i < points.length; i++) {
-                  scaledPoints.push(points[i][0]);
-                  scaledPoints.push(points[i][1]);
-              }
-              return scaledPoints
+      function flattenPoints(points) {
+          const scaledPoints = [];
+          for(let i=0; i < points.length; i++) {
+              scaledPoints.push(points[i][0]);
+              scaledPoints.push(points[i][1]);
           }
+          return scaledPoints
+      }
 
-          function drawSegmentation(name, box, segm, color, width, height, drawing_id) {
-              $('#' + drawing_id).empty();
-              const draw = SVG(drawing_id).viewbox(0, 0, width, height);
-              draw.addClass('segmentation');
-              for (let i=0; i < segm.length; i++) {
-                  draw.polygon(flattenPoints(segm[i])).fill({color: color.brighten(2).hex(), opacity: 0.3}).stroke({opacity:0.5, width:2, color:color.darken(2).hex()});
-              }
-              draw.rect(box[2]-box[0], box[3]-box[1]).move(box[0],box[1]).fill({opacity: 0}).stroke({opacity: 0.8, width: 5, color:color.hex()});
-
-              // const group = draw.group();
-              const color2use = '#000';
-              const topY = box[1]-FONTSIZE-7 > 0 ? box[1]-FONTSIZE-7 : box[1]-3;
-
-              const mytext = draw.text(name).move(box[0]+2, topY).font({family: 'Helvetica', size: FONTSIZE, weight:500}).fill(color2use);
-              const thebox = mytext.bbox();
-              draw.rect(thebox.w+4, thebox.h+4).move(thebox.x, thebox.y-2).fill({color: color.brighten(2).hex(), opacity: 0.8}).stroke({opacity:0.8, width:3, color:color.hex()}).backward();
-              return draw;
+      function drawSegmentation(name, box, segm, color, width, height, drawing_id) {
+          $('#' + drawing_id).empty();
+          const draw = SVG(drawing_id).viewbox(0, 0, width, height);
+          draw.addClass('segmentation');
+          for (let i=0; i < segm.length; i++) {
+              draw.polygon(flattenPoints(segm[i])).fill({color: color.brighten(2).hex(), opacity: 0.3}).stroke({opacity:0.5, width:2, color:color.darken(2).hex()});
           }
+          draw.rect(box[2]-box[0], box[3]-box[1]).move(box[0],box[1]).fill({opacity: 0}).stroke({opacity: 0.8, width: 5, color:color.hex()});
 
-          function displayPic(idx, dataFile) {
+          // const group = draw.group();
+          const color2use = '#000';
+          const topY = box[1]-FONTSIZE-7 > 0 ? box[1]-FONTSIZE-7 : box[1]-3;
 
-              searchParams.set('im', idx);
-              let newRelativePathQuery = window.location.pathname + '?' + searchParams.toString();
-              history.pushState(null, '', newRelativePathQuery);
-              // $('#imgid').val(idx);
-              // 'https://visualcomet.s3-us-west-2.amazonaws.com/explore/relation_predictions_' + idx + '.json'
-              // 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json'
+          const mytext = draw.text(name).move(box[0]+2, topY).font({family: 'Helvetica', size: FONTSIZE, weight:500}).fill(color2use);
+          const thebox = mytext.bbox();
+          draw.rect(thebox.w+4, thebox.h+4).move(thebox.x, thebox.y-2).fill({color: color.brighten(2).hex(), opacity: 0.8}).stroke({opacity:0.8, width:3, color:color.hex()}).backward();
+          return draw;
+      }
 
-              dataFileEvent = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
-              dataFilePersonID = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
+      function displayPic(idx, dataFile, start_idx) {
 
-              $.getJSON(dataFile, function (relation_data) {
+          searchParams.set('im', idx);
+          let newRelativePathQuery = window.location.pathname + '?' + searchParams.toString();
+          history.pushState(null, '', newRelativePathQuery);
+          // $('#imgid').val(idx);
+          // 'https://visualcomet.s3-us-west-2.amazonaws.com/explore/relation_predictions_' + idx + '.json'
+          // 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json'
 
-                console.log('blah');
-                $('#annots').empty();
-                // $('#img_annots').empty();
+          dataFileEvent = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
+          dataFilePersonID = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
 
-                $('#imgid').val(idx);
+          $.getJSON(dataFile, function (relation_data) {
 
-                let person_indices = [];
-                  let orig_img_id = '';
-                for (let j = 0; j < 4; j++) {
-                    let img_id = relation_data[idx]['ending' + j];
-                    img_id = img_id.split('/');
-                    let img_dir = img_id[0]
-                    let img_file = img_id[1]
-                    let underscore_idx = img_file.indexOf('_')
-                    let person_idx = parseInt(img_file.slice(0, underscore_idx))
-                    person_indices.push(person_idx)
-                    let orig_img_file = img_file.slice(underscore_idx + 1)
-                    orig_img_id = img_dir + '/' + orig_img_file
-                    let letter='abcd'[j] + ') ';
-                    $('#letter' + j.toString()).empty()
-                    $('#letter' + j.toString()).append(letter).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)'));
+            console.log('blah');
+            $('#annots').empty();
+            // $('#img_annots').empty();
 
-                    $("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + orig_img_id);
-                    $('#button' + j.toString()).removeClass('clicked-wrong').removeClass('clicked-correct');
+            $('#imgid').val(idx);
+
+            let person_indices = [];
+              let orig_img_id = '';
+            for (let j = start_idx; j < start_idx + 4; j++) {
+                let img_id = relation_data[idx]['ending' + j];
+                img_id = img_id.split('/');
+                let img_dir = img_id[0]
+                let img_file = img_id[1]
+                let underscore_idx = img_file.indexOf('_')
+                let person_idx = parseInt(img_file.slice(0, underscore_idx))
+                person_indices.push(person_idx)
+                let orig_img_file = img_file.slice(underscore_idx + 1)
+                orig_img_id = img_dir + '/' + orig_img_file
+                let letter='abcd'[j] + ') ';
+                $('#letter' + j.toString()).empty()
+                $('#letter' + j.toString()).append(letter).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)'));
+
+                $("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + orig_img_id);
+                $('#button' + j.toString()).removeClass('clicked-wrong').removeClass('clicked-correct');
+            }
+            let event = relation_data[idx]['event'];
+            event = 'person' + event.slice(event.indexOf('|>') + 2);
+            // $('#event_text').text('Text: ' + event);
+            $('#text' + (start_idx / 4).toString()).html('<b>Text: </b>' + event);
+            $('#img_id').html('<b>Image ID: </b>' + orig_img_id);
+
+              let predicted_idx = relation_data[idx]['predicted'];
+              $('#button' + predicted_idx.toString()).addClass('clicked-wrong')
+              $('#button' + relation_data[idx]['label'].toString()).removeClass('clicked-wrong').addClass('clicked-correct')
+
+            // let answers = $('<div class="btn-group-vertical answergroup btn-block" id="a' + idx + '">');
+            // let rationales = $('<div class="btn-group-vertical answergroup btn-block" id="r' + idx + '">');
+            //
+            // for (let j=0; j < 4; j++) {
+            //     let letter='abcd'[j] + ') ';
+            //     // answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx]['ending' + j])).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+            //
+            //     // <div class="img-container">
+            //     answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx]['ending' + j])).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+            //     rationales.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
+            // }
+            // answers.children().eq(relation_data[idx].label).addClass('clicked-correct');
+            // rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
+            //
+            // if (relation_data[idx].predicted !== relation_data[idx].label) {
+            //     answers.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
+            // }
+            // if (relation_data[idx].predicted !== relation_data[idx].label) {
+            //     rationales.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
+            // }
+            // let qablock = $('<div class="card box-shadow">').append($('<div class="card-body">').append(answers).append($('<p class="msg">')));
+
+            // $('<div class="row annotationrow">').append($('<div class="col-lg-10">').append(qablock)).appendTo('#annots');
+
+
+
+          $('.hitbox').each(function() {
+                let id = $(this).attr('id');
+                $(this).val(relation_data[0][id]);
+                if (relation_data[0][id].length > 0) {
+                  $('#'+id).show();
                 }
-                let event = relation_data[idx]['event'];
-                event = 'person' + event.slice(event.indexOf('|>') + 2);
-                // $('#event_text').text('Text: ' + event);
-                $('#event_text').html('<b>Text: </b>' + event);
-                $('#img_id').html('<b>Image ID: </b>' + orig_img_id);
+                else {
+                  $('#'+id).hide();
+                }
+            });
 
-                  let predicted_idx = relation_data[idx]['predicted'];
-                  $('#button' + predicted_idx.toString()).addClass('clicked-wrong')
-                  $('#button' + relation_data[idx]['label'].toString()).removeClass('clicked-wrong').addClass('clicked-correct')
+            $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + orig_img_id.replace('jpg', 'json') + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
+              // Show or hide on hover
+              console.log(data);
+              // const palette = new DistinctColors({count: data.names.length, lightMin: 25});
+              const palette = new DistinctColors({count: 4, lightMin: 25});
+              // console.log(palette)
+              // const palette = ['limegreen', 'red', 'blue', 'yellow'];
+              // const palette = [chroma('limegreen'), chroma('red'), chroma('blue').rgb(), chroma('yellow').rgb()];
+              // console.log(palette)
+              // chroma('orange').rgb();
 
-                // let answers = $('<div class="btn-group-vertical answergroup btn-block" id="a' + idx + '">');
-                // let rationales = $('<div class="btn-group-vertical answergroup btn-block" id="r' + idx + '">');
-                //
-                // for (let j=0; j < 4; j++) {
-                //     let letter='abcd'[j] + ') ';
-                //     // answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx]['ending' + j])).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
-                //
-                //     // <div class="img-container">
-                //     answers.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append($("#img2show").attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + relation_data[idx]['ending' + j])).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
-                //     rationales.append($('<button type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">').append(letter).append(relation_data[idx]['ending' + j]).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)')));
-                // }
-                // answers.children().eq(relation_data[idx].label).addClass('clicked-correct');
-                // rationales.children().eq(relation_data[idx].label).addClass('clicked-correct');
-                //
-                // if (relation_data[idx].predicted !== relation_data[idx].label) {
-                //     answers.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
-                // }
-                // if (relation_data[idx].predicted !== relation_data[idx].label) {
-                //     rationales.children().eq(relation_data[idx].predicted).addClass('clicked-wrong');
-                // }
-                // let qablock = $('<div class="card box-shadow">').append($('<div class="card-body">').append(answers).append($('<p class="msg">')));
+              // $('.buttonrow > button.active').click();
+              // $('.buttonrow').empty();
+              // $('#globalbutton').empty();
 
-                // $('<div class="row annotationrow">').append($('<div class="col-lg-10">').append(qablock)).appendTo('#annots');
-
-
-
-              $('.hitbox').each(function() {
-                    let id = $(this).attr('id');
-                    $(this).val(relation_data[0][id]);
-                    if (relation_data[0][id].length > 0) {
-                      $('#'+id).show();
-                    }
-                    else {
-                      $('#'+id).hide();
-                    }
-                });
-
-                // $('.hitbox').each(function() {
-                //     let id = $(this).attr('id');
-                //     $(this).val(relation_data[idx][id]);
-                //     if (relation_data[idx][id].length > 0) {
-                //       $('#'+id).show();
-                //     }
-                //     else {
-                //       $('#'+id).hide();
-                //     }
-                // });
-
-                $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + orig_img_id.replace('jpg', 'json') + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
-                // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[0].metadata_fn + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
-                // $.getJSON('https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/' + relation_data[idx].metadata_fn + '?sigh=' + Math.floor(Math.random() * 1000), function (data) {
-
-                  // $.getJSON('all_relations.json?t=' + new Date, function (data) {
-                  // Show or hide on hover
-                  console.log(data);
-                  // const palette = new DistinctColors({count: data.names.length, lightMin: 25});
-                  const palette = new DistinctColors({count: 4, lightMin: 25});
-                  // console.log(palette)
-                  // const palette = ['limegreen', 'red', 'blue', 'yellow'];
-                  // const palette = [chroma('limegreen'), chroma('red'), chroma('blue').rgb(), chroma('yellow').rgb()];
-                  // console.log(palette)
-                  // chroma('orange').rgb();
-
+              // let i = 0; i < data.names.length; i++
+              for (let i = start_idx; i < start_idx + 4; i++) {
                   // $('.buttonrow > button.active').click();
-                  // $('.buttonrow').empty();
-                  // $('#globalbutton').empty();
+                  $('#buttonrow' + i.toString()).empty();
+                  // $('.buttonrow' + i.toString()).empty();
+                  $('#globalbutton' + i.toString()).empty();
+                  let person_idx = person_indices[i]
+                  let bgcolor = palette[i].darker().hex();
+                  let bgcolorHighlight = palette[i].brighten().hex();
+                  let name_i = (person_idx + 1).toString() + " (" + data.names[person_idx] + ")";
+                  let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
+                  let drawing_id = 'drawing' + i.toString()
+                  let draw = drawSegmentation(name_i, data.boxes[person_idx], data.segms[person_idx], palette[i], data.width, data.height, drawing_id);
+                  mybutton.on('click', function () {
+                      if (mybutton.attr('aria-pressed') === 'true') {
+                          mybutton.css({backgroundColor: bgcolor, color: '#fff'});
+                          draw.attr('opacity', 0);
+                      } else {
+                          draw.attr('opacity', 1);
+                          mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
+                      }
+                  });
 
-                  // let i = 0; i < data.names.length; i++
-                  for (let i = 0; i < 4; i++) {
-                      // $('.buttonrow > button.active').click();
-                      $('#buttonrow' + i.toString()).empty();
-                      // $('.buttonrow' + i.toString()).empty();
-                      $('#globalbutton' + i.toString()).empty();
-                      let person_idx = person_indices[i]
-                      let bgcolor = palette[i].darker().hex();
-                      let bgcolorHighlight = palette[i].brighten().hex();
-                      let name_i = (person_idx + 1).toString() + " (" + data.names[person_idx] + ")";
-                      let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
-                      let drawing_id = 'drawing' + i.toString()
-                      let draw = drawSegmentation(name_i, data.boxes[person_idx], data.segms[person_idx], palette[i], data.width, data.height, drawing_id);
-                      mybutton.on('click', function () {
-                          if (mybutton.attr('aria-pressed') === 'true') {
-                              mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                              draw.attr('opacity', 0);
-                          } else {
-                              draw.attr('opacity', 1);
-                              mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                          }
-                      });
-
-                      mybutton.hover(function () {
-                          if (mybutton.attr('aria-pressed') === 'true') {
-                              mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                          } else {
-                              mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                          }
-                      }, function () {
-                          if (mybutton.attr('aria-pressed') === 'true') {
-                              mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
-                          } else {
-                              mybutton.css({backgroundColor: bgcolor, color: '#fff'});
-                          }
-                      });
-                      $('#buttonrow' + i.toString()).append(mybutton);
+                  mybutton.hover(function () {
+                      if (mybutton.attr('aria-pressed') === 'true') {
+                          mybutton.css({backgroundColor: bgcolor, color: '#fff'});
+                      } else {
+                          mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
+                      }
+                  }, function () {
+                      if (mybutton.attr('aria-pressed') === 'true') {
+                          mybutton.css({backgroundColor: bgcolorHighlight, color: '#000'});
+                      } else {
+                          mybutton.css({backgroundColor: bgcolor, color: '#fff'});
+                      }
+                  });
+                  $('#buttonrow' + i.toString()).append(mybutton);
 
 
-                      // let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton' + i.toString());
-                      // hideall.on('click', function () {
-                      //     $('.buttonrow${i} > button.active').click();
-                      //     // $('.buttonrow > button.active').click();
-                      // });
-                      //
-                      // let showall = $('<button type="button" class="btn btn-outline-dark">').text('show all').appendTo('#globalbutton' + i.toString());
-                      // showall.on('click', function () {
-                      //     $('.buttonrow > button:not(.active)').click();
-                      // });
-                  }
-                });
-                });
-          }
+                  // let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton' + i.toString());
+                  // hideall.on('click', function () {
+                  //     $('.buttonrow${i} > button.active').click();
+                  //     // $('.buttonrow > button.active').click();
+                  // });
+                  //
+                  // let showall = $('<button type="button" class="btn btn-outline-dark">').text('show all').appendTo('#globalbutton' + i.toString());
+                  // showall.on('click', function () {
+                  //     $('.buttonrow > button:not(.active)').click();
+                  // });
+              }
+            });
+            });
+      }
 
 
-      $(document ).ready(function() {
+    $(document ).ready(function() {
 
-        var idx = 0;
-        var max = 0;
-        var dataFile = '';
-        // $.ajax({
-        //     'async': false,
-        //     'global': false,
-        //     'url': 'relation_predictions_9000_57000.json?sigh=' + 4,
-        //     'dataType': "json",
-        //     'success': function (data) {
-        //         console.log(data)
-        //         for (let d of data) {
-        //           max += 1;
-        //         }
-        //     }
-        // });
-        // max = max - 1;
+    var idx = 0;
+    var max = 0;
+    var dataFile = '';
 
-        $('#event').click(function(){
-            max = 2684;
-            dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_event_reverse.json';
-            $("#task_description").text("Event task using train_localization_event_reverse.json and val_localization_event_reverse.json");
-            $('#imgid').attr("placeholder", "(0-" + max + ")");
-            displayPic(idx, dataFile);
-        });
+    // $('#event').click(function(){
+    //     max = 2684;
+    //     dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_event_reverse.json';
+    //     $("#task_description").text("Event task using train_localization_event_reverse.json and val_localization_event_reverse.json");
+    //     $('#imgid').attr("placeholder", "(0-" + max + ")");
+    //     displayPic(idx, dataFile);
+    // });
+    //
+    // $('#person_id').click(function(){
+    //     max = 2684;
+    //     dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_person_reverse.json';
+    //     $('#task_description').text("Person ID task using train_localization_event_reverse.json and val_localization_event_reverse.json");
+    //     $('#imgid').attr("placeholder", "(0-" + max + ")");
+    //     displayPic(idx, dataFile);
+    // });
+    max = 2684;
+    let dataFile_event = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_event_reverse.json';
+    let dataFile_person = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_person_reverse.json';
+    $("#task_description0").text("Event task using train_localization_event_reverse.json and val_localization_event_reverse.json");
+    $('#task_description1').text("Person ID task using train_localization_event_reverse.json and val_localization_event_reverse.json");
+    $('#imgid').attr("placeholder", "(0-" + max + ")");
+    displayPic(idx, dataFile_event, 0);
+    displayPic(idx, dataFile_person, 4);
 
-        $('#person_id').click(function(){
-            max = 2684;
-            dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_person_reverse.json';
-            $('#task_description').text("Person ID task using train_localization_event_reverse.json and val_localization_event_reverse.json");
-            $('#imgid').attr("placeholder", "(0-" + max + ")");
-            displayPic(idx, dataFile);
-        });
-        max = 2684;
-        dataFile = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/eval_localization_person_reverse.json';
-        $('#task_description').text("Person ID task using train_localization_event_reverse.json and val_localization_event_reverse.json");
-        $('#imgid').attr("placeholder", "(0-" + max + ")");
+    if (searchParams.has('im')) {
+        idx = parseInt(searchParams.get('im'));
+        if (max != 0 && ((idx < 0) || (idx > max))) {
+          alert("index must be between 0 and "+ max + " inclusive");
+        }
+    }
+    displayPic(idx, dataFile);
+    $('#prev').click(function(){
+        idx = idx-1;
+        if (idx < 0)
+          idx = max;
         displayPic(idx, dataFile);
-        // max = 2684;
-        // dataFileEvent = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
-        // dataFilePersonID = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
-        // $('#task_description').text("Person ID task using train_localization_event_eq.json and test_localization_event_eq.json");
-        // $('#imgid').attr("placeholder", "(0-" + max + ")");
-        // displayPic(idx, dataFile);
-        $('#imgid').attr("placeholder", "(0-" + max + ")");
+    });
 
-        if (searchParams.has('im')) {
-            idx = parseInt(searchParams.get('im'));
-            if (max != 0 && ((idx < 0) || (idx > max))) {
-              alert("index must be between 0 and "+ max + " inclusive");
+    $('#next').click(function(){
+        idx = idx + 1;
+        if (idx > max)
+          idx = 0;
+        displayPic(idx, dataFile);
+    });
+
+    $('#goto').on('click', function() {
+        let target = $('#imgid').val();
+        if (isNaN(parseInt(target))) {
+            alert("Invalid image ID. It should be a single number.");
+        } else {
+            let number = parseInt(target);
+            if ((number < 0) || (number > max)) {
+                alert("ID must be between 0 and "+ max + " inclusive");
+            } else {
+                idx = number;
+                displayPic(number, dataFile);
             }
         }
-        displayPic(idx, dataFile);
-        $('#prev').click(function(){
-            idx = idx-1;
-            if (idx < 0)
-              idx = max;
-            displayPic(idx, dataFile);
-        });
+    });
 
-        $('#next').click(function(){
-            idx = idx + 1;
-            if (idx > max)
-              idx = 0;
-            displayPic(idx, dataFile);
-        });
+    $('#imgid').on('keypress', function(e) {
+        if (e.keyCode === 13) {
+            $('#goto').click();
+        }
+    });
 
-        $('#goto').on('click', function() {
-            let target = $('#imgid').val();
-            if (isNaN(parseInt(target))) {
-                alert("Invalid image ID. It should be a single number.");
-            } else {
-                let number = parseInt(target);
-                if ((number < 0) || (number > max)) {
-                    alert("ID must be between 0 and "+ max + " inclusive");
-                } else {
-                    idx = number;
-                    displayPic(number, dataFile);
-                }
-            }
-        });
-
-        $('#imgid').on('keypress', function(e) {
-            if (e.keyCode === 13) {
-                $('#goto').click();
-            }
-        });
-
-      });
+    });
 </script>
 
 
