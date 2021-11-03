@@ -572,9 +572,6 @@
           // 'https://visualcomet.s3-us-west-2.amazonaws.com/explore/relation_predictions_' + idx + '.json'
           // 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json'
 
-          dataFileEvent = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_event_train_val_eq.json';
-          dataFilePersonID = 'https://raw.githubusercontent.com/DavidBChang/Visualizations/main/localization_person_id_train_eq_val_eq.json';
-
           $.getJSON(dataFile, function (relation_data) {
 
             console.log('blah');
@@ -585,6 +582,7 @@
 
             let person_indices = [];
               let orig_img_id = '';
+              console.log('dataFile:', dataFile, relation_data);
             for (let j = start_idx; j < start_idx + 4; j++) {
                 let img_id = relation_data[idx]['ending' + j];
                 img_id = img_id.split('/');
