@@ -354,7 +354,7 @@
                 <div class="card box-shadow col-lg-6">
                     <p><b id="task_description0"></b></p>
                     <p id="text0"> </p>
-                    <p id="img_id"> </p>
+                    <p id="img_id0"> </p>
                     <div class="card-body">
                         <div class="btn-group-vertical answergroup btn-block">
                             <button id="button0" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
@@ -408,7 +408,7 @@
               <div class="card box-shadow col-lg-6">
                   <p><b id="task_description1"></b></p>
                   <p id="text1"> </p>
-                  <p id="img_id"> </p>
+                  <p id="img_id1"> </p>
                   <div class="card-body">
           <div class="btn-group-vertical answergroup btn-block">
                 <button id="button4" type="button" class="btn btn-lg btn-outline-dark text-left answerbutton">
@@ -575,6 +575,7 @@
           $.getJSON(dataFile, function (relation_data) {
 
             console.log('blah');
+            console.log(dataFile, relation_data[idx]);
             $('#annots').empty();
             // $('#img_annots').empty();
 
@@ -603,11 +604,12 @@
             event = 'person' + event.slice(event.indexOf('|>') + 2);
             // $('#event_text').text('Text: ' + event);
             $('#text' + (start_idx / 4).toString()).html('<b>Text: </b>' + event);
-            $('#img_id').html('<b>Image ID: </b>' + orig_img_id);
+            $('#img_id' + (start_idx / 4)).html('<b>Image ID: </b>' + orig_img_id);
 
               let predicted_idx = relation_data[idx]['predicted'];
-              $('#button' + predicted_idx.toString()).addClass('clicked-wrong')
-              $('#button' + relation_data[idx]['label'].toString()).removeClass('clicked-wrong').addClass('clicked-correct')
+              let label_idx = relation_data[idx]['label'];
+              $('#button' + (start_idx + predicted_idx.toString())).addClass('clicked-wrong')
+              $('#button' + (start_idx + label_idx.toString())).removeClass('clicked-wrong').addClass('clicked-correct')
 
             // let answers = $('<div class="btn-group-vertical answergroup btn-block" id="a' + idx + '">');
             // let rationales = $('<div class="btn-group-vertical answergroup btn-block" id="r' + idx + '">');
@@ -671,7 +673,7 @@
                   let bgcolorHighlight = palette[i].brighten().hex();
                   let name_i = (person_idx + 1).toString() + " (" + data.names[person_idx] + ")";
                   let mybutton = $('<button type="button" class="btn image-toggle active" style="background-color: ' + bgcolorHighlight + '; color: #000" data-toggle="button" aria-pressed="true">').text(name_i);
-                  let drawing_id = 'drawing' + i.toString()
+                  let drawing_id = 'drawing' + (start_idx + i).toString()
                   let draw = drawSegmentation(name_i, data.boxes[person_idx], data.segms[person_idx], palette[i], data.width, data.height, drawing_id);
                   mybutton.on('click', function () {
                       if (mybutton.attr('aria-pressed') === 'true') {
