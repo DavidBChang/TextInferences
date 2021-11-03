@@ -582,8 +582,7 @@
 
             let person_indices = [];
               let orig_img_id = '';
-              console.log('dataFile:', dataFile, relation_data);
-            for (let j = start_idx; j < start_idx + 4; j++) {
+            for (let j = 0; j < 4; j++) {
                 let img_id = relation_data[idx]['ending' + j];
                 img_id = img_id.split('/');
                 let img_dir = img_id[0]
@@ -594,11 +593,11 @@
                 let orig_img_file = img_file.slice(underscore_idx + 1)
                 orig_img_id = img_dir + '/' + orig_img_file
                 let letter='abcd'[j] + ') ';
-                $('#letter' + j.toString()).empty()
-                $('#letter' + j.toString()).append(letter).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)'));
+                $('#letter' + (start_idx + j).toString()).empty()
+                $('#letter' + (start_idx + j).toString()).append(letter).append($('<b>').text('     (' + relation_data[idx]['percentages'][j] + '%)'));
 
-                $("#img2show" + j.toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + orig_img_id);
-                $('#button' + j.toString()).removeClass('clicked-wrong').removeClass('clicked-correct');
+                $("#img2show" + (start_idx + j).toString()).attr("src", "https://s3-us-west-2.amazonaws.com/ai2-rowanz/vcr1images/" + orig_img_id);
+                $('#button' + (start_idx + j).toString()).removeClass('clicked-wrong').removeClass('clicked-correct');
             }
             let event = relation_data[idx]['event'];
             event = 'person' + event.slice(event.indexOf('|>') + 2);
@@ -663,11 +662,10 @@
               // $('#globalbutton').empty();
 
               // let i = 0; i < data.names.length; i++
-              for (let i = start_idx; i < start_idx + 4; i++) {
+              for (let i = 0; i < 4; i++) {
                   // $('.buttonrow > button.active').click();
-                  $('#buttonrow' + i.toString()).empty();
-                  // $('.buttonrow' + i.toString()).empty();
-                  $('#globalbutton' + i.toString()).empty();
+                  $('#buttonrow' + (start_idx + i).toString()).empty();
+                  $('#globalbutton' + (start_idx + i).toString()).empty();
                   let person_idx = person_indices[i]
                   let bgcolor = palette[i].darker().hex();
                   let bgcolorHighlight = palette[i].brighten().hex();
@@ -698,7 +696,7 @@
                           mybutton.css({backgroundColor: bgcolor, color: '#fff'});
                       }
                   });
-                  $('#buttonrow' + i.toString()).append(mybutton);
+                  $('#buttonrow' + (start_idx + i).toString()).append(mybutton);
 
 
                   // let hideall = $('<button type="button" class="btn btn-outline-dark">').text('hide all').appendTo('#globalbutton' + i.toString());
