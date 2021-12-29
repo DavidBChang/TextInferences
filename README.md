@@ -1,3 +1,4 @@
-# Visualizations
+# VisualCOMET Visualizations
 
-https://textinferences.netlify.app/
+Model predictions for visualcomet localization task
+https://textinferences.netlify.app/localization_reverse.html?im=0
